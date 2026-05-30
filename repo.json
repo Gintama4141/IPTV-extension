@@ -1,0 +1,9 @@
+{
+    "name": "Indonesian IPTV Extension",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1200px-Flag_of_Indonesia.svg.png",
+    "description": "Indonesian IPTV Channels - Live TV Indonesia untuk CloudStream",
+    "manifestVersion": 1,
+    "pluginLists": [
+        "https://raw.githubusercontent.com/username/IPTV-extension/builds/plugins.json"
+    ]
+}
