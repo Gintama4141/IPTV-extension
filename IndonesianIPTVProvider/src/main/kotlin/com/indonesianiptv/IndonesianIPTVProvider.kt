@@ -122,43 +122,25 @@ class IndonesianIPTVProvider : MainAPI() {
 
     override suspend fun load(url: String): LoadResponse {
         val channel = indonesianChannels.find { it.streamUrl == url } ?: indonesianChannels.first()
+        val recommendations = indonesianChannels.map { ch ->
+            newLiveSearchResponse(
+                name = ch.name,
+                url = ch.streamUrl,
+                type = TvType.Live
+            ) {
+                this.posterUrl = ch.logoUrl
+            }
+        }
 
-        return newEpisodicLoadResponse(
+        return newLiveStreamLoadResponse(
             name = channel.name,
             url = url,
-            type = TvType.Live
+            dataUrl = url
         ) {
             this.posterUrl = channel.logoUrl
             this.plot = "Channel: ${channel.name}\nCategory: ${channel.category}"
+            this.recommendations = recommendations
         }
-    }
-
-    override suspend fun loadEpisodes(
-        url: String,
-        data: String?,
-        extraData: String?,
-        subtitleCallback: (SubtitleFile) -> Unit,
-        callback: (Episode) -> Unit
-    ): Boolean {
-        val currentIdx = indonesianChannels.indexOfFirst { it.streamUrl == url }
-        val startIdx = (currentIdx - 10).coerceAtLeast(0)
-        val endIdx = (currentIdx + 10).coerceAtMost(indonesianChannels.lastIndex)
-
-        for (i in startIdx..endIdx) {
-            val ch = indonesianChannels[i]
-            callback.invoke(
-                newEpisode(
-                    name = ch.name,
-                    episode = i.toLong()
-                ) {
-                    this.posterUrl = ch.logoUrl
-                    this.url = ch.streamUrl
-                    this.data = ch.streamUrl
-                    this.description = ch.category
-                }
-            )
-        }
-        return true
     }
 
     override suspend fun loadLinks(
