@@ -4,42 +4,51 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 
 class IndonesianIPTVProvider : MainAPI() {
-    override var mainUrl = "https://iptv-org.github.io/iptv"
+    override var mainUrl = "https://github.com/iptv-org/iptv"
     override var name = "Indonesian IPTV"
     override val hasMainPage = true
     override var lang = "id"
     override val hasDownloadSupport = false
     override val supportedTypes = setOf(TvType.Live)
 
+    private val iconBase = "https://raw.githubusercontent.com/riotryulianto/iptv-playlists/main/icons"
+
     private val indonesianChannels = listOf(
-        ChannelData("TVRI Nasional", "https://live.tvri.go.id/live/tvrinasional/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/0/0e/TVRI_Nasional_logo_2019.svg/1200px-TVRI_Nasional_logo_2019.svg.png", "Nasional"),
-        ChannelData("TVRI World", "https://live.tvri.go.id/live/tvriworld/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/9/9d/TVRI_World_logo_2019.svg/1200px-TVRI_World_logo_2019.svg.png", "Nasional"),
-        ChannelData("TVRI Sport", "https://live.tvri.go.id/live/tvrivosport/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/8/8e/TVRI_Sport_logo_2019.svg/1200px-TVRI_Sport_logo_2019.svg.png", "Nasional"),
-        ChannelData("RCTI", "https://rctiplus.akamaized.net/live/rcti/rcti/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/b/ba/RCTI_logo_2021.svg/1200px-RCTI_logo_2021.svg.png", "Nasional"),
-        ChannelData("MNC TV", "https://rctiplus.akamaized.net/live/mnctv/mnctv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/d/d5/MNC_TV_logo_2022.svg/1200px-MNC_TV_logo_2022.svg.png", "Nasional"),
-        ChannelData("GTV", "https://rctiplus.akamaized.net/live/gtv/gtv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/c/c0/GTV_2022.svg/1200px-GTV_2022.svg.png", "Nasional"),
-        ChannelData("iNews", "https://rctiplus.akamaized.net/live/inews/inews/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/1/1e/INews_2022.svg/1200px-INews_2022.svg.png", "Nasional"),
-        ChannelData("SCTV", "https://video.sctv.co.id/sctv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/SCTV_logo_2021.svg/1200px-SCTV_logo_2021.svg.png", "Nasional"),
-        ChannelData("Indosiar", "https://video.indosiar.co.id/indosiar/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/8/84/Indosiar_2015.svg/1200px-Indosiar_2015.svg.png", "Nasional"),
-        ChannelData("ANTV", "https://antvpremium.akamaized.net/antv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Antv_logo_2022.svg/1200px-Antv_logo_2022.svg.png", "Nasional"),
-        ChannelData("Trans TV", "https://transvideo.akamaized.net/tv/trans/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Trans_Tv_logo_2022.svg/1200px-Trans_Tv_logo_2022.svg.png", "Nasional"),
-        ChannelData("Trans7", "https://transvideo.akamaized.net/tv/trans7/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Trans7_logo_2022.svg/1200px-Trans7_logo_2022.svg.png", "Nasional"),
-        ChannelData("Metro TV", "https://live.metrotvnews.com/live/metrotv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Metro_TV_logo_2022.svg/1200px-Metro_TV_logo_2022.svg.png", "Nasional"),
-        ChannelData("tvOne", "https://avtvone.akamaized.net/tv/antv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/TvOne_logo_2022.svg/1200px-TvOne_logo_2022.svg.png", "Nasional"),
-        ChannelData("BTV", "https://b1news.beritasatumedia.com/Beritasatu/B1News_manifest.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/BTV_logo_2023.svg/1200px-BTV_logo_2023.svg.png", "Nasional"),
-        ChannelData("Kompas TV", "https://live.kompastv.com/live/kompastv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Kompas_TV_logo_2022.svg/1200px-Kompas_TV_logo_2022.svg.png", "Berita"),
-        ChannelData("CNN Indonesia", "https://live.cnnindonesia.com/live/cnn/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/CNN_Indonesia_logo_2022.svg/1200px-CNN_Indonesia_logo_2022.svg.png", "Berita"),
-        ChannelData("CNBC Indonesia", "https://live.cnbcindonesia.com/live/cnbc/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/CNBC_Indonesia_logo_2022.svg/1200px-CNBC_Indonesia_logo_2022.svg.png", "Berita"),
-        ChannelData("TVRI Sport", "https://live.tvri.go.id/live/tvrivosport/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/id/thumb/8/8e/TVRI_Sport_logo_2019.svg/1200px-TVRI_Sport_logo_2019.svg.png", "Olahraga"),
-        ChannelData("RTV", "https://live.vidio.com/live/rtv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/RTV_logo_2022.svg/1200px-RTV_logo_2022.svg.png", "Anak"),
-        ChannelData("Rodja TV", "https://rojadutv.com/live/rodjatv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Rodja_TV_logo_2022.svg/1200px-Rodja_TV_logo_2022.svg.png", "Religi"),
-        ChannelData("JTV", "https://live.jtvonline.net/jtv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/JTV_logo_2022.svg/1200px-JTV_logo_2022.svg.png", "Daerah"),
-        ChannelData("Bali TV", "https://live.balitv.co.id/balitv/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bali_TV_logo_2022.svg/1200px-Bali_TV_logo_2022.svg.png", "Daerah"),
-        ChannelData("BBC World News", "https://live.bbc.co.uk/bbcwsworld/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/BBC_World_News_2019.svg/1200px-BBC_World_News_2019.svg.png", "Internasional"),
-        ChannelData("CNN International", "https://live.cnn.com/cnn/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CNN_International_logo_2022.svg/1200px-CNN_International_logo_2022.svg.png", "Internasional"),
-        ChannelData("Al Jazeera", "https://live.aljazeera.com/aljazeera/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Al_Jazeera_logo_2022.svg/1200px-Al_Jazeera_logo_2022.svg.png", "Internasional"),
-        ChannelData("DW", "https://live.dw.com/dw/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/DW_logo_2022.svg/1200px-DW_logo_2022.svg.png", "Internasional"),
-        ChannelData("France 24", "https://live.france24.com/france24/playlist.m3u8", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/France_24_logo_2022.svg/1200px-France_24_logo_2022.svg.png", "Internasional"),
+        ChannelData("TVRI Nasional", "https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8", "$iconBase/tvri.png", "Nasional"),
+        ChannelData("TVRI World", "https://ott-balancer.tvri.go.id/live/eds/TVRIWorld/hls/TVRIWorld.m3u8", "$iconBase/tvriworld.png", "Nasional"),
+        ChannelData("RCTI", "http://103.66.62.83:8000/play/a00v/index.m3u8", "$iconBase/rcti.png", "Nasional"),
+        ChannelData("SCTV", "http://210.210.155.35/qwr9ew/s/s03/02.m3u8", "$iconBase/sctv.png", "Nasional"),
+        ChannelData("Indosiar", "http://210.210.155.35/qwr9ew/s/s04/01.m3u8", "$iconBase/indosiar.png", "Nasional"),
+        ChannelData("ANTV", "https://op-group1-swiftservehd-1.dens.tv/s/s07/index.m3u8", "$iconBase/antv.png", "Nasional"),
+        ChannelData("Trans TV", "https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8", "$iconBase/transtv.png", "Nasional"),
+        ChannelData("Trans7", "https://video.detik.com/trans7/smil:trans7.smil/playlist.m3u8", "$iconBase/trans7.png", "Nasional"),
+        ChannelData("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8", "$iconBase/metrotv.png", "Nasional"),
+        ChannelData("tvOne", "https://op-group1-swiftservehd-1.dens.tv/h/h224/index.m3u8", "$iconBase/tvone.png", "Nasional"),
+        ChannelData("BTV", "https://b1news.beritasatumedia.com/Beritasatu/B1News_manifest.m3u8", "$iconBase/btv.png", "Nasional"),
+        ChannelData("NET", "https://op-group1-swiftservehd-1.dens.tv/h/h223/index.m3u8", "$iconBase/net.png", "Nasional"),
+        ChannelData("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "$iconBase/magna.png", "Nasional"),
+        ChannelData("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "$iconBase/nusantaratv.png", "Nasional"),
+        ChannelData("Garuda TV", "https://etv-cdn.kdb.co.id/GarudaTV-Stream/index.m3u8", "$iconBase/antv.png", "Nasional"),
+        ChannelData("VTV", "https://flv.intechmedia.net/live/ch107.m3u8", "$iconBase/vtv.png", "Nasional"),
+        ChannelData("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/index.m3u8", "$iconBase/kompastv.png", "Berita"),
+        ChannelData("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "$iconBase/cnnindonesia.png", "Berita"),
+        ChannelData("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8", "$iconBase/cnbcindonesia.png", "Berita"),
+        ChannelData("IDTV", "https://b1world.beritasatumedia.com/Beritasatu/B1World_manifest.m3u8", "$iconBase/idtv.png", "Berita"),
+        ChannelData("Metro Globe Network", "https://edge.medcom.id/live-edge/smil:mgnch.smil/playlist.m3u8", "$iconBase/mgn.png", "Berita"),
+        ChannelData("BeritaSatu", "https://beritasatu.secureswiftcontent.com/han/beritasatu/bsatu10008r/srtoutput/manifest.m3u8", "$iconBase/btv.png", "Berita"),
+        ChannelData("SEA Today", "https://cdn-telkomsel-01.akamaized.net/Content/HLS/Live/channel(9ce3f094-4044-467e-84b7-b684a49571d5)/index.m3u8", "$iconBase/seatoday.png", "Berita"),
+        ChannelData("TVRI Sport", "https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8", "$iconBase/tvrisport.png", "Olahraga"),
+        ChannelData("RTV", "https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8", "$iconBase/rtv.png", "Anak"),
+        ChannelData("Rodja TV", "https://rodjatv.com/rodjatv/live.m3u8", "$iconBase/rodjatv.png", "Religi"),
+        ChannelData("DAAI TV", "https://pull.daaiplus.com/live-DAAIPLUS/live-DAAIPLUS_HD.m3u8", "$iconBase/daaitv.png", "Religi"),
+        ChannelData("RRI Net", "https://public-streaming.rri.co.id/memfs/b3169f10-7846-496c-a186-698ea5ddd310.m3u8", "$iconBase/rrinet.png", "Religi"),
+        ChannelData("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", "$iconBase/jtv.png", "Daerah"),
+        ChannelData("Bali TV", "http://45.126.83.51/uq2663/h/h159/S4/mnf.m3u8", "$iconBase/jtv.png", "Daerah"),
+        ChannelData("Elshinta TV", "https://ams.juraganstreaming.com:5443/LiveApp/streams/elshintatv.m3u8", "$iconBase/rcti.png", "Daerah"),
+        ChannelData("TVKU", "https://tvku.tv/hlsstream/hls/live.m3u8", "$iconBase/vtv.png", "Daerah"),
+        ChannelData("Indonesiana TV", "https://dgwubfppws111.cloudfront.net/out/v1/667a86e35ddd496c886fa11598dc184d/index.m3u8", "$iconBase/indonesianatv.png", "Daerah"),
+        ChannelData("Surabaya TV", "https://e.siar.us/live/surabayatv.m3u8", "$iconBase/mnctv.png", "Daerah"),
+        ChannelData("MDTV", "https://wahyu1ptv.pages.dev/MDTV-HD.m3u8", "$iconBase/net.png", "Daerah"),
     )
 
     data class ChannelData(
@@ -56,8 +65,7 @@ class IndonesianIPTVProvider : MainAPI() {
         "Olahraga" to "TV Olahraga",
         "Anak" to "TV Anak",
         "Religi" to "TV Religi",
-        "Daerah" to "TV Daerah",
-        "Internasional" to "TV Internasional"
+        "Daerah" to "TV Daerah"
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
