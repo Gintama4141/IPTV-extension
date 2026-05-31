@@ -1,4 +1,4 @@
-version = 16
+version = 17
 
 cloudstream {
     description = "Indonesian IPTV Channels - Live TV Indonesia"

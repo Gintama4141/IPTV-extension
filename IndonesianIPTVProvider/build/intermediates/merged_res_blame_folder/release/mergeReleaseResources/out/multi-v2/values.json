@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.indonesianiptv.IndonesianIPTVProvider-mergeReleaseResources-2:/values/values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Darul Izzah Yoso\\.gradle\\caches\\8.13\\transforms\\fb85221ef69d478e5e6040b801a3a586\\transformed\\jetified-startup-runtime-1.2.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "82",
+                        "endOffsets": "133"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.indonesianiptv.IndonesianIPTVProvider-release-4:/values/values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Darul Izzah Yoso\\.gradle\\caches\\8.13\\transforms\\fb85221ef69d478e5e6040b801a3a586\\transformed\\jetified-startup-runtime-1.2.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "82",
+                        "endOffsets": "133"
+                    }
+                }
+            ]
+        }
+    ]
+}

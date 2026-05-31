@@ -9,7 +9,18 @@ class IndonesianIPTVProvider : MainAPI() {
     override val hasMainPage = true
     override var lang = "id"
     override val hasDownloadSupport = false
-    override val supportedTypes = setOf(TvType.Live, TvType.TvSeries)
+    override val supportedTypes = setOf(TvType.Live)
+
+    companion object {
+        private const val ITEMS_PER_PAGE = 20
+    }
+
+    private fun getPageChannels(channels: List<ChannelData>, page: Int): List<ChannelData> {
+        val startIndex = (page - 1) * ITEMS_PER_PAGE
+        if (startIndex >= channels.size) return emptyList()
+        val endIndex = minOf(startIndex + ITEMS_PER_PAGE, channels.size)
+        return channels.subList(startIndex, endIndex)
+    }
 
     private val iconBase = "https://raw.githubusercontent.com/riotryulianto/iptv-playlists/main/icons"
     private val alkhalifitvBase = "https://raw.githubusercontent.com/alkhalifitv/TV/master/big"
@@ -231,9 +242,16 @@ class IndonesianIPTVProvider : MainAPI() {
             else -> allChannels.filter { it.category == request.data }
         }
 
-        val home = filteredChannels.map { channel ->
+        val pageChannels = getPageChannels(filteredChannels, page)
+        val globalIndex = if (request.data == "Semua") {
+            allChannels.indexOf(pageChannels.firstOrNull() ?: return newHomePageResponse(listOf(), false)) + 1
+        } else 0
+
+        val home = pageChannels.mapIndexed { i, channel ->
+            val channelNumber = if (request.data == "Semua") globalIndex + i
+                else filteredChannels.indexOf(channel) + 1
             newLiveSearchResponse(
-                name = channel.name,
+                name = "#${channelNumber} ${channel.name}",
                 url = channel.streamUrl,
                 type = TvType.Live
             ) {
@@ -241,13 +259,15 @@ class IndonesianIPTVProvider : MainAPI() {
             }
         }
 
+        val hasNext = (page * ITEMS_PER_PAGE) < filteredChannels.size
+
         return newHomePageResponse(
             list = HomePageList(
                 name = request.name,
                 list = home,
                 isHorizontalImages = false
             ),
-            hasNext = false
+            hasNext = hasNext
         )
     }
 
@@ -256,8 +276,9 @@ class IndonesianIPTVProvider : MainAPI() {
             it.name.contains(query, ignoreCase = true) ||
             it.category.contains(query, ignoreCase = true)
         }.map { channel ->
+            val channelNumber = allChannels.indexOf(channel) + 1
             newLiveSearchResponse(
-                name = channel.name,
+                name = "#${channelNumber} ${channel.name}",
                 url = channel.streamUrl,
                 type = TvType.Live
             ) {
@@ -268,23 +289,15 @@ class IndonesianIPTVProvider : MainAPI() {
 
     override suspend fun load(url: String): LoadResponse {
         val channel = allChannels.find { it.streamUrl == url } ?: allChannels.first()
-        val episodes = allChannels.mapIndexed { i, ch ->
-            newEpisode(ch.streamUrl) {
-                name = ch.name
-                episode = i
-                posterUrl = ch.logoUrl
-                description = ch.category
-            }
-        }
-
-        return newTvSeriesLoadResponse(
-            name = channel.name,
+        val channelNumber = allChannels.indexOf(channel) + 1
+        return newMovieLoadResponse(
+            name = "#${channelNumber} ${channel.name}",
             url = url,
-            type = TvType.TvSeries,
-            episodes = episodes
+            type = TvType.Live,
+            dataUrl = url
         ) {
             this.posterUrl = channel.logoUrl
-            this.plot = "Channel: ${channel.name}\nCategory: ${channel.category}"
+            this.plot = "Channel: ${channel.name} (#${channelNumber})\nCategory: ${channel.category}"
         }
     }
 
