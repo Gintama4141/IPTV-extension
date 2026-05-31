@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1200px-Flag_of_Indonesia.svg.png",
-        "fileHash": "sha256-13779127a68e54d67c690e4265aad70f1cc612ee98f8b80b640d41faa46cddb7",
+        "fileHash": "sha256-8872763a587124d47d9d406970320c15afe9da43a1947974714b5ae9978fb0c1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/Gintama4141/IPTV-extension",
-        "fileSize": 10684,
+        "fileSize": 11355,
         "status": 1,
         "language": "id",
         "authors": [
