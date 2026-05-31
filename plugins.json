@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1200px-Flag_of_Indonesia.svg.png",
-        "fileHash": "sha256-a8b7c03378637de85ae51448ca289967a7d0358b389b033028fa288e66754e11",
+        "fileHash": "sha256-55d57c03eb7925242e29186605dc521dfb90a48e417211bd72a2ca349e20c0df",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/Gintama4141/IPTV-extension",
-        "fileSize": 13046,
+        "fileSize": 13389,
         "status": 1,
         "language": "id",
         "authors": [
@@ -13,7 +13,7 @@
         "tvTypes": [
             "Live"
         ],
-        "version": 12,
+        "version": 13,
         "internalName": "IndonesianIPTVProvider",
         "description": "Indonesian IPTV Channels - Live TV Indonesia",
         "url": "https://raw.githubusercontent.com/Gintama4141/IPTV-extension/builds/IndonesianIPTVProvider.cs3",
