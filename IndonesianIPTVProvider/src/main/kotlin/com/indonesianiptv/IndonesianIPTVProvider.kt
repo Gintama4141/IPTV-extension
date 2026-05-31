@@ -122,7 +122,7 @@ class IndonesianIPTVProvider : MainAPI() {
     ): Boolean {
         if (data.isNotEmpty()) {
             callback.invoke(
-                ExtractorLink(
+                newExtractorLink(
                     source = this.name,
                     name = this.name,
                     url = data,
