@@ -1,12 +1,12 @@
 # 🇮🇩 Indonesian IPTV Extension for CloudStream
 
-Extension CloudStream yang menyediakan **63 channel TV Indonesia** langsung dari player CloudStream, lengkap dengan navigasi channel tanpa keluar dari tayangan.
+Extension CloudStream yang menyediakan **68 channel TV Indonesia** langsung dari player CloudStream, lengkap dengan navigasi channel tanpa keluar dari tayangan.
 
 ## ✨ Fitur
 
 | Fitur | Keterangan |
 |-------|-----------|
-| 📺 **63 Channel** | 6 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah |
+| 📺 **68 Channel** | 6 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah |
 | 🔄 **Navigasi Channel** | Ganti channel dengan tombol ◀ ▶ tanpa keluar player |
 | 🖼️ **Logo Channel** | Setiap channel punya logo sendiri |
 | 📡 **HLS Stream** | Semua sumber menggunakan HLS |
@@ -36,49 +36,54 @@ Extension CloudStream yang menyediakan **63 channel TV Indonesia** langsung dari
 | 18 | Kompas TV | 📰 Berita |
 | 19 | CNN Indonesia | 📰 Berita |
 | 20 | CNBC Indonesia | 📰 Berita |
-| 21 | IDTV | 📰 Berita |
-| 22 | Metro Globe Network | 📰 Berita |
-| 23 | BeritaSatu | 📰 Berita |
-| 24 | Jakarta Globe News | 📰 Berita |
-| 25 | BN Channel | 📰 Berita |
-| 26 | TVRI Sport | ⚽ Olahraga |
-| 27 | SPOTV | ⚽ Olahraga |
-| 28 | SPOTV2 | ⚽ Olahraga |
-| 29 | RTV | 🧒 Anak |
-| 30 | Biznet Kids | 🧒 Anak |
-| 31 | Rodja TV | 🕌 Religi |
-| 32 | DAAI TV | 🕌 Religi |
-| 33 | RRI Net | 🕌 Religi |
-| 34 | TV Mu | 🕌 Religi |
-| 35 | Surau TV | 🕌 Religi |
-| 36 | Al Iman TV | 🕌 Religi |
-| 37 | Salam TV | 🕌 Religi |
-| 38 | MQTV | 🕌 Religi |
-| 39 | WesalTV | 🕌 Religi |
-| 40 | AshillTV | 🕌 Religi |
-| 41 | TV MUI | 🕌 Religi |
-| 42 | JTV | 🏙️ Daerah |
-| 43 | Elshinta TV | 🏙️ Daerah |
-| 44 | TVKU | 🏙️ Daerah |
-| 45 | Surabaya TV | 🏙️ Daerah |
-| 46 | Stara TV | 🏙️ Daerah |
-| 47 | Jawa Pos TV | 🏙️ Daerah |
-| 48 | Jogja Istimewa TV | 🏙️ Daerah |
-| 49 | Semarang TV | 🏙️ Daerah |
-| 50 | PJTV | 🏙️ Daerah |
-| 51 | Caruban TV | 🏙️ Daerah |
-| 52 | Dhoho TV | 🏙️ Daerah |
-| 53 | Nasional TV | 🏙️ Daerah |
-| 54 | Madu TV | 🏙️ Daerah |
-| 55 | Bandung TV | 🏙️ Daerah |
-| 56 | Jogja TV | 🏙️ Daerah |
-| 57 | Banjar TV | 🏙️ Daerah |
-| 58 | RCTV | 🏙️ Daerah |
-| 59 | Banten TV | 🏙️ Daerah |
-| 60 | Kilisuci TV | 🏙️ Daerah |
-| 61 | BMS TV | 🏙️ Daerah |
-| 62 | TATV | 🏙️ Daerah |
-| 63 | Dhamma TV | 🏙️ Daerah |
+| 21 | iNews | 📰 Berita |
+| 22 | IDTV | 📰 Berita |
+| 23 | Metro Globe Network | 📰 Berita |
+| 24 | BeritaSatu | 📰 Berita |
+| 25 | Jakarta Globe News | 📰 Berita |
+| 26 | BN Channel | 📰 Berita |
+| 27 | TVRI Sport | ⚽ Olahraga |
+| 28 | SPOTV | ⚽ Olahraga |
+| 29 | SPOTV2 | ⚽ Olahraga |
+| 30 | Motorvision TV | ⚽ Olahraga |
+| 31 | RTV | 🧒 Anak |
+| 32 | Biznet Kids | 🧒 Anak |
+| 33 | My Kidz | 🧒 Anak |
+| 34 | Rodja TV | 🕌 Religi |
+| 35 | DAAI TV | 🕌 Religi |
+| 36 | RRI Net | 🕌 Religi |
+| 37 | TV Mu | 🕌 Religi |
+| 38 | Surau TV | 🕌 Religi |
+| 39 | Al Iman TV | 🕌 Religi |
+| 40 | Salam TV | 🕌 Religi |
+| 41 | MQTV | 🕌 Religi |
+| 42 | WesalTV | 🕌 Religi |
+| 43 | AshillTV | 🕌 Religi |
+| 44 | TV MUI | 🕌 Religi |
+| 45 | JTV | 🏙️ Daerah |
+| 46 | JAKTV | 🏙️ Daerah |
+| 47 | Jowo Channel | 🏙️ Daerah |
+| 48 | Elshinta TV | 🏙️ Daerah |
+| 49 | TVKU | 🏙️ Daerah |
+| 50 | Surabaya TV | 🏙️ Daerah |
+| 51 | Stara TV | 🏙️ Daerah |
+| 52 | Jawa Pos TV | 🏙️ Daerah |
+| 53 | Jogja Istimewa TV | 🏙️ Daerah |
+| 54 | Semarang TV | 🏙️ Daerah |
+| 55 | PJTV | 🏙️ Daerah |
+| 56 | Caruban TV | 🏙️ Daerah |
+| 57 | Dhoho TV | 🏙️ Daerah |
+| 58 | Nasional TV | 🏙️ Daerah |
+| 59 | Madu TV | 🏙️ Daerah |
+| 60 | Bandung TV | 🏙️ Daerah |
+| 61 | Jogja TV | 🏙️ Daerah |
+| 62 | Banjar TV | 🏙️ Daerah |
+| 63 | RCTV | 🏙️ Daerah |
+| 64 | Banten TV | 🏙️ Daerah |
+| 65 | Kilisuci TV | 🏙️ Daerah |
+| 66 | BMS TV | 🏙️ Daerah |
+| 67 | TATV | 🏙️ Daerah |
+| 68 | Dhamma TV | 🏙️ Daerah |
 
 ## 📲 Instalasi
 
@@ -111,6 +116,7 @@ Hasil build otomatis melalui **GitHub Actions** dan dipush ke branch `builds`:
 - [iptv-org/iptv](https://github.com/iptv-org/iptv)
 - [mgi24/tvdigital](https://github.com/mgi24/tvdigital)
 - [riotryulianto/iptv-playlists](https://github.com/riotryulianto/iptv-playlists)
+- [alkhalifitv/TV](https://github.com/alkhalifitv/TV)
 - [dens.tv](https://dens.tv)
 
 ## 📄 Lisensi
