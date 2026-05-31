@@ -16,37 +16,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
         with:
           path: "src"
 
-      - name: Checkout builds
-        uses: actions/checkout@v4
-        with:
-          ref: "builds"
-          path: "builds"
-          fetch-depth: 0
-        continue-on-error: true
-        id: checkout_builds
-
-      - name: Create builds directory if not exists
-        if: steps.checkout_builds.outcome == 'failure'
+      - name: Setup builds directory
         run: |
-          mkdir -p builds
+          rm -rf builds
+          mkdir builds
           cd builds
           git init
-          git checkout --orphan builds
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
           git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git commit --allow-empty -m "Initial builds branch"
-          git push -u origin builds
-
-      - name: Clean old builds
-        run: |
-          cd builds
-          rm -f *.cs3 *.json
-          git add . || true
-          git commit -m "Clean old builds" || true
+          git fetch --depth=1 origin builds:builds 2>/dev/null || true
+          git checkout builds 2>/dev/null || git checkout --orphan builds
 
       - name: Setup JDK 17
         uses: actions/setup-java@v4
@@ -62,14 +47,17 @@ jobs:
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
           ./gradlew make makePluginsJson
+          mkdir -p $GITHUB_WORKSPACE/builds
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds/ 2>/dev/null || true
           cp build/plugins.json $GITHUB_WORKSPACE/builds/ 2>/dev/null || true
 
       - name: Push builds
         run: |
           cd $GITHUB_WORKSPACE/builds
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
           git add .
-          git diff --cached --quiet || git commit -m "Build $GITHUB_SHA"
-          git push origin builds
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Build $GITHUB_SHA"
+            git push -u origin builds
+          fi
