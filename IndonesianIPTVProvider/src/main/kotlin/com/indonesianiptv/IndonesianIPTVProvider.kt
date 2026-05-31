@@ -9,7 +9,7 @@ class IndonesianIPTVProvider : MainAPI() {
     override val hasMainPage = true
     override var lang = "id"
     override val hasDownloadSupport = false
-    override val supportedTypes = setOf(TvType.Live)
+    override val supportedTypes = setOf(TvType.Live, TvType.TvSeries)
 
     private val iconBase = "https://raw.githubusercontent.com/riotryulianto/iptv-playlists/main/icons"
 
@@ -134,7 +134,7 @@ class IndonesianIPTVProvider : MainAPI() {
         return newTvSeriesLoadResponse(
             name = channel.name,
             url = url,
-            type = TvType.Live,
+            type = TvType.TvSeries,
             episodes = episodes
         ) {
             this.posterUrl = channel.logoUrl
