@@ -47,6 +47,7 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("RTV", "https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8", "$iconBase/rtv.png", "Anak"),
         ChannelData("Biznet Kids", "http://livestream.biznetvideo.net/biznet_kids/smil:kids.smil/index.m3u8", "$iconBase/mykidz.png", "Anak"),
         ChannelData("My Kidz", "http://op-group1-swiftservesd-1.dens.tv/h/h191/index.m3u8", "https://alkhalifitv.github.io/TV/big/mykidz.png", "Anak"),
+        ChannelData("Animax", "https://nl.utako.moe/Animax/index.m3u8", "https://alkhalifitv.github.io/TV/big/animax.png", "Anak"),
         ChannelData("Rodja TV", "https://rodjatv.com/rodjatv/live.m3u8", "$iconBase/rodjatv.png", "Religi"),
         ChannelData("DAAI TV", "https://pull.daaiplus.com/live-DAAIPLUS/live-DAAIPLUS_HD.m3u8", "$iconBase/daaitv.png", "Religi"),
         ChannelData("RRI Net", "https://private-streaming.rri.go.id/memfs/6f77c7b5-feb2-4935-9f89-e7e9fca0a54a_output_0.m3u8", "$iconBase/rrinet.png", "Religi"),

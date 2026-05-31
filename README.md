@@ -1,12 +1,12 @@
 # 🇮🇩 Indonesian IPTV Extension for CloudStream
 
-Extension CloudStream yang menyediakan **68 channel TV Indonesia** langsung dari player CloudStream, lengkap dengan navigasi channel tanpa keluar dari tayangan.
+Extension CloudStream yang menyediakan **69 channel TV Indonesia** langsung dari player CloudStream, lengkap dengan navigasi channel tanpa keluar dari tayangan.
 
 ## ✨ Fitur
 
 | Fitur | Keterangan |
 |-------|-----------|
-| 📺 **68 Channel** | 6 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah |
+| 📺 **69 Channel** | 6 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah |
 | 🔄 **Navigasi Channel** | Ganti channel dengan tombol ◀ ▶ tanpa keluar player |
 | 🖼️ **Logo Channel** | Setiap channel punya logo sendiri |
 | 📡 **HLS Stream** | Semua sumber menggunakan HLS |
@@ -49,41 +49,42 @@ Extension CloudStream yang menyediakan **68 channel TV Indonesia** langsung dari
 | 31 | RTV | 🧒 Anak |
 | 32 | Biznet Kids | 🧒 Anak |
 | 33 | My Kidz | 🧒 Anak |
-| 34 | Rodja TV | 🕌 Religi |
-| 35 | DAAI TV | 🕌 Religi |
-| 36 | RRI Net | 🕌 Religi |
-| 37 | TV Mu | 🕌 Religi |
-| 38 | Surau TV | 🕌 Religi |
-| 39 | Al Iman TV | 🕌 Religi |
-| 40 | Salam TV | 🕌 Religi |
-| 41 | MQTV | 🕌 Religi |
-| 42 | WesalTV | 🕌 Religi |
-| 43 | AshillTV | 🕌 Religi |
-| 44 | TV MUI | 🕌 Religi |
-| 45 | JTV | 🏙️ Daerah |
-| 46 | JAKTV | 🏙️ Daerah |
-| 47 | Jowo Channel | 🏙️ Daerah |
-| 48 | Elshinta TV | 🏙️ Daerah |
-| 49 | TVKU | 🏙️ Daerah |
-| 50 | Surabaya TV | 🏙️ Daerah |
-| 51 | Stara TV | 🏙️ Daerah |
-| 52 | Jawa Pos TV | 🏙️ Daerah |
-| 53 | Jogja Istimewa TV | 🏙️ Daerah |
-| 54 | Semarang TV | 🏙️ Daerah |
-| 55 | PJTV | 🏙️ Daerah |
-| 56 | Caruban TV | 🏙️ Daerah |
-| 57 | Dhoho TV | 🏙️ Daerah |
-| 58 | Nasional TV | 🏙️ Daerah |
-| 59 | Madu TV | 🏙️ Daerah |
-| 60 | Bandung TV | 🏙️ Daerah |
-| 61 | Jogja TV | 🏙️ Daerah |
-| 62 | Banjar TV | 🏙️ Daerah |
-| 63 | RCTV | 🏙️ Daerah |
-| 64 | Banten TV | 🏙️ Daerah |
-| 65 | Kilisuci TV | 🏙️ Daerah |
-| 66 | BMS TV | 🏙️ Daerah |
-| 67 | TATV | 🏙️ Daerah |
-| 68 | Dhamma TV | 🏙️ Daerah |
+| 34 | Animax | 🧒 Anak |
+| 35 | Rodja TV | 🕌 Religi |
+| 36 | DAAI TV | 🕌 Religi |
+| 37 | RRI Net | 🕌 Religi |
+| 38 | TV Mu | 🕌 Religi |
+| 39 | Surau TV | 🕌 Religi |
+| 40 | Al Iman TV | 🕌 Religi |
+| 41 | Salam TV | 🕌 Religi |
+| 42 | MQTV | 🕌 Religi |
+| 43 | WesalTV | 🕌 Religi |
+| 44 | AshillTV | 🕌 Religi |
+| 45 | TV MUI | 🕌 Religi |
+| 46 | JTV | 🏙️ Daerah |
+| 47 | JAKTV | 🏙️ Daerah |
+| 48 | Jowo Channel | 🏙️ Daerah |
+| 49 | Elshinta TV | 🏙️ Daerah |
+| 50 | TVKU | 🏙️ Daerah |
+| 51 | Surabaya TV | 🏙️ Daerah |
+| 52 | Stara TV | 🏙️ Daerah |
+| 53 | Jawa Pos TV | 🏙️ Daerah |
+| 54 | Jogja Istimewa TV | 🏙️ Daerah |
+| 55 | Semarang TV | 🏙️ Daerah |
+| 56 | PJTV | 🏙️ Daerah |
+| 57 | Caruban TV | 🏙️ Daerah |
+| 58 | Dhoho TV | 🏙️ Daerah |
+| 59 | Nasional TV | 🏙️ Daerah |
+| 60 | Madu TV | 🏙️ Daerah |
+| 61 | Bandung TV | 🏙️ Daerah |
+| 62 | Jogja TV | 🏙️ Daerah |
+| 63 | Banjar TV | 🏙️ Daerah |
+| 64 | RCTV | 🏙️ Daerah |
+| 65 | Banten TV | 🏙️ Daerah |
+| 66 | Kilisuci TV | 🏙️ Daerah |
+| 67 | BMS TV | 🏙️ Daerah |
+| 68 | TATV | 🏙️ Daerah |
+| 69 | Dhamma TV | 🏙️ Daerah |
 
 ## 📲 Instalasi
 
