@@ -29,6 +29,7 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "$iconBase/magna.png", "Nasional"),
         ChannelData("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "$iconBase/nusantaratv.png", "Nasional"),
         ChannelData("Garuda TV", "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8", "$iconBase/antv.png", "Nasional"),
+        ChannelData("MNCTV", "http://202.80.222.20/cdn/iptv/Tvod/001/channel2000106/1024.m3u8", "$iconBase/mnctv.png", "Nasional"),
         ChannelData("VTV", "http://103.66.62.83:8000/play/a00c/index.m3u8", "$iconBase/vtv.png", "Nasional"),
         ChannelData("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/index.m3u8", "$iconBase/kompastv.png", "Berita"),
         ChannelData("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "$iconBase/cnnindonesia.png", "Berita"),

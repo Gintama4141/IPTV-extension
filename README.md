@@ -31,37 +31,38 @@ Extension CloudStream yang menyediakan **45+ channel TV Indonesia** langsung dar
 | 13 | Magna Channel | 🇮🇩 Nasional |
 | 14 | Nusantara TV | 🇮🇩 Nasional |
 | 15 | Garuda TV | 🇮🇩 Nasional |
-| 16 | VTV | 🇮🇩 Nasional |
-| 17 | Kompas TV | 📰 Berita |
-| 18 | CNN Indonesia | 📰 Berita |
-| 19 | CNBC Indonesia | 📰 Berita |
-| 20 | IDTV | 📰 Berita |
-| 21 | Metro Globe Network | 📰 Berita |
-| 22 | BeritaSatu | 📰 Berita |
-| 23 | Jakarta Globe News | 📰 Berita |
-| 24 | TVRI Sport | ⚽ Olahraga |
-| 25 | SPOTV | ⚽ Olahraga |
-| 26 | SPOTV2 | ⚽ Olahraga |
-| 27 | RTV | 🧒 Anak |
-| 28 | Biznet Kids | 🧒 Anak |
-| 29 | Rodja TV | 🕌 Religi |
-| 30 | DAAI TV | 🕌 Religi |
-| 31 | RRI Net | 🕌 Religi |
-| 32 | TV Mu | 🕌 Religi |
-| 33 | Surau TV | 🕌 Religi |
-| 34 | Al Iman TV | 🕌 Religi |
-| 35 | Salam TV | 🕌 Religi |
-| 36 | JTV | 🏙️ Daerah |
-| 37 | Elshinta TV | 🏙️ Daerah |
-| 38 | TVKU | 🏙️ Daerah |
-| 39 | Surabaya TV | 🏙️ Daerah |
-| 40 | Stara TV | 🏙️ Daerah |
-| 41 | Jawa Pos TV | 🏙️ Daerah |
-| 42 | Jogja Istimewa TV | 🏙️ Daerah |
-| 43 | Semarang TV | 🏙️ Daerah |
-| 44 | PJTV | 🏙️ Daerah |
-| 45 | Caruban TV | 🏙️ Daerah |
-| 46 | Dhoho TV | 🏙️ Daerah |
+| 16 | MNCTV | 🇮🇩 Nasional |
+| 17 | VTV | 🇮🇩 Nasional |
+| 18 | Kompas TV | 📰 Berita |
+| 19 | CNN Indonesia | 📰 Berita |
+| 20 | CNBC Indonesia | 📰 Berita |
+| 21 | IDTV | 📰 Berita |
+| 22 | Metro Globe Network | 📰 Berita |
+| 23 | BeritaSatu | 📰 Berita |
+| 24 | Jakarta Globe News | 📰 Berita |
+| 25 | TVRI Sport | ⚽ Olahraga |
+| 26 | SPOTV | ⚽ Olahraga |
+| 27 | SPOTV2 | ⚽ Olahraga |
+| 28 | RTV | 🧒 Anak |
+| 29 | Biznet Kids | 🧒 Anak |
+| 30 | Rodja TV | 🕌 Religi |
+| 31 | DAAI TV | 🕌 Religi |
+| 32 | RRI Net | 🕌 Religi |
+| 33 | TV Mu | 🕌 Religi |
+| 34 | Surau TV | 🕌 Religi |
+| 35 | Al Iman TV | 🕌 Religi |
+| 36 | Salam TV | 🕌 Religi |
+| 37 | JTV | 🏙️ Daerah |
+| 38 | Elshinta TV | 🏙️ Daerah |
+| 39 | TVKU | 🏙️ Daerah |
+| 40 | Surabaya TV | 🏙️ Daerah |
+| 41 | Stara TV | 🏙️ Daerah |
+| 42 | Jawa Pos TV | 🏙️ Daerah |
+| 43 | Jogja Istimewa TV | 🏙️ Daerah |
+| 44 | Semarang TV | 🏙️ Daerah |
+| 45 | PJTV | 🏙️ Daerah |
+| 46 | Caruban TV | 🏙️ Daerah |
+| 47 | Dhoho TV | 🏙️ Daerah |
 
 ## 📲 Instalasi
 
