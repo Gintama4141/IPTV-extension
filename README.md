@@ -1,12 +1,12 @@
 # 🇮🇩 Indonesian IPTV Extension for CloudStream
 
-Extension CloudStream yang menyediakan **45+ channel TV Indonesia** langsung dari player CloudStream, lengkap dengan navigasi channel tanpa keluar dari tayangan.
+Extension CloudStream yang menyediakan **63 channel TV Indonesia** langsung dari player CloudStream, lengkap dengan navigasi channel tanpa keluar dari tayangan.
 
 ## ✨ Fitur
 
 | Fitur | Keterangan |
 |-------|-----------|
-| 📺 **45+ Channel** | 6 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah |
+| 📺 **63 Channel** | 6 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah |
 | 🔄 **Navigasi Channel** | Ganti channel dengan tombol ◀ ▶ tanpa keluar player |
 | 🖼️ **Logo Channel** | Setiap channel punya logo sendiri |
 | 📡 **HLS Stream** | Semua sumber menggunakan HLS |
@@ -28,10 +28,10 @@ Extension CloudStream yang menyediakan **45+ channel TV Indonesia** langsung dar
 | 10 | tvOne | 🇮🇩 Nasional |
 | 11 | BTV | 🇮🇩 Nasional |
 | 12 | MDTV | 🇮🇩 Nasional |
-| 13 | Magna Channel | 🇮🇩 Nasional |
-| 14 | Nusantara TV | 🇮🇩 Nasional |
-| 15 | Garuda TV | 🇮🇩 Nasional |
-| 16 | MNCTV | 🇮🇩 Nasional |
+| 13 | MOJI | 🇮🇩 Nasional |
+| 14 | Magna Channel | 🇮🇩 Nasional |
+| 15 | Nusantara TV | 🇮🇩 Nasional |
+| 16 | Garuda TV | 🇮🇩 Nasional |
 | 17 | VTV | 🇮🇩 Nasional |
 | 18 | Kompas TV | 📰 Berita |
 | 19 | CNN Indonesia | 📰 Berita |
@@ -40,29 +40,45 @@ Extension CloudStream yang menyediakan **45+ channel TV Indonesia** langsung dar
 | 22 | Metro Globe Network | 📰 Berita |
 | 23 | BeritaSatu | 📰 Berita |
 | 24 | Jakarta Globe News | 📰 Berita |
-| 25 | TVRI Sport | ⚽ Olahraga |
-| 26 | SPOTV | ⚽ Olahraga |
-| 27 | SPOTV2 | ⚽ Olahraga |
-| 28 | RTV | 🧒 Anak |
-| 29 | Biznet Kids | 🧒 Anak |
-| 30 | Rodja TV | 🕌 Religi |
-| 31 | DAAI TV | 🕌 Religi |
-| 32 | RRI Net | 🕌 Religi |
-| 33 | TV Mu | 🕌 Religi |
-| 34 | Surau TV | 🕌 Religi |
-| 35 | Al Iman TV | 🕌 Religi |
-| 36 | Salam TV | 🕌 Religi |
-| 37 | JTV | 🏙️ Daerah |
-| 38 | Elshinta TV | 🏙️ Daerah |
-| 39 | TVKU | 🏙️ Daerah |
-| 40 | Surabaya TV | 🏙️ Daerah |
-| 41 | Stara TV | 🏙️ Daerah |
-| 42 | Jawa Pos TV | 🏙️ Daerah |
-| 43 | Jogja Istimewa TV | 🏙️ Daerah |
-| 44 | Semarang TV | 🏙️ Daerah |
-| 45 | PJTV | 🏙️ Daerah |
-| 46 | Caruban TV | 🏙️ Daerah |
-| 47 | Dhoho TV | 🏙️ Daerah |
+| 25 | BN Channel | 📰 Berita |
+| 26 | TVRI Sport | ⚽ Olahraga |
+| 27 | SPOTV | ⚽ Olahraga |
+| 28 | SPOTV2 | ⚽ Olahraga |
+| 29 | RTV | 🧒 Anak |
+| 30 | Biznet Kids | 🧒 Anak |
+| 31 | Rodja TV | 🕌 Religi |
+| 32 | DAAI TV | 🕌 Religi |
+| 33 | RRI Net | 🕌 Religi |
+| 34 | TV Mu | 🕌 Religi |
+| 35 | Surau TV | 🕌 Religi |
+| 36 | Al Iman TV | 🕌 Religi |
+| 37 | Salam TV | 🕌 Religi |
+| 38 | MQTV | 🕌 Religi |
+| 39 | WesalTV | 🕌 Religi |
+| 40 | AshillTV | 🕌 Religi |
+| 41 | TV MUI | 🕌 Religi |
+| 42 | JTV | 🏙️ Daerah |
+| 43 | Elshinta TV | 🏙️ Daerah |
+| 44 | TVKU | 🏙️ Daerah |
+| 45 | Surabaya TV | 🏙️ Daerah |
+| 46 | Stara TV | 🏙️ Daerah |
+| 47 | Jawa Pos TV | 🏙️ Daerah |
+| 48 | Jogja Istimewa TV | 🏙️ Daerah |
+| 49 | Semarang TV | 🏙️ Daerah |
+| 50 | PJTV | 🏙️ Daerah |
+| 51 | Caruban TV | 🏙️ Daerah |
+| 52 | Dhoho TV | 🏙️ Daerah |
+| 53 | Nasional TV | 🏙️ Daerah |
+| 54 | Madu TV | 🏙️ Daerah |
+| 55 | Bandung TV | 🏙️ Daerah |
+| 56 | Jogja TV | 🏙️ Daerah |
+| 57 | Banjar TV | 🏙️ Daerah |
+| 58 | RCTV | 🏙️ Daerah |
+| 59 | Banten TV | 🏙️ Daerah |
+| 60 | Kilisuci TV | 🏙️ Daerah |
+| 61 | BMS TV | 🏙️ Daerah |
+| 62 | TATV | 🏙️ Daerah |
+| 63 | Dhamma TV | 🏙️ Daerah |
 
 ## 📲 Instalasi
 
