@@ -121,16 +121,44 @@ class IndonesianIPTVProvider : MainAPI() {
     }
 
     override suspend fun load(url: String): LoadResponse {
-        val channel = indonesianChannels.find { it.streamUrl == url }
+        val channel = indonesianChannels.find { it.streamUrl == url } ?: indonesianChannels.first()
 
-        return newLiveStreamLoadResponse(
-            name = channel?.name ?: "Unknown Channel",
+        return newEpisodicLoadResponse(
+            name = channel.name,
             url = url,
-            dataUrl = url
+            type = TvType.Live
         ) {
-            this.posterUrl = channel?.logoUrl
-            this.plot = "Channel: ${channel?.name}\nCategory: ${channel?.category}"
+            this.posterUrl = channel.logoUrl
+            this.plot = "Channel: ${channel.name}\nCategory: ${channel.category}"
         }
+    }
+
+    override suspend fun loadEpisodes(
+        url: String,
+        data: String?,
+        extraData: String?,
+        subtitleCallback: (SubtitleFile) -> Unit,
+        callback: (Episode) -> Unit
+    ): Boolean {
+        val currentIdx = indonesianChannels.indexOfFirst { it.streamUrl == url }
+        val startIdx = (currentIdx - 10).coerceAtLeast(0)
+        val endIdx = (currentIdx + 10).coerceAtMost(indonesianChannels.lastIndex)
+
+        for (i in startIdx..endIdx) {
+            val ch = indonesianChannels[i]
+            callback.invoke(
+                newEpisode(
+                    name = ch.name,
+                    episode = i.toLong()
+                ) {
+                    this.posterUrl = ch.logoUrl
+                    this.url = ch.streamUrl
+                    this.data = ch.streamUrl
+                    this.description = ch.category
+                }
+            )
+        }
+        return true
     }
 
     override suspend fun loadLinks(
