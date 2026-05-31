@@ -290,21 +290,11 @@ class IndonesianIPTVProvider : MainAPI() {
     override suspend fun load(url: String): LoadResponse {
         val channel = allChannels.find { it.streamUrl == url } ?: allChannels.first()
         val channelNumber = allChannels.indexOf(channel) + 1
-        val orderedChannels = listOf(channel) + allChannels.filter { it.streamUrl != url }
-        val episodes = orderedChannels.mapIndexed { i, ch ->
-            newEpisode(ch.streamUrl) {
-                name = ch.name
-                episode = i
-                posterUrl = ch.logoUrl
-                description = ch.category
-            }
-        }
-
-        return newTvSeriesLoadResponse(
+        return newMovieLoadResponse(
             name = "#${channelNumber} ${channel.name}",
             url = url,
-            type = TvType.TvSeries,
-            episodes = episodes
+            type = TvType.Live,
+            dataUrl = url
         ) {
             this.posterUrl = channel.logoUrl
             this.plot = "Channel: ${channel.name} (#${channelNumber})\nCategory: ${channel.category}"
