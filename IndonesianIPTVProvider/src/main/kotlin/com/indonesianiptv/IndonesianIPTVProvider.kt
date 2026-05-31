@@ -122,10 +122,14 @@ class IndonesianIPTVProvider : MainAPI() {
     ): Boolean {
         if (data.isNotEmpty()) {
             callback.invoke(
-                newExtractorLink(this.name, this.name, data) {
-                    this.quality = Qualities.P1080.value
-                    this.isM3u8 = data.contains(".m3u8")
-                }
+                ExtractorLink(
+                    source = this.name,
+                    name = this.name,
+                    url = data,
+                    referer = "",
+                    quality = Qualities.P1080.value,
+                    isM3u8 = data.contains(".m3u8")
+                )
             )
         }
         return true
