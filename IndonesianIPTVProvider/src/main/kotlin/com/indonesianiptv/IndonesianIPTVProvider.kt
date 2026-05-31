@@ -122,24 +122,23 @@ class IndonesianIPTVProvider : MainAPI() {
 
     override suspend fun load(url: String): LoadResponse {
         val channel = indonesianChannels.find { it.streamUrl == url } ?: indonesianChannels.first()
-        val recommendations = indonesianChannels.map { ch ->
-            newLiveSearchResponse(
-                name = ch.name,
-                url = ch.streamUrl,
-                type = TvType.Live
-            ) {
-                this.posterUrl = ch.logoUrl
+        val episodes = indonesianChannels.mapIndexed { i, ch ->
+            newEpisode(ch.streamUrl) {
+                name = ch.name
+                episode = i
+                posterUrl = ch.logoUrl
+                description = ch.category
             }
         }
 
-        return newLiveStreamLoadResponse(
+        return newTvSeriesLoadResponse(
             name = channel.name,
             url = url,
-            dataUrl = url
+            type = TvType.Live,
+            episodes = episodes
         ) {
             this.posterUrl = channel.logoUrl
             this.plot = "Channel: ${channel.name}\nCategory: ${channel.category}"
-            this.recommendations = recommendations
         }
     }
 
