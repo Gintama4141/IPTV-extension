@@ -9,7 +9,7 @@ class IndonesianIPTVProvider : MainAPI() {
     override val hasMainPage = true
     override var lang = "id"
     override val hasDownloadSupport = false
-    override val supportedTypes = setOf(TvType.Live)
+    override val supportedTypes = setOf(TvType.Live, TvType.TvSeries)
 
     companion object {
         private const val ITEMS_PER_PAGE = 20
@@ -290,11 +290,21 @@ class IndonesianIPTVProvider : MainAPI() {
     override suspend fun load(url: String): LoadResponse {
         val channel = allChannels.find { it.streamUrl == url } ?: allChannels.first()
         val channelNumber = allChannels.indexOf(channel) + 1
-        return newMovieLoadResponse(
+        val orderedChannels = listOf(channel) + allChannels.filter { it.streamUrl != url }
+        val episodes = orderedChannels.mapIndexed { i, ch ->
+            newEpisode(ch.streamUrl) {
+                name = ch.name
+                episode = i
+                posterUrl = ch.logoUrl
+                description = ch.category
+            }
+        }
+
+        return newTvSeriesLoadResponse(
             name = "#${channelNumber} ${channel.name}",
             url = url,
-            type = TvType.Live,
-            dataUrl = url
+            type = TvType.TvSeries,
+            episodes = episodes
         ) {
             this.posterUrl = channel.logoUrl
             this.plot = "Channel: ${channel.name} (#${channelNumber})\nCategory: ${channel.category}"
