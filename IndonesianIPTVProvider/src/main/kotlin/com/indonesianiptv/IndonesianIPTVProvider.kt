@@ -28,8 +28,7 @@ class IndonesianIPTVProvider : MainAPI() {
     private val indonesianChannels = listOf(
         ChannelData("TVRI Nasional", "https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8", "$iconBase/tvri.png", "Nasional"),
         ChannelData("TVRI World", "https://ott-balancer.tvri.go.id/live/eds/TVRIWorld/hls/TVRIWorld.m3u8", "$iconBase/tvriworld.png", "Nasional"),
-        ChannelData("SCTV", "https://op-group1-swiftservehd-1.dens.tv/h/h217/index.m3u8", "$iconBase/sctv.png", "Nasional"),
-        ChannelData("Indosiar", "https://op-group1-swiftservehd-1.dens.tv/h/h235/index.m3u8", "$iconBase/indosiar.png", "Nasional"),
+
         ChannelData("ANTV", "http://103.58.160.157:8278/720-ANTV/playlist.m3u8", "$iconBase/antv.png", "Nasional"),
         ChannelData("Trans TV", "https://video.detik.com/transtv/smil:transtv.smil/index.m3u8", "$iconBase/transtv.png", "Nasional"),
         ChannelData("Trans7", "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8", "$iconBase/trans7.png", "Nasional"),
@@ -46,10 +45,7 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "$iconBase/cnbcindonesia.png", "Berita"),
 
 
-        ChannelData("Metro Globe Network", "https://edge.medcom.id/live-edge/smil:mgnch.smil/playlist.m3u8", "$iconBase/mgn.png", "Berita"),
-
-
-        ChannelData("BN Channel", "http://op-group1-swiftservehd-1.dens.tv/h/h39/01.m3u8", "https://static.wikia.nocookie.net/logopedia/images/5/54/BN_Channel.png", "Berita"),
+        ChannelData("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "https://static.wikia.nocookie.net/logopedia/images/5/54/BN_Channel.png", "Berita"),
         ChannelData("TVRI Sport", "https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8", "$iconBase/tvrisport.png", "Olahraga"),
         ChannelData("SPOTV", "http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119515.m3u8", "$alkhalifitvBase/spotv.png", "Olahraga"),
         ChannelData("SPOTV2", "http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119516.m3u8", "$alkhalifitvBase/spotv2.png", "Olahraga"),
