@@ -1,7 +1,7 @@
 version = 30
 
 cloudstream {
-    description = "300+ FTA Live TV — Indonesia TV (10 kategori) & International TV (20 negara)"
+    description = "300+ FTA Live TV — 10 kategori Indonesia + 20 negara internasional"
     language = "id"
     authors = listOf("IPTV-Indonesia")
     status = 1

@@ -1,14 +1,15 @@
 package com.indonesianiptv.provider
 
+import com.indonesianiptv.model.M3UChannel
 import com.indonesianiptv.model.M3UParser
 import com.indonesianiptv.util.Constants
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 
-class InternationalTVProvider : MainAPI() {
+class UnifiedTVProvider : MainAPI() {
     override var mainUrl = "https://iptv-org.github.io"
-    override var name = "International TV"
-    override var lang = "en"
+    override var name = "IPTV Indonesia"
+    override var lang = "id"
     override var hasMainPage = true
     override var supportedTypes = setOf(TvType.Live)
 
@@ -18,8 +19,41 @@ class InternationalTVProvider : MainAPI() {
     private val cacheTtl = 10 * 60 * 1000L
 
     override val mainPage = mainPageOf(
-        *Constants.COUNTRIES.map { it.code to it.name }.toTypedArray()
+        "Nasional" to "${Constants.CATEGORY_FLAGS["Nasional"]} Nasional",
+        "Berita" to "${Constants.CATEGORY_FLAGS["Berita"]} Berita",
+        "Edukasi" to "${Constants.CATEGORY_FLAGS["Edukasi"]} Edukasi",
+        "Religi" to "${Constants.CATEGORY_FLAGS["Religi"]} Religi",
+        "Daerah" to "${Constants.CATEGORY_FLAGS["Daerah"]} Daerah",
+        "Hiburan" to "${Constants.CATEGORY_FLAGS["Hiburan"]} Hiburan",
+        "Musik" to "${Constants.CATEGORY_FLAGS["Musik"]} Musik",
+        "Anak" to "${Constants.CATEGORY_FLAGS["Anak"]} Anak",
+        "Olahraga" to "${Constants.CATEGORY_FLAGS["Olahraga"]} Olahraga",
+        "Pemerintah" to "${Constants.CATEGORY_FLAGS["Pemerintah"]} Pemerintah",
+        "JP" to "${countryFlag("JP")} Jepang",
+        "KR" to "${countryFlag("KR")} Korea",
+        "TH" to "${countryFlag("TH")} Thailand",
+        "MY" to "${countryFlag("MY")} Malaysia",
+        "BN" to "${countryFlag("BN")} Brunei",
+        "SG" to "${countryFlag("SG")} Singapura",
+        "PH" to "${countryFlag("PH")} Filipina",
+        "US" to "${countryFlag("US")} Amerika Serikat",
+        "GB" to "${countryFlag("GB")} Inggris",
+        "DE" to "${countryFlag("DE")} Jerman",
+        "FR" to "${countryFlag("FR")} Perancis",
+        "AU" to "${countryFlag("AU")} Australia",
+        "IN" to "${countryFlag("IN")} India",
+        "CN" to "${countryFlag("CN")} China",
+        "TW" to "${countryFlag("TW")} Taiwan",
+        "HK" to "${countryFlag("HK")} Hong Kong",
+        "NL" to "${countryFlag("NL")} Belanda",
+        "SA" to "${countryFlag("SA")} Arab Saudi",
+        "TR" to "${countryFlag("TR")} Turki",
+        "RU" to "${countryFlag("RU")} Rusia"
     )
+
+    private fun countryFlag(code: String): String {
+        return Constants.COUNTRIES.find { it.code == code }?.flag ?: ""
+    }
 
     private suspend fun refreshCache() {
         val now = System.currentTimeMillis()
@@ -28,9 +62,25 @@ class InternationalTVProvider : MainAPI() {
 
         val channels = mutableListOf<Constants.CategorizedChannel>()
 
+        // Indonesian sources
+        val hardcoded = Constants.TVRI_CATEGORIZED + Constants.INDONESIAN_CHANNELS
+        channels.addAll(hardcoded)
+
+        val m3uChannels = mutableListOf<Constants.CategorizedChannel>()
+        for (source in Constants.M3U_SOURCES) {
+            try {
+                val resp = app.get(source)
+                val parsed = M3UParser.parse(resp.text)
+                m3uChannels.addAll(parsed.mapNotNull { categorizeM3uChannel(it) })
+                if (parsed.isNotEmpty()) break
+            } catch (_: Exception) { }
+        }
+        channels.addAll(m3uChannels)
+
+        // International sources
         for (country in Constants.COUNTRIES) {
-            val hardcoded = Constants.INTERNATIONAL_CHANNELS.filter { it.category == country.code }
-            channels.addAll(hardcoded)
+            val hc = Constants.INTERNATIONAL_CHANNELS.filter { it.category == country.code }
+            channels.addAll(hc)
 
             val m3uUrl = country.m3uUrl ?: continue
             try {
@@ -58,16 +108,46 @@ class InternationalTVProvider : MainAPI() {
         channelCache = allChannels.associateBy { it.url }
     }
 
+    private fun categorizeM3uChannel(ch: M3UChannel): Constants.CategorizedChannel? {
+        val group = ch.group?.lowercase()?.trim() ?: ""
+        val name = ch.name.lowercase()
+
+        val category = when {
+            group.isEmpty() -> categorizeByName(name)
+            else -> Constants.CATEGORY_KEYWORDS.entries.find { entry ->
+                entry.value.any { keyword -> group.contains(keyword) }
+            }?.key ?: categorizeByName(name)
+        }
+
+        val quality = parseQualityInt(ch.quality)
+
+        return Constants.CategorizedChannel(
+            name = ch.name,
+            url = ch.streamUrl,
+            category = category,
+            tvgId = ch.tvgId,
+            tvgLogo = ch.tvgLogo,
+            headers = ch.headers,
+            quality = quality
+        )
+    }
+
+    private fun categorizeByName(name: String): String {
+        return Constants.CATEGORY_KEYWORDS.entries.find { entry ->
+            entry.value.any { keyword -> name.contains(keyword) }
+        }?.key ?: "Nasional"
+    }
+
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         refreshCache()
-        val countryCode = request.data
-        val items = allChannels.filter { it.category == countryCode }
+        val key = request.data
+        val items = allChannels.filter { it.category == key }
         val pageSize = 50
         val start = (page - 1) * pageSize
         val end = minOf(start + pageSize, items.size)
         return newHomePageResponse(
             list = HomePageList(
-                name = "${countryCode} (${items.size} ch)",
+                name = "${key} (${items.size} ch)",
                 list = items.subList(start, end).map { it.toSearchResponse() }
             ),
             hasNext = end < items.size

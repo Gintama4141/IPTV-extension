@@ -136,17 +136,17 @@ object Constants {
         "Hiburan", "Musik", "Anak", "Olahraga", "Pemerintah"
     )
 
-    val CATEGORY_LABELS = mapOf(
-        "Nasional" to "Nasional",
-        "Berita" to "Berita",
-        "Edukasi" to "Edukasi",
-        "Religi" to "Religi",
-        "Daerah" to "Daerah",
-        "Hiburan" to "Hiburan",
-        "Musik" to "Musik",
-        "Anak" to "Anak",
-        "Olahraga" to "Olahraga",
-        "Pemerintah" to "Pemerintah"
+    val CATEGORY_FLAGS = mapOf(
+        "Nasional" to "\uD83C\uDDE6\uD83C\uDDEA",
+        "Berita" to "\uD83D\uDCF0",
+        "Edukasi" to "\uD83C\uDF93",
+        "Religi" to "\uD83D\uDD4C",
+        "Daerah" to "\uD83C\uDFD8\uFE0F",
+        "Hiburan" to "\uD83C\uDFAC",
+        "Musik" to "\uD83C\uDFB5",
+        "Anak" to "\uD83E\uDDD2",
+        "Olahraga" to "\u26BD",
+        "Pemerintah" to "\uD83C\uDFDB\uFE0F"
     )
 
     val CATEGORY_KEYWORDS = mapOf(
@@ -162,34 +162,35 @@ object Constants {
         "Pemerintah" to listOf("pemerintah", "government", "pemerintah indonesia", "tv pemerintah", "publik", "public", "parliament")
     )
 
-    // Country system for InternationalTVProvider
+    // Country system
     data class CountryData(
         val code: String,
         val name: String,
+        val flag: String,
         val m3uUrl: String?
     )
 
     val COUNTRIES = listOf(
-        CountryData("JP", "Jepang", "https://iptv-org.github.io/iptv/streams/jp.m3u8"),
-        CountryData("KR", "Korea", null),
-        CountryData("TH", "Thailand", null),
-        CountryData("MY", "Malaysia", null),
-        CountryData("BN", "Brunei", null),
-        CountryData("SG", "Singapura", null),
-        CountryData("PH", "Filipina", null),
-        CountryData("US", "Amerika Serikat", "https://iptv-org.github.io/iptv/streams/us.m3u8"),
-        CountryData("GB", "Inggris", "https://iptv-org.github.io/iptv/streams/gb.m3u8"),
-        CountryData("DE", "Jerman", "https://iptv-org.github.io/iptv/streams/de.m3u8"),
-        CountryData("FR", "Perancis", "https://iptv-org.github.io/iptv/streams/fr.m3u8"),
-        CountryData("AU", "Australia", "https://iptv-org.github.io/iptv/streams/au.m3u8"),
-        CountryData("IN", "India", "https://iptv-org.github.io/iptv/streams/in.m3u8"),
-        CountryData("CN", "China", "https://iptv-org.github.io/iptv/streams/cn.m3u8"),
-        CountryData("TW", "Taiwan", "https://iptv-org.github.io/iptv/streams/tw.m3u8"),
-        CountryData("HK", "Hong Kong", "https://iptv-org.github.io/iptv/streams/hk.m3u8"),
-        CountryData("NL", "Belanda", "https://iptv-org.github.io/iptv/streams/nl.m3u8"),
-        CountryData("SA", "Arab Saudi", "https://iptv-org.github.io/iptv/streams/sa.m3u8"),
-        CountryData("TR", "Turki", "https://iptv-org.github.io/iptv/streams/tr.m3u8"),
-        CountryData("RU", "Rusia", "https://iptv-org.github.io/iptv/streams/ru.m3u8")
+        CountryData("JP", "Jepang", "\uD83C\uDDEF\uD83C\uDDF5", "https://iptv-org.github.io/iptv/streams/jp.m3u8"),
+        CountryData("KR", "Korea", "\uD83C\uDDF0\uD83C\uDDF7", null),
+        CountryData("TH", "Thailand", "\uD83C\uDDF9\uD83C\uDDED", null),
+        CountryData("MY", "Malaysia", "\uD83C\uDDF2\uD83C\uDDFE", null),
+        CountryData("BN", "Brunei", "\uD83C\uDDE7\uD83C\uDDF3", null),
+        CountryData("SG", "Singapura", "\uD83C\uDDF8\uD83C\uDDEC", null),
+        CountryData("PH", "Filipina", "\uD83C\uDDF5\uD83C\uDDED", null),
+        CountryData("US", "Amerika Serikat", "\uD83C\uDDFA\uD83C\uDDF8", "https://iptv-org.github.io/iptv/streams/us.m3u8"),
+        CountryData("GB", "Inggris", "\uD83C\uDDEC\uD83C\uDDE7", "https://iptv-org.github.io/iptv/streams/gb.m3u8"),
+        CountryData("DE", "Jerman", "\uD83C\uDDE9\uD83C\uDDEA", "https://iptv-org.github.io/iptv/streams/de.m3u8"),
+        CountryData("FR", "Perancis", "\uD83C\uDDEB\uD83C\uDDF7", "https://iptv-org.github.io/iptv/streams/fr.m3u8"),
+        CountryData("AU", "Australia", "\uD83C\uDDE6\uD83C\uDDFA", "https://iptv-org.github.io/iptv/streams/au.m3u8"),
+        CountryData("IN", "India", "\uD83C\uDDEE\uD83C\uDDF3", "https://iptv-org.github.io/iptv/streams/in.m3u8"),
+        CountryData("CN", "China", "\uD83C\uDDE8\uD83C\uDDF3", "https://iptv-org.github.io/iptv/streams/cn.m3u8"),
+        CountryData("TW", "Taiwan", "\uD83C\uDDF9\uD83C\uDDFC", "https://iptv-org.github.io/iptv/streams/tw.m3u8"),
+        CountryData("HK", "Hong Kong", "\uD83C\uDDED\uD83C\uDDF0", "https://iptv-org.github.io/iptv/streams/hk.m3u8"),
+        CountryData("NL", "Belanda", "\uD83C\uDDF3\uD83C\uDDF1", "https://iptv-org.github.io/iptv/streams/nl.m3u8"),
+        CountryData("SA", "Arab Saudi", "\uD83C\uDDF8\uD83C\uDDE6", "https://iptv-org.github.io/iptv/streams/sa.m3u8"),
+        CountryData("TR", "Turki", "\uD83C\uDDF9\uD83C\uDDF7", "https://iptv-org.github.io/iptv/streams/tr.m3u8"),
+        CountryData("RU", "Rusia", "\uD83C\uDDF7\uD83C\uDDFA", "https://iptv-org.github.io/iptv/streams/ru.m3u8")
     )
 
     // Hardcoded international channels (fallback when M3U unavailable)
