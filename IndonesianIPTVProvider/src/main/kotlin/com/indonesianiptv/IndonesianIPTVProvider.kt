@@ -22,74 +22,168 @@ class IndonesianIPTVProvider : MainAPI() {
         return channels.subList(startIndex, endIndex)
     }
 
+    // Logo bases
     private val iconBase = "https://raw.githubusercontent.com/riotryulianto/iptv-playlists/main/icons"
     private val alkhalifitvBase = "https://raw.githubusercontent.com/alkhalifitv/TV/master/big"
+    private val genericIptv = "$iconBase/iptv.png"
 
-    private val indonesianChannels = listOf(
-        ChannelData("TVRI Nasional", "https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8", "$iconBase/tvri.png", "Nasional"),
-        ChannelData("TVRI World", "https://ott-balancer.tvri.go.id/live/eds/TVRIWorld/hls/TVRIWorld.m3u8", "$iconBase/tvriworld.png", "Nasional"),
-
-        ChannelData("ANTV", "http://103.58.160.157:8278/720-ANTV/playlist.m3u8", "$iconBase/antv.png", "Nasional"),
-        ChannelData("Trans TV", "https://video.detik.com/transtv/smil:transtv.smil/index.m3u8", "$iconBase/transtv.png", "Nasional"),
-        ChannelData("Trans7", "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8", "$iconBase/trans7.png", "Nasional"),
-        ChannelData("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8", "$iconBase/metrotv.png", "Nasional"),
-        ChannelData("tvOne", "https://op-group1-swiftservehd-1.dens.tv/h/h40/01.m3u8", "$iconBase/tvone.png", "Nasional"),
-        ChannelData("MDTV", "https://wahyu1ptv.pages.dev/MDTV-HD.m3u8", "$alkhalifitvBase/mdtv.png", "Nasional"),
-        ChannelData("MOJI", "http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "$iconBase/moji.png", "Nasional"),
-        ChannelData("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "$iconBase/magna.png", "Nasional"),
-        ChannelData("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "$iconBase/nusantaratv.png", "Nasional"),
-        ChannelData("Garuda TV", "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8", "$alkhalifitvBase/garudatv.png", "Nasional"),
-
-        ChannelData("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/index.m3u8", "$iconBase/kompastv.png", "Berita"),
-        ChannelData("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "$iconBase/cnnindonesia.png", "Berita"),
-        ChannelData("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "$iconBase/cnbcindonesia.png", "Berita"),
-
-
-        ChannelData("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "https://static.wikia.nocookie.net/logopedia/images/5/54/BN_Channel.png", "Berita"),
-        ChannelData("TVRI Sport", "https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8", "$iconBase/tvrisport.png", "Olahraga"),
-        ChannelData("SPOTV", "http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119515.m3u8", "$alkhalifitvBase/spotv.png", "Olahraga"),
-        ChannelData("SPOTV2", "http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119516.m3u8", "$alkhalifitvBase/spotv2.png", "Olahraga"),
-        ChannelData("Motorvision TV", "http://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8", "$alkhalifitvBase/motorvision.png", "Olahraga"),
-        ChannelData("RTV", "https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8", "$iconBase/rtv.png", "Anak"),
-        ChannelData("Biznet Kids", "http://livestream.biznetvideo.net/biznet_kids/smil:kids.smil/index.m3u8", "$alkhalifitvBase/kidstv.png", "Anak"),
-
-        ChannelData("Animax", "https://akariko.netgenx.site/stream/jp/animax/stream-output.m3u8?mode=hls", "$alkhalifitvBase/animax.png", "Anak"),
-        ChannelData("Rodja TV", "https://rodjatv.com/rodjatv/live.m3u8", "$iconBase/rodjatv.png", "Religi"),
-        ChannelData("DAAI TV", "https://pull.daaiplus.com/live-DAAIPLUS/live-DAAIPLUS_HD.m3u8", "$iconBase/daaitv.png", "Religi"),
-        ChannelData("RRI Net", "https://private-streaming.rri.go.id/memfs/6f77c7b5-feb2-4935-9f89-e7e9fca0a54a_output_0.m3u8", "$iconBase/rrinet.png", "Religi"),
-        ChannelData("TV Mu", "https://e.siar.us/live/tvmu.m3u8", "$alkhalifitvBase/tvmu.png", "Religi"),
-
-        ChannelData("Al Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "https://upload.wikimedia.org/wikipedia/id/2/28/Logo_Al-Iman_TV.png", "Religi"),
-        ChannelData("Salam TV", "https://salamtv.siar.us/live/salamtv.m3u8", "https://static.wikia.nocookie.net/logopedia/images/2/20/Salam_TV.png", "Religi"),
-        ChannelData("MQTV", "https://wahyu1ptv.pages.dev/MQTV-HD.m3u8", "https://static.wikia.nocookie.net/logopedia/images/d/d5/MQTV_%282005%29.png", "Religi"),
-        ChannelData("WesalTV", "https://wahyu1ptv.pages.dev/WesalTV-HD.m3u8", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Logo_Wesal_TV.png", "Religi"),
-        ChannelData("AshillTV", "https://wahyu1ptv.pages.dev/AshiilTV-HD.m3u8", "https://upload.wikimedia.org/wikipedia/id/9/98/Logo_Ashiil_TV.png", "Religi"),
-
-        ChannelData("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", "$iconBase/jtv.png", "Daerah"),
-        ChannelData("JAKTV", "http://op-group1-swiftservesd-1.dens.tv/s/s123/S4/mnf.m3u8", "$alkhalifitvBase/jaktv.png", "Daerah"),
-        ChannelData("Jowo Channel", "http://khano.nng.cloudns.us/live/m3u8/id/1de333734b1b7e0.m3u8", "$alkhalifitvBase/jowo.png", "Daerah"),
-
-        ChannelData("TVKU", "https://tvku.tv/hlsstream/hls/live.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Surabaya TV", "https://e.siar.us/live/surabayatv.m3u8", "https://static.wikia.nocookie.net/logopedia/images/f/fe/Surabaya_TV_2017.png", "Daerah"),
-        ChannelData("Stara TV", "https://stream.staratv.id/hls/0/stream.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Jawa Pos TV", "http://122.248.43.242:1935/JAWAPOSTVSBY/_definst_/myStream/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Jogja Istimewa TV", "http://103.255.15.222:1935/tv/jitv_720p/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-
-
-        ChannelData("Caruban TV", "https://stream.carubantv.id/hls/0/stream.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Dhoho TV", "https://dhohotv.siar.us/dhohotv/live/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-
-        ChannelData("Madu TV", "https://re1.siar.us/madutv/hd720/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Jogja TV", "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Banjar TV", "https://banjartv.siar.us/banjartv/live/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("RCTV", "https://v10.siar.us/rctv/live/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-
-
-
-        ChannelData("TATV", "https://tatv.siar.us/tatv/live.sdp/playlist.m3u8", "$iconBase/iptv.png", "Daerah"),
-        ChannelData("Dhamma TV", "https://b.webcache.maxindo.net.id/dhamma/dhamma.m3u8", "$iconBase/iptv.png", "Daerah"),
+    // TVRI configuration
+    private val tvriBaseUrl = "https://ott-balancer.tvri.go.id/live/eds"
+    private val tvriIcon = "$iconBase/tvri.png"
+    private val tvriWorldIcon = "$iconBase/tvriworld.png"
+    private val tvriSportIcon = "$iconBase/tvrisport.png"
+    private val tvriHeaders = mapOf(
+        "User-Agent" to "TVRIKLIK/7.0 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1"
     )
 
+    // MNC Group logo bases
+    private val mimipipiLogo = "https://mimipipi22.github.io/logo/nasional"
+
+    data class ChannelData(
+        val name: String,
+        val streamUrl: String,
+        val logoUrl: String,
+        val category: String,
+        val headers: Map<String, String> = emptyMap(),
+        val referer: String? = null,
+        val isUnstable: Boolean = false
+    )
+
+    // ==================== TVRI CHANNELS (35) ====================
+    private val tvriChannels = listOf(
+        ChannelData("TVRI Nasional", "$tvriBaseUrl/Nasional/hls/Nasional.m3u8", tvriIcon, "Nasional", tvriHeaders),
+        ChannelData("TVRI World", "$tvriBaseUrl/TVRIWorld/hls/TVRIWorld.m3u8", tvriWorldIcon, "Nasional", tvriHeaders),
+        ChannelData("TVRI Sport", "$tvriBaseUrl/SportHD/hls/SportHD.m3u8", tvriSportIcon, "Olahraga", tvriHeaders),
+        ChannelData("TVRI Aceh", "$tvriBaseUrl/Aceh/hls/Aceh.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Bali", "$tvriBaseUrl/Bali/hls/Bali.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Bangka Belitung", "$tvriBaseUrl/Babel/hls/Babel.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Bengkulu", "$tvriBaseUrl/Bengkulu/hls/Bengkulu.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI DIY", "$tvriBaseUrl/DIY/hls/DIY.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Gorontalo", "$tvriBaseUrl/Gorontalo/hls/Gorontalo.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Jakarta", "$tvriBaseUrl/DKI/hls/DKI.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Jambi", "$tvriBaseUrl/Jambi/hls/Jambi.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Jawa Barat", "$tvriBaseUrl/Jabar/hls/Jabar.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Jawa Tengah", "$tvriBaseUrl/Jateng/hls/Jateng.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Jawa Timur", "$tvriBaseUrl/Jatim/hls/Jatim.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Kalimantan Barat", "$tvriBaseUrl/Kalbar/hls/Kalbar.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Kalimantan Selatan", "$tvriBaseUrl/Kalsel/hls/Kalsel.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Kalimantan Tengah", "$tvriBaseUrl/Kalteng/hls/Kalteng.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Kalimantan Timur", "$tvriBaseUrl/Kaltim/hls/Kaltim.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Lampung", "$tvriBaseUrl/Lampung/hls/Lampung.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Maluku", "$tvriBaseUrl/Maluku/hls/Maluku.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Maluku Utara", "$tvriBaseUrl/Malut/hls/Malut.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI NTT", "$tvriBaseUrl/NTT/hls/NTT.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI NTB", "$tvriBaseUrl/NTB/hls/NTB.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Papua", "$tvriBaseUrl/Papua/hls/Papua.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Papua Barat", "$tvriBaseUrl/PapuaBarat/hls/PapuaBarat.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Riau", "$tvriBaseUrl/Riau/hls/Riau.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sulawesi Barat", "$tvriBaseUrl/Sulbar/hls/Sulbar.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sulawesi Selatan", "$tvriBaseUrl/Sulsel/hls/Sulsel.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sulawesi Tengah", "$tvriBaseUrl/Sulteng/hls/Sulteng.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sulawesi Tenggara", "$tvriBaseUrl/Sultra/hls/Sultra.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sulawesi Utara", "$tvriBaseUrl/Sulut/hls/Sulut.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sumatera Barat", "$tvriBaseUrl/Sumbar/hls/Sumbar.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sumatera Selatan", "$tvriBaseUrl/Sumsel/hls/Sumsel.m3u8", tvriIcon, "Daerah", tvriHeaders),
+        ChannelData("TVRI Sumatera Utara", "$tvriBaseUrl/Sumut/hls/Sumut.m3u8", tvriIcon, "Daerah", tvriHeaders),
+    )
+
+    // ==================== MNC GROUP - RCTI+ FTA (4) ====================
+    private val mncHeaders = mapOf(
+        "User-Agent" to "MNCNow/6.33.3 (Linux;Android 15.0.0;)ExoPlayerLib/2.19.1"
+    )
+
+    private val mncChannels = listOf(
+        ChannelData(
+            "RCTI",
+            "https://d35d0ifx19oopq.cloudfront.net/live/eds/rcti_fta/live_fta/rcti_fta.m3u8",
+            "$mimipipiLogo/rcti.jpg",
+            "Nasional",
+            headers = mncHeaders,
+            referer = "https://www.rctiplus.com/tv/rcti"
+        ),
+        ChannelData(
+            "MNCTV",
+            "https://d33j155pv2xyba.cloudfront.net/live/eds/mnctv_fta/live_fta/mnctv_fta.m3u8",
+            "$mimipipiLogo/mnctv.jpg",
+            "Nasional",
+            headers = mncHeaders,
+            referer = "https://www.rctiplus.com/tv/mnctv"
+        ),
+        ChannelData(
+            "GTV",
+            "https://d322b885qvsbxg.cloudfront.net/live/eds/gtv_fta/live_fta/gtv_fta.m3u8",
+            "$mimipipiLogo/gtv.jpg",
+            "Nasional",
+            headers = mncHeaders,
+            referer = "https://www.rctiplus.com/tv/gtv"
+        ),
+        ChannelData(
+            "iNews",
+            "https://d2hfpzcndkyscp.cloudfront.net/live/eds/INEWS_2021/live_fta/INEWS_2021.m3u8",
+            "$mimipipiLogo/inews.jpg",
+            "Berita",
+            headers = mncHeaders,
+            referer = "https://www.rctiplus.com/tv/inews"
+        ),
+    )
+
+    // ==================== OTHER NATIONAL CHANNELS (12) ====================
+    private val nationalChannels = listOf(
+        ChannelData("Trans TV", "https://livestream.transtv.co.id/stream/live/ttv.m3u8", "$iconBase/transtv.png", "Nasional", referer = "https://www.detik.com/"),
+        ChannelData("Trans7", "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8", "$iconBase/trans7.png", "Nasional", referer = "https://www.detik.com/"),
+        ChannelData("SCTV", "http://op-group1-swiftservehd-1.dens.tv/h/h217/02.m3u8", "https://images.useetv.com/logo_sctv_big1.png", "Nasional", headers = mapOf("User-Agent" to "DENSGO/3.00.00 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1"), referer = "http://dens.tv"),
+        ChannelData("Indosiar", "http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "https://images.useetv.com/logo_indosiar_big1.png", "Nasional", headers = mapOf("User-Agent" to "DENSGO/3.00.00 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1"), referer = "http://dens.tv"),
+        ChannelData("NET TV", "https://cdn-accedo-01.akamaized.net/Content/HLS/Live/channel(404d689d-691f-4035-9801-ae8bfd8712e9)/index.m3u8", "https://mimipipi22.github.io/logo/nasional/nettv.jpg", "Nasional"),
+        ChannelData("O Channel (Moji)", "https://kmklive-lh.akamaihd.net/i/ochannel_live@577566/master.m3u8", "$iconBase/moji.png", "Nasional"),
+        ChannelData("tvOne", "https://yt.urfan.web.id/stream/yNKvkPJl-tg/master.m3u8", "$iconBase/tvone.png", "Nasional", headers = mapOf("User-Agent" to "ExoPlayer/2.19.1 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1")),
+        ChannelData("ANTV", "http://210.210.155.35/qwr9ew/s/s07/index1.m3u8", "$iconBase/antv.png", "Nasional", headers = mapOf("User-Agent" to "ExoPlayer/2.19.1 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1"), isUnstable = true),
+        ChannelData("Mentari TV", "https://app-etslive-2.vidio.com/live/8237/master.m3u8", "$iconBase/mentaritv.png", "Nasional"),
+        ChannelData("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "$iconBase/magna.png", "Nasional"),
+        ChannelData("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "$iconBase/nusantaratv.png", "Nasional"),
+        ChannelData("Indonesiana TV", "https://tvstreamcast.com/indonesiana.m3u8", "$iconBase/indonesiana.png", "Nasional", referer = "https://indonesiana.tv/"),
+        ChannelData("Garuda TV", "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8", "$alkhalifitvBase/garudatv.png", "Nasional"),
+    )
+
+    // ==================== NEWS CHANNELS (6) ====================
+    private val newsChannels = listOf(
+        ChannelData("Metro TV", "https://yt.urfan.web.id/stream/XKueVSGTk2o/master.m3u8", "$iconBase/metrotv.png", "Berita"),
+        ChannelData("Kompas TV", "https://live-kg.jixie.media/live/kompastv.m3u8", "$iconBase/kompastv.png", "Berita"),
+        ChannelData("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "$iconBase/cnnindonesia.png", "Berita", referer = "https://www.cnnindonesia.com/"),
+        ChannelData("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "$iconBase/cnbcindonesia.png", "Berita", referer = "https://www.cnbcindonesia.com/"),
+        ChannelData("BTV", "https://btv.secureswiftcontent.com/han/btv/btv10005/srtoutput/manifest.m3u8", "https://mimipipi22.github.io/logo/nasional/btv.jpg", "Berita", referer = "https://www.beritasatu.com/btv-live-streaming"),
+        ChannelData("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "https://static.wikia.nocookie.net/logopedia/images/5/54/BN_Channel.png", "Berita"),
+    )
+
+    // ==================== KIDS CHANNELS (1) ====================
+    private val kidsChannels = listOf(
+        ChannelData("RTV", "https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8", "$iconBase/rtv.png", "Anak"),
+    )
+
+    // ==================== RELIGIOUS CHANNELS (4) ====================
+    private val religiousChannels = listOf(
+        ChannelData("Rodja TV", "https://rodjatv.com/rodjatv/live.m3u8", "$iconBase/rodjatv.png", "Religi"),
+        ChannelData("DAAI TV", "https://pull.daaiplus.com/live-DAAIPLUS/live-DAAIPLUS_HD.m3u8", "$iconBase/daaitv.png", "Religi"),
+        ChannelData("TV Mu", "https://e.siar.us/live/tvmu.m3u8", "$alkhalifitvBase/tvmu.png", "Religi"),
+        ChannelData("Al Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "https://upload.wikimedia.org/wikipedia/id/2/28/Logo_Al-Iman_TV.png", "Religi"),
+    )
+
+    // ==================== REGIONAL CHANNELS (12) ====================
+    private val regionalChannels = listOf(
+        ChannelData("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", "$iconBase/jtv.png", "Daerah", isUnstable = true),
+        ChannelData("JAKTV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8", "$alkhalifitvBase/jaktv.png", "Daerah"),
+        ChannelData("TVKU", "https://tvku.tv/hlsstream/hls/live.m3u8", genericIptv, "Daerah"),
+        ChannelData("Surabaya TV", "https://e.siar.us/live/surabayatv.m3u8", "https://static.wikia.nocookie.net/logopedia/images/f/fe/Surabaya_TV_2017.png", "Daerah"),
+        ChannelData("Caruban TV", "https://stream.carubantv.id/hls/0/stream.m3u8", genericIptv, "Daerah", referer = "https://stream.carubantv.id"),
+        ChannelData("Dhoho TV", "https://dhohotv.siar.us/dhohotv/live/playlist.m3u8", genericIptv, "Daerah"),
+        ChannelData("Madu TV", "https://re1.siar.us/madutv/hd720/playlist.m3u8", genericIptv, "Daerah"),
+        ChannelData("Jogja TV", "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8", genericIptv, "Daerah"),
+        ChannelData("Bali TV", "http://210.210.155.69/s/s82/S4/mnf.m3u8", genericIptv, "Daerah", isUnstable = true),
+        ChannelData("TATV", "https://tatv.siar.us/tatv/live.sdp/playlist.m3u8", genericIptv, "Daerah"),
+        ChannelData("Stara TV", "https://stream.staratv.id/hls/0/stream.m3u8", genericIptv, "Daerah"),
+        ChannelData("Jawa Pos TV", "http://122.248.43.242:1935/JAWAPOSTVSBY/_definst_/myStream/playlist.m3u8", genericIptv, "Daerah", isUnstable = true),
+    )
+
+    // ==================== JAPAN CHANNELS (keep existing) ====================
     private val japanBase = "https://akariko.netgenx.site/stream/jp"
     private val skyLogo = "https://www.skyperfectv.co.jp/library/common/img/channel/icon/basic"
     private val skyLogoPremium = "https://www.skyperfectv.co.jp/library/common/img/channel/icon/premium"
@@ -134,8 +228,6 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("MTV", "$japanBase/mtv/stream-output.m3u8?mode=hls", "$skyLogo/cs323.gif", "JEPANG"),
         ChannelData("Mnet", "$japanBase/mnet/stream-output.m3u8?mode=hls", "$skyLogo/cs318.gif", "JEPANG"),
         ChannelData("Super Drama TV", "$japanBase/super_drama_tv/stream-output.m3u8?mode=hls", "$skyLogoPremium/647.gif", "JEPANG"),
-
-
         ChannelData("NTV G+", "$japanBase/nittele_g+/stream-output.m3u8?mode=hls", "$skyLogo/cs257.gif", "JEPANG"),
         ChannelData("NTV Plus", "$japanBase/nittele_plus/stream-output.m3u8?mode=hls", "$skyLogo/cs300.gif", "JEPANG"),
         ChannelData("Family Gekijo", "$japanBase/family_gekijyo/stream-output.m3u8?mode=hls", "$skyLogo/cs293.gif", "JEPANG"),
@@ -151,71 +243,98 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("Discovery", "$japanBase/discovery_channel/stream-output.m3u8?mode=hls", "$skyLogo/cs340.gif", "JEPANG"),
         ChannelData("Animal Planet", "$japanBase/animal_planet/stream-output.m3u8?mode=hls", "$skyLogo/cs341.gif", "JEPANG"),
         ChannelData("History", "$japanBase/history/stream-output.m3u8?mode=hls", "$skyLogo/cs342.gif", "JEPANG"),
-
         ChannelData("BBC News", "$japanBase/bbc_news/stream-output.m3u8?mode=hls", "$skyLogo/cs353.gif", "JEPANG"),
         ChannelData("TBS News", "$japanBase/tbs_news/stream-output.m3u8?mode=hls", "$skyLogo/cs351.gif", "JEPANG"),
         ChannelData("NHK World Japan", "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUuAlkE08b3RI79ZRo0e4oe0nZm3NxnuYOIw&s", "JEPANG"),
     )
 
+    // ==================== KOREA CHANNELS ====================
     private val koreaChannels = listOf(
         ChannelData("Arirang TV", "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0cqd-JrliSDG0kvFFKk8IDV7UBJDgP9KDjg&s", "KOREA"),
         ChannelData("Arirang TV UN", "https://amdlive-ch02-ctnd-com.akamaized.net/arirang_2ch/smil:arirang_2ch.smil/playlist.m3u8", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwzZZcfmWhFjkbw4ljeVBALeIvi4zqZ94_w&s", "KOREA"),
         ChannelData("Arirang Radio", "https://amdlive-ch02-ctnd-com.akamaized.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyPS2HfHVb4Sr1DIRtyxyvQlkYVTj4ZMG4ow&s", "KOREA"),
-        ChannelData("ABN TV", "https://vod2.abn.co.kr/IPHONE/abn.m3u8", "$iconBase/iptv.png", "KOREA"),
-        ChannelData("BTN", "https://btn.nowcdn.co.kr/btn/btnlive2m/playlist.m3u8", "$iconBase/iptv.png", "KOREA"),
-        ChannelData("CJ OnStyle", "https://live-ch1.cjonstyle.net/cjmalllive/stream2/playlist.m3u8", "$iconBase/iptv.png", "KOREA"),
-
-        ChannelData("TVN", "https://op-group1-swiftservehd-1.dens.tv/h/h20/01.m3u8", "$iconBase/iptv.png", "KOREA"),
-        ChannelData("SBS", "http://1.222.207.80:1935/live/cjbtv/playlist.m3u8", "$iconBase/iptv.png", "KOREA"),
+        ChannelData("ABN TV", "https://vod2.abn.co.kr/IPHONE/abn.m3u8", genericIptv, "KOREA"),
+        ChannelData("BTN", "https://btn.nowcdn.co.kr/btn/btnlive2m/playlist.m3u8", genericIptv, "KOREA"),
+        ChannelData("CJ OnStyle", "https://live-ch1.cjonstyle.net/cjmalllive/stream2/playlist.m3u8", genericIptv, "KOREA"),
+        ChannelData("TVN", "https://op-group1-swiftservehd-1.dens.tv/h/h20/01.m3u8", genericIptv, "KOREA"),
+        ChannelData("SBS", "http://1.222.207.80:1935/live/cjbtv/playlist.m3u8", genericIptv, "KOREA"),
     )
 
+    // ==================== THAILAND CHANNELS ====================
     private val thailandChannels = listOf(
-        ChannelData("Channel 8", "http://vip.login.in.th:1935/ch8/ch8/playlist.m3u8", "$iconBase/iptv.png", "THAILAND"),
-
-        ChannelData("DLTV 1", "https://cdn-live.dltv.ac.th/dltv01.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 2", "https://cdn-live.dltv.ac.th/dltv02.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 3", "https://cdn-live.dltv.ac.th/dltv03.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 4", "https://cdn-live.dltv.ac.th/dltv04.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 5", "https://cdn-live.dltv.ac.th/dltv05.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 6", "https://cdn-live.dltv.ac.th/dltv06.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 7", "https://cdn-live.dltv.ac.th/dltv07.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 8", "https://cdn-live.dltv.ac.th/dltv08.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 9", "https://cdn-live.dltv.ac.th/dltv09.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 10", "https://cdn-live.dltv.ac.th/dltv10.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 11", "https://cdn-live.dltv.ac.th/dltv11.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 12", "https://cdn-live.dltv.ac.th/dltv12.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 13", "https://cdn-live.dltv.ac.th/dltv13.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 14", "https://cdn-live.dltv.ac.th/dltv14.m3u8", "$iconBase/iptv.png", "THAILAND"),
-        ChannelData("DLTV 15", "https://cdn-live.dltv.ac.th/dltv15.m3u8", "$iconBase/iptv.png", "THAILAND"),
+        ChannelData("Channel 8", "http://vip.login.in.th:1935/ch8/ch8/playlist.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 1", "https://cdn-live.dltv.ac.th/dltv01.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 2", "https://cdn-live.dltv.ac.th/dltv02.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 3", "https://cdn-live.dltv.ac.th/dltv03.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 4", "https://cdn-live.dltv.ac.th/dltv04.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 5", "https://cdn-live.dltv.ac.th/dltv05.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 6", "https://cdn-live.dltv.ac.th/dltv06.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 7", "https://cdn-live.dltv.ac.th/dltv07.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 8", "https://cdn-live.dltv.ac.th/dltv08.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 9", "https://cdn-live.dltv.ac.th/dltv09.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 10", "https://cdn-live.dltv.ac.th/dltv10.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 11", "https://cdn-live.dltv.ac.th/dltv11.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 12", "https://cdn-live.dltv.ac.th/dltv12.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 13", "https://cdn-live.dltv.ac.th/dltv13.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 14", "https://cdn-live.dltv.ac.th/dltv14.m3u8", genericIptv, "THAILAND"),
+        ChannelData("DLTV 15", "https://cdn-live.dltv.ac.th/dltv15.m3u8", genericIptv, "THAILAND"),
     )
 
+    // ==================== MALAYSIA CHANNELS ====================
     private val malaysiaChannels = listOf(
-
-        ChannelData("Astro Awani", "https://d2idp3hzkhjpih.cloudfront.net/out/v1/4b85d9c2bf97413eb0c9fd875599b837/index.m3u8?c", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("RTM Asean", "https://d25tgymtnqzu8s.cloudfront.net/event/smil:event1/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("APETITO", "https://d1sq2slp9afh7o.cloudfront.net/smil:apetito/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("AURA", "https://d1sq2slp9afh7o.cloudfront.net/smil:aura/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("FITRAH", "https://d1sq2slp9afh7o.cloudfront.net/smil:fitrah/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("JR.", "https://d1sq2slp9afh7o.cloudfront.net/smil:jr/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("LEAD", "https://d1sq2slp9afh7o.cloudfront.net/smil:lead/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("ROLL", "https://d1sq2slp9afh7o.cloudfront.net/smil:roll/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
-        ChannelData("SNAP", "https://d1sq2slp9afh7o.cloudfront.net/smil:snap/chunklist_b2596000_slENG.m3u8", "$iconBase/iptv.png", "MALAYSIA"),
+        ChannelData("Astro Awani", "https://d2idp3hzkhjpih.cloudfront.net/out/v1/4b85d9c2bf97413eb0c9fd875599b837/index.m3u8?c", genericIptv, "MALAYSIA"),
+        ChannelData("RTM Asean", "https://d25tgymtnqzu8s.cloudfront.net/event/smil:event1/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("APETITO", "https://d1sq2slp9afh7o.cloudfront.net/smil:apetito/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("AURA", "https://d1sq2slp9afh7o.cloudfront.net/smil:aura/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("FITRAH", "https://d1sq2slp9afh7o.cloudfront.net/smil:fitrah/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("JR.", "https://d1sq2slp9afh7o.cloudfront.net/smil:jr/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("LEAD", "https://d1sq2slp9afh7o.cloudfront.net/smil:lead/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("ROLL", "https://d1sq2slp9afh7o.cloudfront.net/smil:roll/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
+        ChannelData("SNAP", "https://d1sq2slp9afh7o.cloudfront.net/smil:snap/chunklist_b2596000_slENG.m3u8", genericIptv, "MALAYSIA"),
     )
 
+    // ==================== BRUNEI CHANNELS ====================
     private val bruneiChannels = listOf(
-        ChannelData("RTB Sukmaindera", "https://d1211whpimeups.cloudfront.net/smil:rtb1/chunklist.m3u8", "$iconBase/iptv.png", "BRUNEI"),
-        ChannelData("RTB Aneka", "https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist.m3u8", "$iconBase/iptv.png", "BRUNEI"),
-        ChannelData("RTB Go Live", "https://d1211whpimeups.cloudfront.net/smil:rtbgo/chunklist.m3u8", "$iconBase/iptv.png", "BRUNEI"),
+        ChannelData("RTB Sukmaindera", "https://d1211whpimeups.cloudfront.net/smil:rtb1/chunklist.m3u8", genericIptv, "BRUNEI"),
+        ChannelData("RTB Aneka", "https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist.m3u8", genericIptv, "BRUNEI"),
+        ChannelData("RTB Go Live", "https://d1211whpimeups.cloudfront.net/smil:rtbgo/chunklist.m3u8", genericIptv, "BRUNEI"),
     )
 
-    private val allChannels = indonesianChannels + japanChannels + koreaChannels + thailandChannels + malaysiaChannels + bruneiChannels
-
-    data class ChannelData(
-        val name: String,
-        val streamUrl: String,
-        val logoUrl: String,
-        val category: String
+    // ==================== SINGAPORE CHANNELS ====================
+    private val singaporeChannels = listOf(
+        ChannelData("Channel 5", "https://app.viloud.tv/hls/channel/dcbf7a54c89ba12d98cc7c401c37f565.m3u8", genericIptv, "SINGAPORE"),
+        ChannelData("Channel 8", "https://app.viloud.tv/hls/channel/57148804a268f59e0c1af0c1b67a2f7e.m3u8", genericIptv, "SINGAPORE"),
+        ChannelData("Channel U", "https://app.viloud.tv/hls/channel/aaf404bee904cff424bb5d1f6fdf9333.m3u8", genericIptv, "SINGAPORE"),
     )
+
+    // ==================== PHILIPPINES CHANNELS ====================
+    private val philippinesChannels = listOf(
+        ChannelData("GMA 7", "https://catty.wtf/kapuso/stream/index.m3u8", genericIptv, "FILIPINA"),
+        ChannelData("Hope Channel PH", "https://jstre.am/live/jsl:7A1swL7Fhlh.m3u8", genericIptv, "FILIPINA"),
+        ChannelData("UNTV", "https://cdn.untvweb.com/live-stream/untvweb.m3u8", genericIptv, "FILIPINA"),
+    )
+
+    // ==================== HELPER FUNCTIONS ====================
+    private fun createHeaders(userAgent: String, referer: String? = null): Map<String, String> {
+        val headers = mutableMapOf<String, String>()
+        headers["User-Agent"] = userAgent
+        if (referer != null) {
+            headers["Referer"] = referer
+        }
+        return headers
+    }
+
+    private fun getChannelByName(name: String): ChannelData? {
+        return allChannels.find { it.name.equals(name, ignoreCase = true) }
+    }
+
+    private fun getChannelsByCategory(category: String): List<ChannelData> {
+        return if (category == "Semua") allChannels
+        else allChannels.filter { it.category.equals(category, ignoreCase = true) }
+    }
+
+    // ==================== ALL CHANNELS ====================
+    private val allChannels = tvriChannels + mncChannels + nationalChannels + newsChannels + kidsChannels + religiousChannels + regionalChannels + japanChannels + koreaChannels + thailandChannels + malaysiaChannels + bruneiChannels + singaporeChannels + philippinesChannels
 
     override val mainPage = mainPageOf(
         "Semua" to "Semua Channel",
@@ -225,11 +344,13 @@ class IndonesianIPTVProvider : MainAPI() {
         "Anak" to "TV Anak",
         "Religi" to "TV Religi",
         "Daerah" to "TV Daerah",
-        "JEPANG" to "Jepang",
-        "KOREA" to "Korea Selatan",
-        "THAILAND" to "Thailand",
-        "MALAYSIA" to "Malaysia",
-        "BRUNEI" to "Brunei"
+        "JEPANG" to "TV Jepang",
+        "KOREA" to "TV Korea",
+        "THAILAND" to "TV Thailand",
+        "MALAYSIA" to "TV Malaysia",
+        "BRUNEI" to "TV Brunei",
+        "SINGAPORE" to "TV Singapura",
+        "FILIPINA" to "TV Filipina"
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
@@ -245,9 +366,10 @@ class IndonesianIPTVProvider : MainAPI() {
 
         val home = pageChannels.mapIndexed { i, channel ->
             val channelNumber = if (request.data == "Semua") globalIndex + i
-                else filteredChannels.indexOf(channel) + 1
+            else filteredChannels.indexOf(channel) + 1
+            val unstableTag = if (channel.isUnstable) " [Unstable]" else ""
             newLiveSearchResponse(
-                name = "#${channelNumber} ${channel.name}",
+                name = "#${channelNumber} ${channel.name}$unstableTag",
                 url = channel.streamUrl,
                 type = TvType.Live
             ) {
@@ -273,8 +395,9 @@ class IndonesianIPTVProvider : MainAPI() {
             it.category.contains(query, ignoreCase = true)
         }.map { channel ->
             val channelNumber = allChannels.indexOf(channel) + 1
+            val unstableTag = if (channel.isUnstable) " [Unstable]" else ""
             newLiveSearchResponse(
-                name = "#${channelNumber} ${channel.name}",
+                name = "#${channelNumber} ${channel.name}$unstableTag",
                 url = channel.streamUrl,
                 type = TvType.Live
             ) {
@@ -314,13 +437,24 @@ class IndonesianIPTVProvider : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        if (data.isNotEmpty()) {
-            callback.invoke(
-                newExtractorLink(this.name, this.name, data) {
-                    this.quality = Qualities.P1080.value
-                }
-            )
+        if (data.isEmpty()) return true
+
+        val channel = allChannels.find { it.streamUrl == data }
+        val finalHeaders = buildMap {
+            putAll(channel?.headers ?: emptyMap())
+            channel?.referer?.let { put("Referer", it) }
         }
+
+        callback.invoke(
+            newExtractorLink(
+                source = this.name,
+                name = channel?.name ?: this.name,
+                url = data,
+                headers = finalHeaders
+            ) {
+                this.quality = Qualities.P1080.value
+            }
+        )
         return true
     }
 }

@@ -1,189 +1,193 @@
 # 🇮🇩 Indonesian IPTV Extension for CloudStream
 
-Extension CloudStream yang menyediakan **140 channel** dari Indonesia, Jepang, Korea, Thailand, Malaysia, dan Brunei langsung dari player CloudStream.
+Extension CloudStream yang menyediakan **83 channel** dari Indonesia, Jepang, Korea, Thailand, Malaysia, Brunei, Singapura, dan Filipina langsung dari player CloudStream.
 
 ## ✨ Fitur
 
 | Fitur | Keterangan |
 |-------|-----------|
-| 📺 **140 Channel** | 12 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah, Jepang, Korea, Thailand, Malaysia, Brunei |
+| 📺 **83 Channel** | 14 kategori: Nasional, Berita, Olahraga, Anak, Religi, Daerah, Jepang, Korea, Thailand, Malaysia, Brunei, Singapura, Filipina |
 | 🔄 **Navigasi Channel** | Ganti channel dengan tombol ◀ ▶ tanpa keluar player |
 | 🖼️ **Logo Channel** | Setiap channel punya logo sendiri |
 | 📡 **HLS Stream** | Semua sumber menggunakan HLS |
 | 📱 **CloudStream Native** | Full integration dengan CloudStream |
 | 🔢 **Paginasi** | List channel per halaman (20 channel per halaman) |
+| ⚠️ **Unstable Tag** | Channel dengan sumber tidak stabil ditandai [Unstable] |
 
 ## 📡 Daftar Channel
 
-### 🇮🇩 Indonesia (1-48)
+### 🇮🇩 Indonesia - TVRI (34 channel)
 
 | # | Channel | Kategori |
 |---|---------|----------|
 | 1 | TVRI Nasional | Nasional |
 | 2 | TVRI World | Nasional |
-| 3 | ANTV | Nasional |
-| 4 | Trans TV | Nasional |
-| 5 | Trans7 | Nasional |
-| 6 | Metro TV | Nasional |
-| 7 | tvOne | Nasional |
-| 8 | MDTV | Nasional |
-| 9 | MOJI | Nasional |
-| 10 | Magna Channel | Nasional |
-| 11 | Nusantara TV | Nasional |
-| 12 | Garuda TV | Nasional |
-| 13 | Kompas TV | Berita |
-| 14 | CNN Indonesia | Berita |
-| 15 | CNBC Indonesia | Berita |
-| 16 | BN Channel | Berita |
-| 17 | TVRI Sport | Olahraga |
-| 18 | SPOTV | Olahraga |
-| 19 | SPOTV2 | Olahraga |
-| 20 | Motorvision TV | Olahraga |
-| 21 | RTV | Anak |
-| 22 | Biznet Kids | Anak |
-| 23 | Animax | Anak |
-| 24 | Rodja TV | Religi |
-| 25 | DAAI TV | Religi |
-| 26 | RRI Net | Religi |
-| 27 | TV Mu | Religi |
-| 28 | Al Iman TV | Religi |
-| 29 | Salam TV | Religi |
-| 30 | MQTV | Religi |
-| 31 | WesalTV | Religi |
-| 32 | AshillTV | Religi |
-| 33 | JTV | Daerah |
-| 34 | JAKTV | Daerah |
-| 35 | Jowo Channel | Daerah |
-| 36 | TVKU | Daerah |
-| 37 | Surabaya TV | Daerah |
-| 38 | Stara TV | Daerah |
-| 39 | Jawa Pos TV | Daerah |
-| 40 | Jogja Istimewa TV | Daerah |
-| 41 | Caruban TV | Daerah |
-| 42 | Dhoho TV | Daerah |
-| 43 | Madu TV | Daerah |
-| 44 | Jogja TV | Daerah |
-| 45 | Banjar TV | Daerah |
-| 46 | RCTV | Daerah |
-| 47 | TATV | Daerah |
-| 48 | Dhamma TV | Daerah |
+| 3 | TVRI Sport | Olahraga |
+| 4 | TVRI Aceh | Daerah |
+| 5 | TVRI Bali | Daerah |
+| 6 | TVRI Bangka Belitung | Daerah |
+| 7 | TVRI Bengkulu | Daerah |
+| 8 | TVRI DIY | Daerah |
+| 9 | TVRI Gorontalo | Daerah |
+| 10 | TVRI Jakarta | Daerah |
+| 11 | TVRI Jambi | Daerah |
+| 12 | TVRI Jawa Barat | Daerah |
+| 13 | TVRI Jawa Tengah | Daerah |
+| 14 | TVRI Jawa Timur | Daerah |
+| 15 | TVRI Kalimantan Barat | Daerah |
+| 16 | TVRI Kalimantan Selatan | Daerah |
+| 17 | TVRI Kalimantan Tengah | Daerah |
+| 18 | TVRI Kalimantan Timur | Daerah |
+| 19 | TVRI Lampung | Daerah |
+| 20 | TVRI Maluku | Daerah |
+| 21 | TVRI Maluku Utara | Daerah |
+| 22 | TVRI NTT | Daerah |
+| 23 | TVRI NTB | Daerah |
+| 24 | TVRI Papua | Daerah |
+| 25 | TVRI Papua Barat | Daerah |
+| 26 | TVRI Riau | Daerah |
+| 27 | TVRI Sulawesi Barat | Daerah |
+| 28 | TVRI Sulawesi Selatan | Daerah |
+| 29 | TVRI Sulawesi Tengah | Daerah |
+| 30 | TVRI Sulawesi Tenggara | Daerah |
+| 31 | TVRI Sulawesi Utara | Daerah |
+| 32 | TVRI Sumatera Barat | Daerah |
+| 33 | TVRI Sumatera Selatan | Daerah |
+| 34 | TVRI Sumatera Utara | Daerah |
 
-### 🇯🇵 Jepang (49-104)
+### 🇮🇩 Indonesia - MNC Group (4 channel)
 
 | # | Channel | Kategori |
 |---|---------|----------|
-| 49 | NHK G | Jepang |
-| 50 | NHK E | Jepang |
-| 51 | NTV | Jepang |
-| 52 | TV Asahi | Jepang |
-| 53 | TBS | Jepang |
-| 54 | TV Tokyo | Jepang |
-| 55 | Fuji TV | Jepang |
-| 56 | Tokyo MX1 | Jepang |
-| 57 | Tokyo MX2 | Jepang |
-| 58 | NHK BS | Jepang |
-| 59 | BS NTV | Jepang |
-| 60 | BS Asahi | Jepang |
-| 61 | BS TBS | Jepang |
-| 62 | BS TV Tokyo | Jepang |
-| 63 | BS Fuji | Jepang |
-| 64 | BS 10 | Jepang |
-| 65 | BS 11 | Jepang |
-| 66 | BS 12 | Jepang |
-| 67 | NHK BS4K | Jepang |
-| 68 | WOWOW Prime | Jepang |
-| 69 | WOWOW Cinema | Jepang |
-| 70 | WOWOW Live | Jepang |
-| 71 | WOWOW Plus | Jepang |
-| 72 | BS 10 Premium | Jepang |
-| 73 | JSport 1 | Jepang |
-| 74 | JSport 2 | Jepang |
-| 75 | JSport 3 | Jepang |
-| 76 | JSport 4 | Jepang |
-| 77 | Green Channel | Jepang |
-| 78 | Nihon Eiga Senmon | Jepang |
-| 79 | Fishing Vision | Jepang |
-| 80 | Disney Channel | Jepang |
-| 81 | GAORA | Jepang |
-| 82 | AT-X | Jepang |
-| 83 | Space Shower TV | Jepang |
-| 84 | MTV | Jepang |
-| 85 | Mnet | Jepang |
-| 86 | Super Drama TV | Jepang |
-| 87 | NTV G+ | Jepang |
-| 88 | NTV Plus | Jepang |
-| 89 | Family Gekijo | Jepang |
-| 90 | TBS Channel 1 | Jepang |
-| 91 | TBS Channel 2 | Jepang |
-| 92 | TV Asahi Ch 1 | Jepang |
-| 93 | TV Asahi Ch 2 | Jepang |
-| 94 | Fuji TV One | Jepang |
-| 95 | Fuji TV Two | Jepang |
-| 96 | Fuji TV Next | Jepang |
-| 97 | NTV News24 | Jepang |
-| 98 | National Geographic | Jepang |
-| 99 | Discovery | Jepang |
-| 100 | Animal Planet | Jepang |
-| 101 | History | Jepang |
-| 102 | BBC News | Jepang |
-| 103 | TBS News | Jepang |
-| 104 | NHK World Japan | Jepang |
+| 35 | RCTI | Nasional |
+| 36 | MNCTV | Nasional |
+| 37 | GTV | Nasional |
+| 38 | iNews | Berita |
 
-### 🇰🇷 Korea (105-112)
+### 🇮🇩 Indonesia - Nasional (13 channel)
 
 | # | Channel | Kategori |
 |---|---------|----------|
-| 105 | Arirang TV | Korea |
-| 106 | Arirang TV UN | Korea |
-| 107 | Arirang Radio | Korea |
-| 108 | ABN TV | Korea |
-| 109 | BTN | Korea |
-| 110 | CJ OnStyle | Korea |
-| 111 | TVN | Korea |
-| 112 | SBS | Korea |
+| 39 | Trans TV | Nasional |
+| 40 | Trans7 | Nasional |
+| 41 | SCTV | Nasional |
+| 42 | Indosiar | Nasional |
+| 43 | NET TV | Nasional |
+| 44 | O Channel (Moji) | Nasional |
+| 45 | tvOne | Nasional |
+| 46 | ANTV ⚠️ | Nasional |
+| 47 | Mentari TV | Nasional |
+| 48 | Magna Channel | Nasional |
+| 49 | Nusantara TV | Nasional |
+| 50 | Indonesiana TV | Nasional |
+| 51 | Garuda TV | Nasional |
 
-### 🇹🇭 Thailand (113-128)
-
-| # | Channel | Kategori |
-|---|---------|----------|
-| 113 | Channel 8 | Thailand |
-| 114 | DLTV 1 | Thailand |
-| 115 | DLTV 2 | Thailand |
-| 116 | DLTV 3 | Thailand |
-| 117 | DLTV 4 | Thailand |
-| 118 | DLTV 5 | Thailand |
-| 119 | DLTV 6 | Thailand |
-| 120 | DLTV 7 | Thailand |
-| 121 | DLTV 8 | Thailand |
-| 122 | DLTV 9 | Thailand |
-| 123 | DLTV 10 | Thailand |
-| 124 | DLTV 11 | Thailand |
-| 125 | DLTV 12 | Thailand |
-| 126 | DLTV 13 | Thailand |
-| 127 | DLTV 14 | Thailand |
-| 128 | DLTV 15 | Thailand |
-
-### 🇲🇾 Malaysia (129-137)
+### 🇮🇩 Indonesia - Berita (6 channel)
 
 | # | Channel | Kategori |
 |---|---------|----------|
-| 129 | Astro Awani | Malaysia |
-| 130 | RTM Asean | Malaysia |
-| 131 | APETITO | Malaysia |
-| 132 | AURA | Malaysia |
-| 133 | FITRAH | Malaysia |
-| 134 | JR. | Malaysia |
-| 135 | LEAD | Malaysia |
-| 136 | ROLL | Malaysia |
-| 137 | SNAP | Malaysia |
+| 52 | Metro TV | Berita |
+| 53 | Kompas TV | Berita |
+| 54 | CNN Indonesia | Berita |
+| 55 | CNBC Indonesia | Berita |
+| 56 | BTV | Berita |
+| 57 | BN Channel | Berita |
 
-### 🇧🇳 Brunei (138-140)
+### 🇮🇩 Indonesia - Anak & Religi (5 channel)
 
 | # | Channel | Kategori |
 |---|---------|----------|
-| 138 | RTB Sukmaindera | Brunei |
-| 139 | RTB Aneka | Brunei |
-| 140 | RTB Go Live | Brunei |
+| 58 | RTV | Anak |
+| 59 | Rodja TV | Religi |
+| 60 | DAAI TV | Religi |
+| 61 | TV Mu | Religi |
+| 62 | Al Iman TV | Religi |
+
+### 🇮🇩 Indonesia - Daerah (12 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| 63 | JTV ⚠️ | Daerah |
+| 64 | JAKTV | Daerah |
+| 65 | TVKU | Daerah |
+| 66 | Surabaya TV | Daerah |
+| 67 | Caruban TV | Daerah |
+| 68 | Dhoho TV | Daerah |
+| 69 | Madu TV | Daerah |
+| 70 | Jogja TV | Daerah |
+| 71 | Bali TV ⚠️ | Daerah |
+| 72 | TATV | Daerah |
+| 73 | Stara TV | Daerah |
+| 74 | Jawa Pos TV ⚠️ | Daerah |
+
+### 🇯🇵 Jepang (12 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| 75 | NHK G | Jepang |
+| 76 | NHK E | Jepang |
+| 77 | NTV | Jepang |
+| 78 | TV Asahi | Jepang |
+| 79 | TBS | Jepang |
+| 80 | TV Tokyo | Jepang |
+| 81 | Fuji TV | Jepang |
+| 82 | Tokyo MX1 | Jepang |
+| 83 | Tokyo MX2 | Jepang |
+| 84 | NHK BS | Jepang |
+| 85 | NHK World Japan | Jepang |
+
+> Dan 45+ channel Jepang lainnya (BS, WOWOW, JSport, dll)
+
+### 🇰🇷 Korea (8 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| - | Arirang TV | Korea |
+| - | Arirang TV UN | Korea |
+| - | ABN TV | Korea |
+| - | BTN | Korea |
+| - | CJ OnStyle | Korea |
+| - | TVN | Korea |
+| - | SBS | Korea |
+
+### 🇹🇭 Thailand (16 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| - | Channel 8 | Thailand |
+| - | DLTV 1-15 | Thailand |
+
+### 🇲🇾 Malaysia (9 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| - | Astro Awani | Malaysia |
+| - | RTM Asean | Malaysia |
+| - | APETITO, AURA, FITRAH, JR., LEAD, ROLL, SNAP | Malaysia |
+
+### 🇧🇳 Brunei (3 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| - | RTB Sukmaindera | Brunei |
+| - | RTB Aneka | Brunei |
+| - | RTB Go Live | Brunei |
+
+### 🇸🇬 Singapura (3 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| - | Channel 5 | Singapura |
+| - | Channel 8 | Singapura |
+| - | Channel U | Singapura |
+
+### 🇵🇭 Filipina (3 channel)
+
+| # | Channel | Kategori |
+|---|---------|----------|
+| - | GMA 7 | Filipina |
+| - | Hope Channel PH | Filipina |
+| - | UNTV | Filipina |
 
 ## 📲 Instalasi
 
@@ -194,8 +198,6 @@ Extension CloudStream yang menyediakan **140 channel** dari Indonesia, Jepang, K
    https://raw.githubusercontent.com/Gintama4141/IPTV-extension/main/repo.json
    ```
 4. Install **Indonesian IPTV**
-
-Atau gunakan shortcode: (sesuai ketersediaan di CloudStream)
 
 ## 🛠️ Build Lokal
 
@@ -213,11 +215,21 @@ Hasil build otomatis melalui **GitHub Actions** dan dipush ke branch `builds`:
 
 ## 📚 Sumber Stream
 
-- [iptv-org/iptv](https://github.com/iptv-org/iptv)
-- [alkhalifitv/TV](https://github.com/alkhalifitv/TV)
-- [riotryulianto/iptv-playlists](https://github.com/riotryulianto/iptv-playlists)
-- [dens.tv](https://dens.tv)
-- [akariko.netgenx.site](https://akariko.netgenx.site) (JP relay)
+| Sumber | Keterangan |
+|--------|------------|
+| TVRI | Official government broadcaster (ott-balancer.tvri.go.id) |
+| MNC Group | FTA via CloudFront CDN |
+| Vidio/Akamai | SCTV, Indosiar, Mentari TV |
+| dens.tv | Proxy for multiple channels |
+| iptv-org | International channel collection |
+| akariko.netgenx.site | Japan channel relay |
+
+## ⚠️ Catatan
+
+- Channel bertanda ⚠️ memiliki sumber yang tidak stabil
+- Semua channel bersifat **Free-To-Air (FTA)** dan legal
+- Tidak ada DRM atau konten berbayar
+- TVRI menyiarkan Piala Dunia 2026 secara gratis
 
 ## 📄 Lisensi
 
