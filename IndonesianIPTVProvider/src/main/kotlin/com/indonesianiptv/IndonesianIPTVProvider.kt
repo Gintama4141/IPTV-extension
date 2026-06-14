@@ -376,6 +376,7 @@ class IndonesianIPTVProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         if (data.isEmpty()) return true
+        if (data.startsWith(tvriFolderPrefix)) return true
 
         val channel = allChannels.find { it.streamUrl == data }
         val finalHeaders = buildMap {
