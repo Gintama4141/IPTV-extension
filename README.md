@@ -57,22 +57,6 @@ Hasil build otomatis melalui **GitHub Actions** dan dipush ke branch `builds`:
 - `IndonesianIPTVProvider.cs3`
 - `plugins.json`
 
-## 📚 Sumber Stream
-
-| Sumber | Keterangan |
-|--------|------------|
-| TVRI | Official government broadcaster |
-| MNC Group | FTA via CloudFront CDN |
-| Vidio/Akamai | SCTV, Indosiar, Mentari TV |
-| iptv-org | International channel collection |
-| Multi-source M3U | 4 playlist aggregator Indonesia |
-
-## ⚠️ Catatan
-
-- Semua channel bersifat **Free-To-Air (FTA)** dan legal
-- Tidak ada DRM atau konten berbayar
-- Channel dari M3U aggregation ditambahkan otomatis sesuai kategori
-
 ## 📄 Lisensi
 
 Public Domain — Gunakan dengan bijak.
