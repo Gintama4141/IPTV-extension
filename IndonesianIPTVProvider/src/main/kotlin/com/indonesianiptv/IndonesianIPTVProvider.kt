@@ -12,7 +12,7 @@ class IndonesianIPTVProvider : MainAPI() {
     override val supportedTypes = setOf(TvType.Live, TvType.TvSeries)
 
     companion object {
-        private const val ITEMS_PER_PAGE = 20
+        private const val ITEMS_PER_PAGE = 10
     }
 
     private fun getPageChannels(channels: List<ChannelData>, page: Int): List<ChannelData> {
@@ -37,9 +37,6 @@ class IndonesianIPTVProvider : MainAPI() {
 
     // MNC logo base
     private val mimipipiLogo = "https://mimipipi22.github.io/logo/nasional"
-
-    // Folder icon
-    private val folderBase = "$iconBase/iptv.png"
 
     data class ChannelData(
         val name: String,
@@ -90,7 +87,7 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("TVRI Sumatera Utara", "$tvriBaseUrl/Sumut/hls/Sumut.m3u8", tvriIcon, "TVRI", "Daerah", tvriHeaders),
     )
 
-    // ==================== MNC GROUP - RCTI+ FTA (3) ====================
+    // ==================== MNC GROUP - RCTI+ FTA (4) ====================
     private val mncHeaders = mapOf(
         "User-Agent" to "MNCNow/6.33.3 (Linux;Android 15.0.0;)ExoPlayerLib/2.19.1"
     )
@@ -99,6 +96,7 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("RCTI", "https://d35d0ifx19oopq.cloudfront.net/live/eds/rcti_fta/live_fta/rcti_fta.m3u8", "$mimipipiLogo/rcti.jpg", "MNC", headers = mncHeaders, referer = "https://www.rctiplus.com/tv/rcti"),
         ChannelData("MNCTV", "https://d33j155pv2xyba.cloudfront.net/live/eds/mnctv_fta/live_fta/mnctv_fta.m3u8", "$mimipipiLogo/mnctv.jpg", "MNC", headers = mncHeaders, referer = "https://www.rctiplus.com/tv/mnctv"),
         ChannelData("GTV", "https://d322b885qvsbxg.cloudfront.net/live/eds/gtv_fta/live_fta/gtv_fta.m3u8", "$mimipipiLogo/gtv.jpg", "MNC", headers = mncHeaders, referer = "https://www.rctiplus.com/tv/gtv"),
+        ChannelData("iNews", "https://d2hfpzcndkyscp.cloudfront.net/live/eds/INEWS_2021/live_fta/INEWS_2021.m3u8", "$mimipipiLogo/inews.jpg", "MNC", headers = mncHeaders, referer = "https://www.rctiplus.com/tv/inews"),
     )
 
     // ==================== NASIONAL CHANNELS (12) ====================
@@ -118,7 +116,7 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("Garuda TV", "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8", "$alkhalifitvBase/garudatv.png", "NASIONAL"),
     )
 
-    // ==================== BERITA CHANNELS (7) ====================
+    // ==================== BERITA CHANNELS (6) ====================
     private val newsChannels = listOf(
         ChannelData("Metro TV", "https://yt.urfan.web.id/stream/XKueVSGTk2o/master.m3u8", "$iconBase/metrotv.png", "BERITA"),
         ChannelData("Kompas TV", "https://live-kg.jixie.media/live/kompastv.m3u8", "$iconBase/kompastv.png", "BERITA"),
@@ -126,7 +124,6 @@ class IndonesianIPTVProvider : MainAPI() {
         ChannelData("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "$iconBase/cnbcindonesia.png", "BERITA", referer = "https://www.cnbcindonesia.com/"),
         ChannelData("BTV", "https://btv.secureswiftcontent.com/han/btv/btv10005/srtoutput/manifest.m3u8", "https://mimipipi22.github.io/logo/nasional/btv.jpg", "BERITA", referer = "https://www.beritasatu.com/btv-live-streaming"),
         ChannelData("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "https://static.wikia.nocookie.net/logopedia/images/5/54/BN_Channel.png", "BERITA"),
-        ChannelData("iNews", "https://d2hfpzcndkyscp.cloudfront.net/live/eds/INEWS_2021/live_fta/INEWS_2021.m3u8", "$mimipipiLogo/inews.jpg", "BERITA", headers = mncHeaders, referer = "https://www.rctiplus.com/tv/inews"),
     )
 
     // ==================== ANAK & RELIGI CHANNELS (5) ====================
@@ -244,9 +241,6 @@ class IndonesianIPTVProvider : MainAPI() {
     // ==================== ALL CHANNELS ====================
     private val allChannels = tvriChannels + mncChannels + nationalChannels + newsChannels + kidsReligiousChannels + regionalChannels + japanChannels + koreaChannels + thailandChannels + malaysiaChannels + bruneiChannels + singaporeChannels + philippinesChannels
 
-    // ==================== TVRI FOLDER PREFIX ====================
-    private val tvriFolderPrefix = "__TVRI_SUB__"
-
     override val mainPage = mainPageOf(
         "TVRI" to "Indonesia - TVRI",
         "MNC" to "Indonesia - MNC",
@@ -264,25 +258,6 @@ class IndonesianIPTVProvider : MainAPI() {
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        if (request.data == "TVRI") {
-            val nasionalCount = tvriChannels.count { it.subCategory == "Nasional" }
-            val olahragaCount = tvriChannels.count { it.subCategory == "Olahraga" }
-            val daerahCount = tvriChannels.count { it.subCategory == "Daerah" }
-
-            val folders = listOf(
-                Triple("${tvriFolderPrefix}Nasional", "Nasional ($nasionalCount)", tvriIcon),
-                Triple("${tvriFolderPrefix}Olahraga", "Olahraga ($olahragaCount)", tvriSportIcon),
-                Triple("${tvriFolderPrefix}Daerah", "Daerah ($daerahCount)", tvriIcon),
-            ).map { (data, name, icon) ->
-                newLiveSearchResponse(name, data, TvType.Live) { this.posterUrl = icon }
-            }
-
-            return newHomePageResponse(
-                list = HomePageList(name = "Indonesia - TVRI", list = folders, isHorizontalImages = false),
-                hasNext = false
-            )
-        }
-
         val channels = getChannelsByGroup(request.data)
         val pageChannels = getPageChannels(channels, page)
         val home = pageChannels.mapIndexed { i, channel ->
@@ -320,29 +295,6 @@ class IndonesianIPTVProvider : MainAPI() {
     }
 
     override suspend fun load(url: String): LoadResponse {
-        if (url.startsWith(tvriFolderPrefix)) {
-            val subCat = url.removePrefix(tvriFolderPrefix)
-            val channels = tvriChannels.filter { it.subCategory == subCat }
-            val episodes = channels.mapIndexed { i, ch ->
-                newEpisode(ch.streamUrl) {
-                    name = ch.name
-                    episode = i
-                    posterUrl = ch.logoUrl
-                    description = ch.subCategory
-                }
-            }
-            return newTvSeriesLoadResponse(
-                name = "TVRI $subCat",
-                url = url,
-                type = TvType.TvSeries,
-                episodes = episodes
-            ) {
-                this.posterUrl = tvriIcon
-                this.plot = "TVRI $subCat - ${channels.size} channels"
-                this.uniqueUrl = url
-            }
-        }
-
         val channel = allChannels.find { it.streamUrl == url } ?: allChannels.first()
         val sameGroupChannels = allChannels.filter { it.group == channel.group }
         val orderedChannels = listOf(channel) + sameGroupChannels.filter { it.streamUrl != url }
@@ -351,7 +303,7 @@ class IndonesianIPTVProvider : MainAPI() {
                 name = ch.name
                 episode = i
                 posterUrl = ch.logoUrl
-                description = ch.group
+                description = ch.subCategory ?: ch.group
             }
         }
 
@@ -360,7 +312,7 @@ class IndonesianIPTVProvider : MainAPI() {
         return newTvSeriesLoadResponse(
             name = "#${channelNumber} ${channel.name}",
             url = url,
-            type = TvType.Live,
+            type = TvType.TvSeries,
             episodes = episodes
         ) {
             this.posterUrl = channel.logoUrl
@@ -376,7 +328,6 @@ class IndonesianIPTVProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         if (data.isEmpty()) return true
-        if (data.startsWith(tvriFolderPrefix)) return true
 
         val channel = allChannels.find { it.streamUrl == data }
         val finalHeaders = buildMap {
