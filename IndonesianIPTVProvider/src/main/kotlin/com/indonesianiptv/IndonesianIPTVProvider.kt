@@ -450,9 +450,9 @@ class IndonesianIPTVProvider : MainAPI() {
                 source = this.name,
                 name = channel?.name ?: this.name,
                 url = data,
-                headers = finalHeaders
             ) {
                 this.quality = Qualities.P1080.value
+                this.headers = finalHeaders
             }
         )
         return true
