@@ -1,4 +1,4 @@
-version = 33
+version = 34
 
 cloudstream {
     description = "300+ FTA Live TV — 10 kategori Indonesia + 20 negara internasional"

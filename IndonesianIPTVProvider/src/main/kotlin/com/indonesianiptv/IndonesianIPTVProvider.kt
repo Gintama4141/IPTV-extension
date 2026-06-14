@@ -152,7 +152,7 @@ class IndonesianIPTVProvider : MainAPI() {
             name = channel.name,
             url = url,
             dataUrl = url
-        ) { this.posterUrl = channel.tvgLogo }
+        ) { this.posterUrl = Constants.resolveLogo(channel.name, channel.tvgId, channel.tvgLogo) }
     }
 
     override suspend fun loadLinks(
@@ -179,7 +179,7 @@ class IndonesianIPTVProvider : MainAPI() {
     private fun Constants.CategorizedChannel.toSearchResponse() = newLiveSearchResponse(
         name = name,
         url = url
-    ) { this.posterUrl = tvgLogo }
+    ) { this.posterUrl = Constants.resolveLogo(name, tvgId, tvgLogo) }
 
     private fun parseQualityInt(q: String?): Int {
         if (q == null) return -1

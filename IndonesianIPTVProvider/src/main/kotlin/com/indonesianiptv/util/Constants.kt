@@ -222,43 +222,82 @@ object Constants {
         CategorizedChannel("UNTV", "https://cdn.untvweb.com/live-stream/untvweb.m3u8", "PH", quality = 720)
     )
 
-    // TVRI channels categorized for IndonesiaTVProvider
     val TVRI_CATEGORIZED = listOf(
-        CategorizedChannel("TVRI Nasional", "$TVRI_BASE/Nasional/hls/Nasional.m3u8", "Nasional", tvgId = "TVRI.id", tvgLogo = CATEGORY_ICONS["Nasional"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI World", "$TVRI_BASE/TVRIWorld/hls/TVRIWorld.m3u8", "Nasional", tvgId = "TVRIWorld.id", tvgLogo = CATEGORY_ICONS["Nasional"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sport", "$TVRI_BASE/SportHD/hls/SportHD.m3u8", "Olahraga", tvgId = "TVRISport.id", tvgLogo = CATEGORY_ICONS["Olahraga"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Aceh", "$TVRI_BASE/Aceh/hls/Aceh.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Bali", "$TVRI_BASE/Bali/hls/Bali.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Bangka Belitung", "$TVRI_BASE/Babel/hls/Babel.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Bengkulu", "$TVRI_BASE/Bengkulu/hls/Bengkulu.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI DKI Jakarta", "$TVRI_BASE/DKI/hls/DKI.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Gorontalo", "$TVRI_BASE/Gorontalo/hls/Gorontalo.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Jambi", "$TVRI_BASE/Jambi/hls/Jambi.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Jawa Barat", "$TVRI_BASE/Jabar/hls/Jabar.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Jawa Tengah", "$TVRI_BASE/Jateng/hls/Jateng.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Jawa Timur", "$TVRI_BASE/Jatim/hls/Jatim.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Kalimantan Barat", "$TVRI_BASE/Kalbar/hls/Kalbar.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Kalimantan Selatan", "$TVRI_BASE/Kalsel/hls/Kalsel.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Kalimantan Tengah", "$TVRI_BASE/Kalteng/hls/Kalteng.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Kalimantan Timur", "$TVRI_BASE/Kaltim/hls/Kaltim.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Lampung", "$TVRI_BASE/Lampung/hls/Lampung.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI NTB", "$TVRI_BASE/NTB/hls/NTB.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI NTT", "$TVRI_BASE/NTT/hls/NTT.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Papua", "$TVRI_BASE/Papua/hls/Papua.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Papua Barat", "$TVRI_BASE/PapuaBarat/hls/PapuaBarat.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Riau", "$TVRI_BASE/Riau/hls/Riau.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sulawesi Barat", "$TVRI_BASE/Sulbar/hls/Sulbar.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sulawesi Selatan", "$TVRI_BASE/Sulsel/hls/Sulsel.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sulawesi Tengah", "$TVRI_BASE/Sulteng/hls/Sulteng.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sulawesi Tenggara", "$TVRI_BASE/Sultra/hls/Sultra.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sulawesi Utara", "$TVRI_BASE/Sulut/hls/Sulut.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sumatera Barat", "$TVRI_BASE/Sumbar/hls/Sumbar.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sumatera Selatan", "$TVRI_BASE/Sumsel/hls/Sumsel.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Sumatera Utara", "$TVRI_BASE/Sumut/hls/Sumut.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
-        CategorizedChannel("TVRI Yogyakarta", "$TVRI_BASE/Yogyakarta/hls/Yogyakarta.m3u8", "Daerah", tvgLogo = CATEGORY_ICONS["Daerah"], quality = 720, headers = mapOf("User-Agent" to TVRI_UA))
+        CategorizedChannel("TVRI Nasional", "$TVRI_BASE/Nasional/hls/Nasional.m3u8", "Nasional", tvgId = "TVRI.id", tvgLogo = "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/TVRI.id.png", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI World", "$TVRI_BASE/TVRIWorld/hls/TVRIWorld.m3u8", "Nasional", tvgId = "TVRIWorld.id", tvgLogo = "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/TVRIWorld.id.png", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sport", "$TVRI_BASE/SportHD/hls/SportHD.m3u8", "Olahraga", tvgId = "TVRISport.id", tvgLogo = "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/TVRISport.id.png", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Aceh", "$TVRI_BASE/Aceh/hls/Aceh.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Bali", "$TVRI_BASE/Bali/hls/Bali.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Bangka Belitung", "$TVRI_BASE/Babel/hls/Babel.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Bengkulu", "$TVRI_BASE/Bengkulu/hls/Bengkulu.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI DKI Jakarta", "$TVRI_BASE/DKI/hls/DKI.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Gorontalo", "$TVRI_BASE/Gorontalo/hls/Gorontalo.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Jambi", "$TVRI_BASE/Jambi/hls/Jambi.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Jawa Barat", "$TVRI_BASE/Jabar/hls/Jabar.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Jawa Tengah", "$TVRI_BASE/Jateng/hls/Jateng.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Jawa Timur", "$TVRI_BASE/Jatim/hls/Jatim.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Kalimantan Barat", "$TVRI_BASE/Kalbar/hls/Kalbar.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Kalimantan Selatan", "$TVRI_BASE/Kalsel/hls/Kalsel.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Kalimantan Tengah", "$TVRI_BASE/Kalteng/hls/Kalteng.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Kalimantan Timur", "$TVRI_BASE/Kaltim/hls/Kaltim.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Lampung", "$TVRI_BASE/Lampung/hls/Lampung.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI NTB", "$TVRI_BASE/NTB/hls/NTB.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI NTT", "$TVRI_BASE/NTT/hls/NTT.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Papua", "$TVRI_BASE/Papua/hls/Papua.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Papua Barat", "$TVRI_BASE/PapuaBarat/hls/PapuaBarat.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Riau", "$TVRI_BASE/Riau/hls/Riau.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sulawesi Barat", "$TVRI_BASE/Sulbar/hls/Sulbar.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sulawesi Selatan", "$TVRI_BASE/Sulsel/hls/Sulsel.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sulawesi Tengah", "$TVRI_BASE/Sulteng/hls/Sulteng.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sulawesi Tenggara", "$TVRI_BASE/Sultra/hls/Sultra.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sulawesi Utara", "$TVRI_BASE/Sulut/hls/Sulut.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sumatera Barat", "$TVRI_BASE/Sumbar/hls/Sumbar.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sumatera Selatan", "$TVRI_BASE/Sumsel/hls/Sumsel.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Sumatera Utara", "$TVRI_BASE/Sumut/hls/Sumut.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Yogyakarta", "$TVRI_BASE/Yogyakarta/hls/Yogyakarta.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA))
     )
 
     // Hardcoded Indonesian channels (beyond TVRI) categorized
+    // Indonesian FTA channel logos (mimipipi22 directory)
+    private val MIMIPIPI_MAP = mapOf(
+        "rcti" to "rcti.png",
+        "mnctv" to "mnctv.png",
+        "gtv" to "gtv.png",
+        "inews" to "inews.png",
+        "trans tv" to "transtv.png",
+        "trans7" to "trans7.png",
+        "sctv" to "sctv.png",
+        "indosiar" to "indosiar.png",
+        "net tv" to "nettv.png",
+        "tvone" to "tvone.png",
+        "antv" to "antv.png",
+        "metro tv" to "metrotv.png",
+        "kompas tv" to "kompastv.png",
+        "cnn indonesia" to "cnnindonesia.png",
+        "cnbc indonesia" to "cnbcindonesia.png",
+        "rodja tv" to "rodjatv.png",
+        "daai tv" to "daaitv.png",
+        "beritasatu" to "beritasatu.png",
+        "jawa pos tv" to "jawapostv.png",
+        "jtv" to "jtv.png",
+        "surabaya tv" to "surabayatv.png",
+        "bali tv" to "balitv.png",
+        "bandung tv" to "bandungtv.png",
+        "duta tv" to "dutatv.png",
+        "tv mui" to "tvmui.png"
+    )
+
+    fun resolveLogo(name: String, tvgId: String? = null, tvgLogo: String? = null): String {
+        tvgLogo?.let { return it }
+        if (tvgId != null) return "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/$tvgId.png"
+        val file = MIMIPIPI_MAP[name.lowercase()] ?: return generateLogo(name)
+        return "https://mimipipi22.github.io/logo/nasional/$file"
+    }
+
+    private fun generateLogo(name: String): String {
+        return "https://ui-avatars.com/api/?name=${java.net.URLEncoder.encode(name, "UTF-8")}&background=random&color=fff&size=200"
+    }
+
     val INDONESIAN_CHANNELS = listOf(
         // MNC Group → Nasional
         CategorizedChannel("RCTI", "https://d35d0ifx19oopq.cloudfront.net/live/eds/rcti_fta/live_fta/rcti_fta.m3u8", "Nasional", tvgId = "RCTI.id", quality = 720, headers = mapOf("User-Agent" to MNC_UA, "Referer" to "https://www.rctiplus.com/tv/rcti")),
