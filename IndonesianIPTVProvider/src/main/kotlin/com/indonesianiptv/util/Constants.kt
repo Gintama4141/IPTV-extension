@@ -287,8 +287,97 @@ object Constants {
         "tv mui" to "tvmui.png"
     )
 
+    // Wikimedia Commons logo filenames (from Commons category "Logos of television channels in Indonesia")
+    private val COMMONS_LOGO_MAP = mapOf(
+        // TVRI Nasional & Flagship
+        "TVRI Nasional" to "TVRILogo2019.svg",
+        "TVRI World" to "TVRIWorld.png",
+        "TVRI Sport" to "TVRISportHD.png",
+
+        // TVRI Regional (30 stations)
+        "TVRI Aceh" to "TVRI Aceh.png",
+        "TVRI Bali" to "TVRI Bali.png",
+        "TVRI Bangka Belitung" to "TVRI Bangka Belitung.png",
+        "TVRI Bengkulu" to "TVRI Bengkulu.png",
+        "TVRI DKI Jakarta" to "TVRI Jakarta.png",
+        "TVRI Gorontalo" to "TVRI Gorontalo.png",
+        "TVRI Jambi" to "TVRI Jambi.png",
+        "TVRI Jawa Barat" to "TVRI Jawa Barat.png",
+        "TVRI Jawa Tengah" to "TVRI Jawa Tengah.png",
+        "TVRI Jawa Timur" to "TVRI Jawa Timur.png",
+        "TVRI Kalimantan Barat" to "TVRI Kalimantan Barat.png",
+        "TVRI Kalimantan Selatan" to "TVRI Kalimantan Selatan.png",
+        "TVRI Kalimantan Tengah" to "TVRI Kalimantan Tengah.png",
+        "TVRI Kalimantan Timur" to "TVRI Kalimantan Timur.png",
+        "TVRI Kalimantan Utara" to "TVRI Kalimantan Utara.png",
+        "TVRI Lampung" to "TVRI Lampung.png",
+        "TVRI NTB" to "TVRI Nusa Tenggara Barat.png",
+        "TVRI NTT" to "TVRI Nusa Tenggara Timur.png",
+        "TVRI Papua" to "TVRI Papua.png",
+        "TVRI Papua Barat" to "TVRI Papua Barat.png",
+        "TVRI Riau" to "TVRI Riau.png",
+        "TVRI Sulawesi Barat" to "TVRI Sulawesi Barat.png",
+        "TVRI Sulawesi Selatan" to "TVRI Sulawesi Selatan.png",
+        "TVRI Sulawesi Tengah" to "TVRI Sulawesi Tengah.png",
+        "TVRI Sulawesi Tenggara" to "TVRI Sulawesi Tenggara.png",
+        "TVRI Sulawesi Utara" to "TVRI Sulawesi Utara.png",
+        "TVRI Sumatera Barat" to "TVRI Sumatera Barat.png",
+        "TVRI Sumatera Selatan" to "TVRI Sumatera Selatan.png",
+        "TVRI Sumatera Utara" to "TVRI Sumatera Utara.png",
+        "TVRI Yogyakarta" to "TVRI Yogyakarta.png",
+
+        // National FTA
+        "RCTI" to "RCTI logo 2015.svg",
+        "MNCTV" to "MNCTV logo 2015.svg",
+        "GTV" to "GTV logo (2017).png",
+        "iNews" to "INews.svg",
+        "Trans TV" to "Logo Trans TV.png",
+        "Trans7" to "Logo Trans7.png",
+        "SCTV" to "SCTV Logo.svg",
+        "Indosiar" to "INDOSIAR Logo.png",
+        "NET TV" to "Logo NET Kuning.png",
+        "Moji (O Channel)" to "Moji blue.svg",
+        "tvOne" to "TvOne 2023.svg",
+        "ANTV" to "Antv logo.svg",
+        "Mentari TV" to "Mentari TV Logo.svg",
+        "Magna Channel" to "MagnaChannel.png",
+        "Nusantara TV" to "Logo nusantaratv.png",
+        "Indonesiana TV" to "IndonesianaTV.png",
+        "Garuda TV" to "Logo GarudaTV 3D Putih Silver Merah.png",
+        "MDTV" to "MDTV logo.svg",
+        "VTV" to "VTV Indonesia 2023.svg",
+
+        // News
+        "Kompas TV" to "Kompas TV (2016) logo.svg",
+        "CNN Indonesia" to "CNN Indonesia logo.svg",
+        "CNBC Indonesia" to "Logo of CNBC Indonesia.svg",
+        "BTV" to "LogoBTV.png",
+        "BN Channel" to "BN Channel.png",
+        "BeritaSatu" to "Beritasatu.png",
+
+        // Religious
+        "DAAI TV" to "DAAI TV Jakarta.png",
+
+        // Regional
+        "Jawa Pos TV" to "Jawa Pos TV 2024.svg",
+        "JTV" to "JTV (Indonesian TV channel) 2022.svg",
+        "Jogja TV" to "Jogjatvnew.png",
+        "Caruban TV" to "CarubanTV(Low-res).png",
+        "Digdaya TV" to "Logo-digdaya-tv.png",
+        "E Channel" to "Echannel 2024.png",
+        "Sin Po TV" to "Sin Po TV.svg"
+    )
+
+    private const val COMMONS_BASE = "https://commons.wikimedia.org/wiki/Special:FilePath/"
+
+    private fun resolveCommonsLogo(name: String): String? {
+        val filename = COMMONS_LOGO_MAP[name] ?: return null
+        return "$COMMONS_BASE${filename.replace(" ", "_")}"
+    }
+
     fun resolveLogo(name: String, tvgId: String? = null, tvgLogo: String? = null): String {
         tvgLogo?.let { return it }
+        resolveCommonsLogo(name)?.let { return it }
         if (tvgId != null) return "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/$tvgId.png"
         val file = MIMIPIPI_MAP[name.lowercase()] ?: return generateLogo(name)
         return "https://mimipipi22.github.io/logo/nasional/$file"
