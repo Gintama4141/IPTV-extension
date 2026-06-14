@@ -458,3 +458,4 @@ class IndonesianIPTVProvider : MainAPI() {
         return true
     }
 }
+
