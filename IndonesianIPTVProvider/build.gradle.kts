@@ -1,7 +1,7 @@
-version = 29
+version = 30
 
 cloudstream {
-    description = "Indonesian IPTV Channels - Live TV Indonesia"
+    description = "300+ FTA Live TV — Indonesia TV (10 kategori) & International TV (20 negara)"
     language = "id"
     authors = listOf("IPTV-Indonesia")
     status = 1
