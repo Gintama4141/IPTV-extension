@@ -25,30 +25,15 @@ class IndonesianIPTVProvider : MainAPI() {
         "Religi" to "${Constants.CATEGORY_FLAGS["Religi"]} Religi",
         "Daerah" to "${Constants.CATEGORY_FLAGS["Daerah"]} Daerah",
         "Hiburan" to "${Constants.CATEGORY_FLAGS["Hiburan"]} Hiburan",
-        "Musik" to "${Constants.CATEGORY_FLAGS["Musik"]} Musik",
         "Anak" to "${Constants.CATEGORY_FLAGS["Anak"]} Anak",
         "Olahraga" to "${Constants.CATEGORY_FLAGS["Olahraga"]} Olahraga",
-        "Pemerintah" to "${Constants.CATEGORY_FLAGS["Pemerintah"]} Pemerintah",
         "JP" to "${countryFlag("JP")} Jepang",
         "KR" to "${countryFlag("KR")} Korea",
         "TH" to "${countryFlag("TH")} Thailand",
         "MY" to "${countryFlag("MY")} Malaysia",
         "BN" to "${countryFlag("BN")} Brunei",
         "SG" to "${countryFlag("SG")} Singapura",
-        "PH" to "${countryFlag("PH")} Filipina",
-        "US" to "${countryFlag("US")} Amerika Serikat",
-        "GB" to "${countryFlag("GB")} Inggris",
-        "DE" to "${countryFlag("DE")} Jerman",
-        "FR" to "${countryFlag("FR")} Perancis",
-        "AU" to "${countryFlag("AU")} Australia",
-        "IN" to "${countryFlag("IN")} India",
-        "CN" to "${countryFlag("CN")} China",
-        "TW" to "${countryFlag("TW")} Taiwan",
-        "HK" to "${countryFlag("HK")} Hong Kong",
-        "NL" to "${countryFlag("NL")} Belanda",
-        "SA" to "${countryFlag("SA")} Arab Saudi",
-        "TR" to "${countryFlag("TR")} Turki",
-        "RU" to "${countryFlag("RU")} Rusia"
+        "PH" to "${countryFlag("PH")} Filipina"
     )
 
     private fun countryFlag(code: String): String {
