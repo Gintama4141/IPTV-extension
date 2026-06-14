@@ -12,8 +12,9 @@ buildscript {
 
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
+        // Cloudstream gradle plugin which makes everything work and builds plugins
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.0")
     }
 }
 
@@ -59,8 +60,7 @@ subprojects {
                 freeCompilerArgs.addAll(
                     "-Xno-call-assertions",
                     "-Xno-param-assertions",
-                    "-Xno-receiver-assertions",
-                    "-Xannotation-default-target=param-property"
+                    "-Xno-receiver-assertions"
                 )
             }
         }
@@ -68,20 +68,16 @@ subprojects {
 
     dependencies {
         val implementation by configurations
-        val cloudstream by configurations
 
-        cloudstream("com.lagradost:cloudstream3:pre-release")
+        implementation("com.github.recloudstream.cloudstream:library:-SNAPSHOT")
 
         implementation(kotlin("stdlib"))
-        implementation("com.github.Blatzar:NiceHttp:0.4.16")
-        implementation("org.jsoup:jsoup:1.22.1")
-        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.20.1")
-        implementation("com.fasterxml.jackson.core:jackson-databind:2.20.1")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
-        implementation("com.google.code.gson:gson:2.13.2")
+        implementation("com.github.Blatzar:NiceHttp:0.4.11")
+        implementation("org.jsoup:jsoup:1.18.3")
+        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     }
 }
 
-tasks.register<Delete>("clean") {
+task<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
