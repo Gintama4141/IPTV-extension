@@ -435,7 +435,7 @@ object Constants {
 
     val INDONESIAN_CHANNELS = listOf(
         // MNC Group → Nasional
-        CategorizedChannel("RCTI", "https://d35d0ifx19oopq.cloudfront.net/live/eds/rcti_fta/live_fta/rcti_fta.m3u8", "Nasional", tvgId = "RCTI.id", quality = 720, headers = mapOf("User-Agent" to MNC_UA, "Referer" to "https://www.rctiplus.com/tv/rcti")),
+        CategorizedChannel("RCTI", "https://indihuy.streamized.net/atm/DASH/rcti/manifest.mpd", "Nasional", tvgId = "RCTI.id", quality = 720),
         CategorizedChannel("MNCTV", "https://d33j155pv2xyba.cloudfront.net/live/eds/mnctv_fta/live_fta/mnctv_fta.m3u8", "Nasional", tvgId = "MNCTV.id", quality = 720, headers = mapOf("User-Agent" to MNC_UA, "Referer" to "https://www.rctiplus.com/tv/mnctv")),
         CategorizedChannel("GTV", "https://d322b885qvsbxg.cloudfront.net/live/eds/gtv_fta/live_fta/gtv_fta.m3u8", "Nasional", tvgId = "GTV.id", quality = 720, headers = mapOf("User-Agent" to MNC_UA, "Referer" to "https://www.rctiplus.com/tv/gtv")),
         CategorizedChannel("iNews", "https://d2hfpzcndkyscp.cloudfront.net/live/eds/INEWS_2021/live_fta/INEWS_2021.m3u8", "Berita", tvgId = "iNews.id", quality = 720, headers = mapOf("User-Agent" to MNC_UA, "Referer" to "https://www.rctiplus.com/tv/inews")),
