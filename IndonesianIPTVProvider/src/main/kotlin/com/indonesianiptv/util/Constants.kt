@@ -365,7 +365,8 @@ object Constants {
         // Other Nasional
         CategorizedChannel("NET TV", "https://cdn-accedo-01.akamaized.net/Content/HLS/Live/channel(404d689d-691f-4035-9801-ae8bfd8712e9)/index.m3u8", "Nasional", tvgId = "NET.id", quality = 720),
         CategorizedChannel("Moji TV", "https://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
-        
+        CategorizedChannel("Oxygen TV", "https://cdn4-reg2.mm.oxygen.id:8080/hls/oxygentv-web/index.m3u8", "Nasional", quality = 720),
+
         CategorizedChannel("ANTV", "http://210.210.155.35/qwr9ew/s/s07/index1.m3u8", "Nasional", tvgId = "ANTV.id", quality = 480, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Mentari TV", "https://app-etslive-2.vidio.com/live/8237/master.m3u8", "Anak", quality = 720),
         CategorizedChannel("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
