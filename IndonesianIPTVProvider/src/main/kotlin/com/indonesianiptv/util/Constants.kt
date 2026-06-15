@@ -381,7 +381,7 @@ object Constants {
         "trans tv" to "transtv.png",
         "trans7" to "trans7.png",
         "tvone" to "tvone.png",
-        "moji (o channel)" to "moji.png",
+        "moji tv" to "moji.png",
         "nusantara tv" to "nusantara_tv.png",
         "inews" to "inews.png",
         "kompas tv" to "kompas_tv.png",
@@ -447,7 +447,7 @@ object Constants {
         CategorizedChannel("Indosiar", "http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", tvgId = "Indosiar.id", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
         // Other Nasional
         CategorizedChannel("NET TV", "https://cdn-accedo-01.akamaized.net/Content/HLS/Live/channel(404d689d-691f-4035-9801-ae8bfd8712e9)/index.m3u8", "Nasional", tvgId = "NET.id", quality = 720),
-        CategorizedChannel("Moji (O Channel)", "https://kmklive-lh.akamaihd.net/i/ochannel_live@577566/master.m3u8", "Nasional", quality = 720),
+        CategorizedChannel("Moji TV", "https://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
         CategorizedChannel("tvOne", "https://yt.urfan.web.id/stream/yNKvkPJl-tg/master.m3u8", "Berita", tvgId = "tvOne.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("ANTV", "http://210.210.155.35/qwr9ew/s/s07/index1.m3u8", "Nasional", tvgId = "ANTV.id", quality = 480, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Mentari TV", "https://app-etslive-2.vidio.com/live/8237/master.m3u8", "Anak", quality = 720),
