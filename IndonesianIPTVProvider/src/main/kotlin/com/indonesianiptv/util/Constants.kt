@@ -374,7 +374,7 @@ object Constants {
         CategorizedChannel("Indonesiana TV", "https://tvstreamcast.com/indonesiana.m3u8", "Edukasi", quality = 720, headers = mapOf("Referer" to "https://indonesiana.tv/")),
         CategorizedChannel("Garuda TV", "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8", "Nasional", quality = 720),
         CategorizedChannel("RTV", "https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8", "Hiburan", quality = 720),
-        CategorizedChannel("Dens Food", "https://op-group1-swiftservehd-1.dens.tv/h/h217/index.m3u8", "Hiburan", quality = 720),
+        CategorizedChannel("Dens Food", "https://op-group1-densxvisionhd-1.dens.tv/h/h248/04.m3u8", "Hiburan", quality = 720),
         // News channels → Berita
         CategorizedChannel("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8", "Berita", tvgId = "MetroTV.id", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
         CategorizedChannel("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/01.m3u8", "Berita", tvgId = "KompasTV.id", quality = 720, headers = mapOf("Referer" to "https://www.kompas.tv/", "User-Agent" to EXO_UA)),
@@ -391,6 +391,7 @@ object Constants {
         CategorizedChannel("FIFA World Cup 3", "https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("FIFA World Cup 4", "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("FIFA World Cup 5", "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("Motorvision+", "https://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8", "Olahraga", quality = 720),
         // Religious → Religi
         CategorizedChannel("Rodja TV", "https://tv.rodja.live/aliman/ngrp:HD_all/playlist.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "Religi", quality = 720),
