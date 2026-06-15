@@ -84,9 +84,20 @@ class IndonesianIPTVProvider : MainAPI() {
             } catch (_: Exception) { }
         }
 
-        val seen = mutableSetOf<String>()
-        allChannels = channels.filter {
-            if (it.url in seen) false else { seen.add(it.url); true }
+        val seenUrls = mutableSetOf<String>()
+        val seenNames = mutableSetOf<String>()
+        allChannels = channels.filter { channel ->
+            val nameKey = channel.name.lowercase().trim()
+            val urlKey = channel.url
+            when {
+                urlKey in seenUrls -> false
+                nameKey in seenNames -> false
+                else -> {
+                    seenUrls.add(urlKey)
+                    seenNames.add(nameKey)
+                    true
+                }
+            }
         }
         channelCache = allChannels.associateBy { it.url }
     }
