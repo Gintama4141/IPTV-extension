@@ -458,6 +458,7 @@ object Constants {
         CategorizedChannel("RTV", "https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8", "Hiburan", quality = 720),
         CategorizedChannel("RTV 2", "https://op-group1-swiftservehd-1.dens.tv/h/h10/01.m3u8", "Hiburan", quality = 720),
         // News channels → Berita
+        CategorizedChannel("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8", "Berita", tvgId = "MetroTV.id", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
         CategorizedChannel("Kompas TV", "https://live-kg.jixie.media/live/kompastv.m3u8", "Berita", tvgId = "KompasTV.id", quality = 720, headers = mapOf("Referer" to "https://www.kompas.tv/", "User-Agent" to EXO_UA)),
         CategorizedChannel("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "Berita", tvgId = "CNNIndonesia.id", quality = 720, headers = mapOf("Referer" to "https://www.cnnindonesia.com/")),
         CategorizedChannel("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "Berita", tvgId = "CNBCIndonesia.id", quality = 720, headers = mapOf("Referer" to "https://www.cnbcindonesia.com/")),
