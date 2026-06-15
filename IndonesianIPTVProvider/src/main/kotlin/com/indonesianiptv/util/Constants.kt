@@ -378,7 +378,7 @@ object Constants {
         CategorizedChannel("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/01.m3u8", "Berita", tvgId = "KompasTV.id", quality = 720, headers = mapOf("Referer" to "https://www.kompas.tv/", "User-Agent" to EXO_UA)),
         CategorizedChannel("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "Berita", tvgId = "CNNIndonesia.id", quality = 720, headers = mapOf("Referer" to "https://www.cnnindonesia.com/")),
         CategorizedChannel("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "Berita", tvgId = "CNBCIndonesia.id", quality = 720, headers = mapOf("Referer" to "https://www.cnbcindonesia.com/")),
-        CategorizedChannel("BTV", "https://btv.secureswiftcontent.com/han/btv/btv10005/srtoutput/manifest.m3u8", "Berita", quality = 720, headers = mapOf("Referer" to "https://www.beritasatu.com/btv-live-streaming")),
+        CategorizedChannel("BTV", "https://op-group1-swiftservehd-1.dens.tv/h/h210/index.m3u8", "Berita", quality = 720),
         CategorizedChannel("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "Berita", quality = 720),
         CategorizedChannel("Jak TV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8", "Berita", quality = 720),
         CategorizedChannel("BeritaSatu", "https://kmklive-lh.akamaihd.net/i/beritasatu_live@577566/master.m3u8", "Berita", quality = 720),
