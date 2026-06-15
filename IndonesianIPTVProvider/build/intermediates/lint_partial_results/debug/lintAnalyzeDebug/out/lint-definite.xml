@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.2" type="incidents">
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of Gradle than 8.13 is available: 8.14.5">
+        <fix-replace
+            description="Update to 8.14.5"
+            oldString="8.13"
+            replacement="8.14.5"
+            priority="0"/>
+        <location
+            file="../gradle/wrapper/gradle-wrapper.properties"
+            line="4"
+            column="17"
+            startOffset="111"
+            endLine="4"
+            endColumn="79"
+            endOffset="173"/>
+    </incident>
+
+</incidents>

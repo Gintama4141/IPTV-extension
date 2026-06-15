@@ -103,8 +103,10 @@ class IndonesianIPTVProvider : MainAPI() {
     }
 
     private fun categorizeM3uChannel(ch: M3UChannel): Constants.CategorizedChannel? {
-        val group = ch.group?.lowercase()?.trim() ?: ""
         val name = ch.name.lowercase()
+        if (name.contains("metro tv")) return null
+
+        val group = ch.group?.lowercase()?.trim() ?: ""
 
         val category = when {
             group.isEmpty() -> categorizeByName(name)
