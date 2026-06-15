@@ -361,7 +361,7 @@ object Constants {
         CategorizedChannel("Trans7", "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8", "Nasional", tvgId = "Trans7.id", quality = 720, headers = mapOf("Referer" to "https://www.detik.com/")),
         // SCM Group → Nasional
         CategorizedChannel("SCTV", "http://op-group1-swiftservehd-1.dens.tv/h/h217/02.m3u8", "Nasional", tvgId = "SCTV.id", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
-        CategorizedChannel("Indosiar", "http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", tvgId = "Indosiar.id", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
+
         // Other Nasional
         CategorizedChannel("NET TV", "https://cdn-accedo-01.akamaized.net/Content/HLS/Live/channel(404d689d-691f-4035-9801-ae8bfd8712e9)/index.m3u8", "Nasional", tvgId = "NET.id", quality = 720),
         CategorizedChannel("Moji TV", "https://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
