@@ -414,7 +414,8 @@ object Constants {
         "vtv" to "vtv.png",
         "salira tv" to "salira_tv.png",
         "jagatv" to "jagatv.png",
-        "rri net" to "rri_net.png"
+        "rri net" to "rri_net.png",
+        "garuda tv" to "garuda_tv.png"
     )
 
     private fun resolveCommonsLogo(name: String): String? {
