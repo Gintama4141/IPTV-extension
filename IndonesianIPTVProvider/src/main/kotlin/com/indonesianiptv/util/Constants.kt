@@ -14,89 +14,6 @@ object Constants {
         "https://mgi24.github.io/tvdigital/idwork.m3u"
     )
 
-    val TVRI_CHANNELS = listOf(
-        "Nasional" to "TVRI Nasional",
-        "SportHD" to "TVRI Sport",
-        "TVRIWorld" to "TVRI World",
-        "DKI" to "TVRI DKI",
-        "Aceh" to "TVRI Aceh",
-        "Bali" to "TVRI Bali",
-        "Babel" to "TVRI Bangka Belitung",
-        "Bengkulu" to "TVRI Bengkulu",
-        "Gorontalo" to "TVRI Gorontalo",
-        "Jabar" to "TVRI Jawa Barat",
-        "Jambi" to "TVRI Jambi",
-        "Jateng" to "TVRI Jawa Tengah",
-        "Jatim" to "TVRI Jawa Timur",
-        "Kalbar" to "TVRI Kalimantan Barat",
-        "Kalsel" to "TVRI Kalimantan Selatan",
-        "Kalteng" to "TVRI Kalimantan Tengah",
-        "Kaltim" to "TVRI Kalimantan Timur",
-        "Lampung" to "TVRI Lampung",
-        "NTB" to "TVRI Nusa Tenggara Barat",
-        "NTT" to "TVRI Nusa Tenggara Timur",
-        "Papua" to "TVRI Papua",
-        "PapuaBarat" to "TVRI Papua Barat",
-        "Riau" to "TVRI Riau",
-        "Sulbar" to "TVRI Sulawesi Barat",
-        "Sulsel" to "TVRI Sulawesi Selatan",
-        "Sulteng" to "TVRI Sulawesi Tengah",
-        "Sultra" to "TVRI Sulawesi Tenggara",
-        "Sulut" to "TVRI Sulawesi Utara",
-        "Sumbar" to "TVRI Sumatera Barat",
-        "Sumsel" to "TVRI Sumatera Selatan",
-        "Sumut" to "TVRI Sumatera Utara",
-        "Yogyakarta" to "TVRI Yogyakarta"
-    )
-
-    val REGIONAL_CHANNELS = listOf(
-        Triple("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", mapOf("User-Agent" to EXO_UA)),
-        Triple("Jawa Pos TV", "https://jawapostv.siar.us/jawapostv/live/playlist.m3u8", mapOf("User-Agent" to EXO_UA)),
-        Triple("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", emptyMap()),
-        Triple("Surabaya TV", "https://e.siar.us/live/surabayatv.m3u8", emptyMap()),
-        Triple("TV9 Nusantara", "https://5bf7b725107e5.streamlock.net/tv9/tv9/playlist.m3u8", emptyMap()),
-        Triple("Bali TV", "http://122.248.43.242:1935/BALITV/_definst_/myStream/playlist.m3u8", emptyMap()),
-        Triple("Bandung TV", "http://122.248.32.234:1935/ch1/myStream/playlist.m3u8", emptyMap()),
-        Triple("Semarang TV", "http://122.248.32.234:1935/ch2/myStream/playlist.m3u8", emptyMap()),
-        Triple("SBO TV", "http://122.248.32.234:1935/ch13/myStream/playlist.m3u8", emptyMap()),
-        Triple("Duta TV", "https://dutatv.siar.us/dutatv/live/playlist.m3u8", mapOf("User-Agent" to EXO_UA)),
-        Triple("RBTV Bengkulu", "http://122.248.32.234:1935/ch12/myStream/playlist.m3u8", emptyMap()),
-        Triple("Palembang TV", "http://122.248.43.242:1935/PALEMBANGTV/_definst_/myStream/playlist.m3u8", emptyMap()),
-        Triple("Surau TV", "http://103.28.22.198/surautv/live/playlist.m3u8", emptyMap()),
-        Triple("Radar Tasikmalaya", "http://radartasikmalaya.onlivestreaming.net/radartasikmalaya/livestream/playlist.m3u8", emptyMap()),
-        Triple("Banyumas TV", "https://5bf7b725107e5.streamlock.net/banyumastv/banyumastv/playlist.m3u8", emptyMap())
-    )
-
-    val RELIGIOUS_CHANNELS = listOf(
-        Triple("Rodja TV", "https://tv.rodja.live/aliman/ngrp:HD_all/playlist.m3u8", mapOf("User-Agent" to EXO_UA)),
-        Triple("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", emptyMap()),
-        Triple("TV MUI", "https://mui.siar.us/mui/live/playlist.m3u8", mapOf("User-Agent" to EXO_UA)),
-        Triple("Madani TV", "https://madani.siar.us/madani/live/playlist.m3u8", mapOf("User-Agent" to EXO_UA)),
-        Triple("TV Mu", "https://5bf7b725107e5.streamlock.net/tvmu/tvmu/playlist.m3u8", emptyMap()),
-        Triple("Dhamma TV", "https://5bf7b725107e5.streamlock.net/dhamma/dhamma/playlist.m3u8", emptyMap()),
-        Triple("MQTV", "https://5bf7b725107e5.streamlock.net/mqtv/mqtv/playlist.m3u8", emptyMap()),
-        Triple("Salam TV", "https://5bf7b725107e5.streamlock.net/salamtv/salamtv/playlist.m3u8", emptyMap()),
-        Triple("DAAI TV", "https://hgmtv.com:19360/asthatv/asthatv.m3u8", emptyMap()),
-        Triple("Al Bahjah TV", "https://mq-panel.tv:5443/LiveApp/streams/al-bahjahtv.m3u8", emptyMap())
-    )
-
-    val NEWS_CHANNELS = listOf(
-        Triple("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
-            mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
-        Triple("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/01.m3u8",
-            mapOf("Referer" to "https://www.kompas.tv/", "User-Agent" to EXO_UA)),
-        Triple("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8",
-            mapOf("Referer" to "https://www.cnbcindonesia.com/", "User-Agent" to EXO_UA)),
-        Triple("iNews", "https://kmklive-lh.akamaihd.net/i/inewstv_live@94479/master.m3u8",
-            mapOf("Referer" to "https://www.vidio.com/")),
-        Triple("BeritaSatu", "https://kmklive-lh.akamaihd.net/i/beritasatu_live@577566/master.m3u8",
-            mapOf("Referer" to "https://www.vidio.com/")),
-        Triple("Jak TV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8",
-            mapOf("Referer" to "https://www.vidio.com/")),
-        Triple("TVOne", "https://op-group1-swiftservehd-1.dens.tv/h/h40/01.m3u8",
-            mapOf("Referer" to "https://www.vidio.com/"))
-    )
-
     val CATEGORY_ICONS = mapOf(
         "Nasional" to "https://cdn-icons-png.flaticon.com/512/619/619153.png",
         "TV Nasional" to "https://cdn-icons-png.flaticon.com/512/619/619153.png",
@@ -466,6 +383,7 @@ object Constants {
         CategorizedChannel("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "Berita", quality = 720),
         CategorizedChannel("Jak TV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8", "Berita", quality = 720),
         CategorizedChannel("BeritaSatu", "https://kmklive-lh.akamaihd.net/i/beritasatu_live@577566/master.m3u8", "Berita", quality = 720),
+        CategorizedChannel("TVOne", "https://op-group1-swiftservehd-1.dens.tv/h/h40/01.m3u8", "Berita", quality = 720),
         // Sports → Olahraga
         CategorizedChannel("FIFA World Cup 1", "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("FIFA World Cup 2", "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8", "Olahraga", quality = 720),
