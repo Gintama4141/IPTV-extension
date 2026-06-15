@@ -368,6 +368,55 @@ object Constants {
         "Sin Po TV" to "Sin Po TV.svg"
     )
 
+    private const val LOCAL_LOGOS_BASE = "https://raw.githubusercontent.com/Gintama4141/IPTV-extension/master/IndonesianIPTVProvider/logos/"
+
+    private val LOCAL_LOGOS_MAP = mapOf(
+        "rcti" to "rcti.png",
+        "mnctv" to "mnctv.png",
+        "gtv" to "gtv.png",
+        "sctv" to "sctv.png",
+        "indosiar" to "indosiar.png",
+        "antv" to "antv.png",
+        "net tv" to "net_tv.png",
+        "trans tv" to "transtv.png",
+        "trans7" to "trans7.png",
+        "tvone" to "tvone.png",
+        "moji (o channel)" to "moji.png",
+        "nusantara tv" to "nusantara_tv.png",
+        "inews" to "inews.png",
+        "kompas tv" to "kompas_tv.png",
+        "cnn indonesia" to "cnn_indonesia.png",
+        "daai tv" to "daai_tv.png",
+        "tvri nasional" to "tvri_nasional.png",
+        "tvri world" to "tvri_world.png",
+        "tvri sport" to "tvri_sport.png",
+        "tvri aceh" to "tvri_aceh.png",
+        "tvri bali" to "tvri_bali.png",
+        "tvri jakarta" to "tvri_jakarta.png",
+        "tvri jawa barat" to "tvri_jabar.png",
+        "tvri jawa tengah" to "tvri_jateng.png",
+        "tvri jawa timur" to "tvri_jatim.png",
+        "tvri kalimantan barat" to "tvri_kalbar.png",
+        "tvri lampung" to "tvri_lampung.png",
+        "tvri ntb" to "tvri_ntb.png",
+        "tvri ntt" to "tvri_ntt.png",
+        "tvri papua" to "tvri_papua.png",
+        "tvri riau" to "tvri_riau.png",
+        "tvri sulawesi selatan" to "tvri_sulsel.png",
+        "tvri sumatra utara" to "tvri_sumut.png",
+        "prambors" to "prambors.png",
+        "sakti tv" to "sakti_tv.png",
+        "salam tv" to "salam_tv.png",
+        "semarang tv" to "semarang_tv.png",
+        "surabaya tv" to "surabaya_tv.png",
+        "surau tv" to "surau_tv.png",
+        "tatv" to "tatv.png",
+        "vtv" to "vtv.png",
+        "salira tv" to "salira_tv.png",
+        "jagatv" to "jagatv.png",
+        "rri net" to "rri_net.png"
+    )
+
     private fun resolveCommonsLogo(name: String): String? {
         val filename = COMMONS_LOGO_MAP[name] ?: return null
         val encodedFilename = filename.replace(" ", "_")
@@ -380,6 +429,8 @@ object Constants {
 
     fun resolveLogo(name: String, tvgId: String? = null, tvgLogo: String? = null): String {
         tvgLogo?.let { return it }
+        // Check local repo logos first
+        LOCAL_LOGOS_MAP[name.lowercase()]?.let { return "$LOCAL_LOGOS_BASE$it" }
         resolveCommonsLogo(name)?.let { return it }
         if (tvgId != null) return "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/$tvgId.png"
         val file = MIMIPIPI_MAP[name.lowercase()] ?: return generateLogo(name)
