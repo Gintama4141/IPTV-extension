@@ -392,18 +392,11 @@ object Constants {
         "tvri sport" to "tvri_sport.png",
         "tvri aceh" to "tvri_aceh.png",
         "tvri bali" to "tvri_bali.png",
-        "tvri jakarta" to "tvri_jakarta.png",
         "tvri jawa barat" to "tvri_jabar.png",
         "tvri jawa tengah" to "tvri_jateng.png",
-        "tvri jawa timur" to "tvri_jatim.png",
         "tvri kalimantan barat" to "tvri_kalbar.png",
         "tvri lampung" to "tvri_lampung.png",
         "tvri ntb" to "tvri_ntb.png",
-        "tvri ntt" to "tvri_ntt.png",
-        "tvri papua" to "tvri_papua.png",
-        "tvri riau" to "tvri_riau.png",
-        "tvri sulawesi selatan" to "tvri_sulsel.png",
-        "tvri sumatra utara" to "tvri_sumut.png",
         "prambors" to "prambors.png",
         "sakti tv" to "sakti_tv.png",
         "salam tv" to "salam_tv.png",
@@ -413,8 +406,6 @@ object Constants {
         "tatv" to "tatv.png",
         "vtv" to "vtv.png",
         "salira tv" to "salira_tv.png",
-        "jagatv" to "jagatv.png",
-        "rri net" to "rri_net.png",
         "garuda tv" to "garuda_tv.png"
     )
 
