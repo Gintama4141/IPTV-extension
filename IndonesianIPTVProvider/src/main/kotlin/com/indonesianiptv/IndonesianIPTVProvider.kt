@@ -106,6 +106,7 @@ class IndonesianIPTVProvider : MainAPI() {
         val name = ch.name.lowercase()
         if (name.contains("metro tv")) return null
         if (name.contains("kompas tv")) return null
+        if (name.contains("tvone")) return null
 
         val group = ch.group?.lowercase()?.trim() ?: ""
 
