@@ -83,7 +83,7 @@ object Constants {
     val NEWS_CHANNELS = listOf(
         Triple("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
             mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
-        Triple("Kompas TV", "https://live-kg.jixie.media/live/kompastv.m3u8",
+        Triple("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/s/s104/index.m3u8",
             mapOf("Referer" to "https://www.kompas.tv/", "User-Agent" to EXO_UA)),
         Triple("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8",
             mapOf("Referer" to "https://www.cnbcindonesia.com/", "User-Agent" to EXO_UA)),
