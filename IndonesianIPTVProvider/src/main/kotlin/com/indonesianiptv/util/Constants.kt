@@ -368,11 +368,14 @@ object Constants {
         "Sin Po TV" to "Sin Po TV.svg"
     )
 
-    private const val COMMONS_BASE = "https://commons.wikimedia.org/wiki/Special:FilePath/"
-
     private fun resolveCommonsLogo(name: String): String? {
         val filename = COMMONS_LOGO_MAP[name] ?: return null
-        return "$COMMONS_BASE${filename.replace(" ", "_")}"
+        val encodedFilename = filename.replace(" ", "_")
+        return if (encodedFilename.endsWith(".svg", ignoreCase = true)) {
+            "https://commons.wikimedia.org/wiki/Special:Redirect/file/$encodedFilename?width=300"
+        } else {
+            "https://commons.wikimedia.org/wiki/Special:FilePath/$encodedFilename"
+        }
     }
 
     fun resolveLogo(name: String, tvgId: String? = null, tvgLogo: String? = null): String {
