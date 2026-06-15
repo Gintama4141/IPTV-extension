@@ -465,6 +465,12 @@ object Constants {
         CategorizedChannel("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "Berita", quality = 720),
         CategorizedChannel("Jak TV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8", "Berita", quality = 720),
         CategorizedChannel("BeritaSatu", "https://kmklive-lh.akamaihd.net/i/beritasatu_live@577566/master.m3u8", "Berita", quality = 720),
+        // Sports → Olahraga
+        CategorizedChannel("FIFA World Cup 1", "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("FIFA World Cup 2", "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("FIFA World Cup 3", "https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("FIFA World Cup 4", "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("FIFA World Cup 5", "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8", "Olahraga", quality = 720),
         // Religious → Religi
         CategorizedChannel("Rodja TV", "https://tv.rodja.live/aliman/ngrp:HD_all/playlist.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "Religi", quality = 720),
