@@ -145,7 +145,7 @@ object Constants {
     )
 
     val TVRI_CATEGORIZED = listOf(
-        CategorizedChannel("TVRI Nasional", "$TVRI_BASE/Nasional/hls/Nasional.m3u8", "Nasional", tvgId = "TVRI.id", tvgLogo = "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/TVRI.id.png", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
+        CategorizedChannel("TVRI Nasional", "https://op-group1-swiftservesd-1.dens.tv/s/s11/index.m3u8", "Nasional", tvgId = "TVRI.id", tvgLogo = "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/TVRI.id.png", quality = 720, headers = mapOf("User-Agent" to DENS_UA)),
         CategorizedChannel("TVRI World", "$TVRI_BASE/TVRIWorld/hls/TVRIWorld.m3u8", "Nasional", tvgId = "TVRIWorld.id", tvgLogo = "https://raw.githubusercontent.com/iptv-org/iptv/master/assets/channels/TVRIWorld.id.png", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
         CategorizedChannel("TVRI Aceh", "$TVRI_BASE/Aceh/hls/Aceh.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
         CategorizedChannel("TVRI Bali", "$TVRI_BASE/Bali/hls/Bali.m3u8", "Daerah", tvgId = "TVRI.id", quality = 720, headers = mapOf("User-Agent" to TVRI_UA)),
