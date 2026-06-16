@@ -428,6 +428,10 @@ object Constants {
         CategorizedChannel("Jogja TV", "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8", "Daerah", quality = 720),
         CategorizedChannel("TATV", "https://tatv.siar.us/tatv/live.sdp/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Stara TV", "https://stream.staratv.id/hls/0/stream.m3u8", "Daerah", quality = 720),
-        CategorizedChannel("Persiana Jr", "https://junhls.persiana.live/hls/stream.m3u8", "International", quality = 720)
+        CategorizedChannel("Persiana Jr", "https://junhls.persiana.live/hls/stream.m3u8", "International", quality = 720),
+        CategorizedChannel("Persiana Cinema", "https://cinehls.persiana.live/hls/stream.m3u8", "International", quality = 720),
+        CategorizedChannel("Discover Film", "https://discoverfilm-discoverfilm-1-nl.samsung.wurl.tv/playlist.m3u", "International", quality = 720),
+        CategorizedChannel("Moviesphere", "https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8", "International", quality = 720),
+        CategorizedChannel("Moviedome", "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8", "International", quality = 720)
     )
 }
