@@ -113,6 +113,20 @@ class IndonesianIPTVProvider : MainAPI() {
         if (name.contains("indonesiana")) return null
         if (name.contains("magna")) return null
         if (name.contains("rodja")) return null
+        if (name.contains("rri net")) return null
+        if (name.contains("celestial")) return null
+        if (name.contains("hits")) return null
+        if (name.contains("hiys")) return null
+        if (name.contains("kix")) return null
+        if (name.contains("k-plus")) return null
+        if (name.contains("kplus")) return null
+        if (name.contains("my cinema")) return null
+        if (name.contains("my kidz")) return null
+        if (name.contains("rock action")) return null
+        if (name.contains("rock entertainment")) return null
+        if (name.contains("thrill")) return null
+        if (name.contains("tvn asia")) return null
+        if (name.contains("tvn movies")) return null
 
         val group = ch.group?.lowercase()?.trim() ?: ""
 
