@@ -128,6 +128,7 @@ class IndonesianIPTVProvider : MainAPI() {
         if (name.contains("tvn asia")) return null
         if (name.contains("tvn movies")) return null
         if (name.contains("tvri")) return null
+        if (name.contains("antv")) return null
 
         val group = ch.group?.lowercase()?.trim() ?: ""
 

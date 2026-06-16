@@ -191,7 +191,6 @@ object Constants {
         "indosiar" to "indosiar.png",
         "net tv" to "nettv.png",
         "tvone" to "tvone.png",
-        "antv" to "antv.png",
         "metro tv" to "metrotv.png",
         "kompas tv" to "kompastv.png",
         "cnn indonesia" to "cnnindonesia.png",
@@ -259,7 +258,6 @@ object Constants {
         "NET TV" to "Logo NET Kuning.png",
         "Moji (O Channel)" to "Moji blue.svg",
         "tvOne" to "TvOne 2023.svg",
-        "ANTV" to "Antv logo.svg",
         "Mentari TV" to "Mentari TV Logo.svg",
         "Magna Channel" to "MagnaChannel.png",
         "Nusantara TV" to "Logo nusantaratv.png",
@@ -297,7 +295,6 @@ object Constants {
         "gtv" to "gtv.png",
         "sctv" to "sctv.png",
         "indosiar" to "indosiar.png",
-        "antv" to "antv.png",
         "net tv" to "net_tv.png",
         "trans tv" to "transtv.png",
         "trans7" to "trans7.png",
@@ -364,8 +361,6 @@ object Constants {
         // Other Nasional
         CategorizedChannel("Moji TV", "https://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
         CategorizedChannel("Oxygen TV", "https://cdn4-reg2.mm.oxygen.id:8080/hls/oxygentv-web/index.m3u8", "Nasional", quality = 720),
-
-        CategorizedChannel("ANTV", "http://210.210.155.35/qwr9ew/s/s07/index1.m3u8", "Nasional", tvgId = "ANTV.id", quality = 480, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Mentari TV", "https://app-etslive-2.vidio.com/live/8237/master.m3u8", "Anak", quality = 720),
         CategorizedChannel("PBS Kids", "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8", "Anak", quality = 720),
         CategorizedChannel("Duck TV", "https://stream.ads.ottera.tv/playlist.m3u8?network_id=7617", "Anak", quality = 720),
@@ -376,8 +371,6 @@ object Constants {
         CategorizedChannel("Dens Food", "https://op-group1-densxvisionhd-1.dens.tv/h/h248/04.m3u8", "Hiburan", quality = 720),
         CategorizedChannel("Moji TV", "https://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
         CategorizedChannel("Oxygen TV", "https://cdn4-reg2.mm.oxygen.id:8080/hls/oxygentv-web/index.m3u8", "Nasional", quality = 720),
-
-        CategorizedChannel("ANTV", "http://210.210.155.35/qwr9ew/s/s07/index1.m3u8", "Nasional", tvgId = "ANTV.id", quality = 480, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Mentari TV", "https://app-etslive-2.vidio.com/live/8237/master.m3u8", "Anak", quality = 720),
         CategorizedChannel("PBS Kids", "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8", "Anak", quality = 720),
         CategorizedChannel("Duck TV", "https://stream.ads.ottera.tv/playlist.m3u8?network_id=7617", "Anak", quality = 720),

@@ -6,7 +6,7 @@ Extension CloudStream yang menyediakan **300+ FTA Live TV** dari Indonesia dan 2
 
 | # | Menu | Channel |
 |---|------|---------|
-| 1 | 🇮🇩 Nasional (42) | RCTI, MNCTV, GTV, Trans TV, Trans7, SCTV, NET TV, Moji TV, Oxygen TV, ANTV, Magna Channel, Nusantara TV, Garuda TV + channel dari M3U sources |
+| 1 | 🇮🇩 Nasional (40) | RCTI, MNCTV, GTV, Trans TV, Trans7, SCTV, NET TV, Moji TV, Oxygen TV, Magna Channel, Nusantara TV, Garuda TV + channel dari M3U sources |
 | 2 | 📰 Berita (10) | Metro TV, Kompas TV, CNN Indonesia, CNBC Indonesia, BTV, BN Channel, Jak TV, BeritaSatu, TVOne + channel dari M3U sources |
 | 3 | 📚 Edukasi (1) | Indonesiana TV + channel dari M3U sources |
 | 4 | ✝️ Religi (14) | Rodja TV, Al-Iman TV, TV MUI, Madani TV, TV Mu, DAAI TV, Astha TV, MQTV, Salam TV, Al Bahjah TV, Dhamma TV, MQ TV, Sakti TV, Arab Saudi + channel dari M3U sources |
