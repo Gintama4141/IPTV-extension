@@ -6,23 +6,23 @@ Extension CloudStream yang menyediakan **300+ FTA Live TV** dari Indonesia dan 2
 
 | # | Menu | Channel |
 |---|------|---------|
-| 1 | 🇮🇩 Nasional | RCTI, MNCTV, GTV, iNews, Trans TV, Trans7, SCTV, NET TV, Moji TV, Oxygen TV, ANTV, Magna Channel, Nusantara TV, Garuda TV |
-| 2 | 📰 Berita | Metro TV, Kompas TV, CNN Indonesia, CNBC Indonesia, BTV, BN Channel, Jak TV, BeritaSatu, TVOne |
-| 3 | 📚 Edukasi | Indonesiana TV |
-| 4 | ✝️ Religi | Rodja TV, Al-Iman TV, TV MUI, Madani TV, TV Mu, DAAI TV, Astha TV, MQTV, Salam TV, Al Bahjah TV, Dhamma TV, MQ TV, Sakti TV, Arab Saudi |
-| 5 | 🏘️ Daerah | Jawa Pos TV, JTV, Surabaya TV, TV9 Nusantara, Bali TV, Bandung TV, Semarang TV, SBO TV, Duta TV, RBTV Bengkulu, Palembang TV, Surau TV, Banyumas TV, Radar Tasikmalaya, TVKU, Caruban TV, Dhoho TV, Madu TV, Jogja TV, TATV, Stara TV |
-| 6 | 🎭 Hiburan | RTV, Dens Food, Elshinta TV |
-| 7 | 🎵 Musik | Ibiza TV, Deluxe Music, Vevo Music |
-| 8 | 👶 Anak | Mentari TV, PBS Kids, Duck TV |
-| 9 | ⚽ Olahraga | FIFA World Cup 1-5, Motorvision+, BEIN Sports, Real Madrid TV, Redbull TV, MLB, UFC TV |
-| 10 | 🌍 International | Persiana Jr, Persiana Cinema, Discover Film, Moviesphere, Moviedome, Brat TV, Wedo TV, HG TV |
-| 11 | 🇯🇵 Jepang | NHK G, NHK E, NTV, TV Asahi, TBS, TV Tokyo, Fuji TV, Tokyo MX1, Tokyo MX2, NHK World Japan |
-| 12 | 🇰🇷 Korea | Arirang TV, Arirang TV UN, Arirang Radio |
-| 13 | 🇹🇭 Thailand | Channel 8 (TH) |
-| 14 | 🇲🇾 Malaysia | Astro Awani, RTM Asean |
-| 15 | 🇧🇳 Brunei | RTB Sukmaindera, RTB Aneka, RTB Go Live |
-| 16 | 🇸🇬 Singapura | Channel 5 (SG), Channel 8 (SG), Channel U |
-| 17 | 🇵🇭 Filipina | GMA 7, Hope Channel PH, UNTV |
+| 1 | 🇮🇩 Nasional (42) | RCTI, MNCTV, GTV, Trans TV, Trans7, SCTV, NET TV, Moji TV, Oxygen TV, ANTV, Magna Channel, Nusantara TV, Garuda TV + channel dari M3U sources |
+| 2 | 📰 Berita (10) | Metro TV, Kompas TV, CNN Indonesia, CNBC Indonesia, BTV, BN Channel, Jak TV, BeritaSatu, TVOne + channel dari M3U sources |
+| 3 | 📚 Edukasi (1) | Indonesiana TV + channel dari M3U sources |
+| 4 | ✝️ Religi (14) | Rodja TV, Al-Iman TV, TV MUI, Madani TV, TV Mu, DAAI TV, Astha TV, MQTV, Salam TV, Al Bahjah TV, Dhamma TV, MQ TV, Sakti TV, Arab Saudi + channel dari M3U sources |
+| 5 | 🏘️ Daerah (50) | Jawa Pos TV, JTV, Surabaya TV, TV9 Nusantara, Bali TV, Bandung TV, Semarang TV, SBO TV, Duta TV, RBTV Bengkulu, Palembang TV, Surau TV, Banyumas TV, Radar Tasikmalaya, TVKU, Caruban TV, Dhoho TV, Madu TV, Jogja TV, TATV, Stara TV + channel dari M3U sources |
+| 6 | 🎭 Hiburan (3) | RTV, Dens Food, Elshinta TV + channel dari M3U sources |
+| 7 | 🎵 Musik (3) | Ibiza TV, Deluxe Music, Vevo Music |
+| 8 | 👶 Anak (3) | Mentari TV, PBS Kids, Duck TV |
+| 9 | ⚽ Olahraga (12) | FIFA World Cup 1-5, Motorvision+, BEIN Sports, Real Madrid TV, Redbull TV, MLB, UFC TV + channel dari M3U sources |
+| 10 | 🌍 International (9) | Persiana Jr, Persiana Cinema, Discover Film, Moviesphere, Moviedome, Brat TV, Wedo TV, HG TV |
+| 11 | 🇯🇵 Jepang (10) | NHK G, NHK E, NTV, TV Asahi, TBS, TV Tokyo, Fuji TV, Tokyo MX1, Tokyo MX2, NHK World Japan |
+| 12 | 🇰🇷 Korea (3) | Arirang TV, Arirang TV UN, Arirang Radio |
+| 13 | 🇹🇭 Thailand (1) | Channel 8 (TH) |
+| 14 | 🇲🇾 Malaysia (2) | Astro Awani, RTM Asean |
+| 15 | 🇧🇳 Brunei (3) | RTB Sukmaindera, RTB Aneka, RTB Go Live |
+| 16 | 🇸🇬 Singapura (3) | Channel 5 (SG), Channel 8 (SG), Channel U |
+| 17 | 🇵🇭 Filipina (3) | GMA 7, Hope Channel PH, UNTV |
 
 > Total 17 menu entry — channel bertambah otomatis dari M3U aggregation (iptv-org + 3 sumber Indonesia).
 
