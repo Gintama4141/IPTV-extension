@@ -130,6 +130,8 @@ class IndonesianIPTVProvider : MainAPI() {
         if (name.contains("tvri")) return null
         if (name.contains("antv")) return null
         if (ch.streamUrl.contains("b1world")) return null
+        if (ch.streamUrl.contains("h/h06")) return null
+        if (name.contains("net tv")) return null
 
         val group = ch.group?.lowercase()?.trim() ?: ""
 
