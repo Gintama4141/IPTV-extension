@@ -53,6 +53,8 @@ object Constants {
         "Hiburan", "Musik", "Anak", "Olahraga", "International", "Pemerintah"
     )
 
+    val MUSIC_CATEGORY = "Music"
+
     val CATEGORY_FLAGS = mapOf(
         "Nasional" to "\uD83C\uDDE6\uD83C\uDDEA",
         "Berita" to "\uD83D\uDCF0",
@@ -62,6 +64,7 @@ object Constants {
         "Hiburan" to "\uD83C\uDFAC",
         "Musik" to "\uD83C\uDFB5",
         "Anak" to "\uD83E\uDDD2",
+        "Musik" to "\uD83C\uDFB5",
         "Olahraga" to "\u26BD",
         "International" to "\uD83C\uDF0D",
         "Pemerintah" to "\uD83C\uDFDB\uFE0F"
@@ -370,6 +373,8 @@ object Constants {
 
         CategorizedChannel("ANTV", "http://210.210.155.35/qwr9ew/s/s07/index1.m3u8", "Nasional", tvgId = "ANTV.id", quality = 480, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Mentari TV", "https://app-etslive-2.vidio.com/live/8237/master.m3u8", "Anak", quality = 720),
+        CategorizedChannel("PBS Kids", "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8", "Anak", quality = 720),
+        CategorizedChannel("Duck TV", "https://stream.ads.ottera.tv/playlist.m3u8?network_id=7617", "Anak", quality = 720),
         CategorizedChannel("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
         CategorizedChannel("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Indonesiana TV", "https://tvstreamcast.com/indonesiana.m3u8", "Edukasi", quality = 720, headers = mapOf("Referer" to "https://indonesiana.tv/")),
@@ -397,6 +402,8 @@ object Constants {
         CategorizedChannel("BEIN Sports", "https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("Real Madrid TV", "https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/master.m3u8?hdnea=exp=1653452799~acl=*~hmac=6fa983776826e1224ab4c19996ce92f00a1ad234617b07fd8a398160d72c19e0", "Olahraga", quality = 720),
         CategorizedChannel("Redbull TV", "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("MLB", "https://d1yqxv6gx128ca.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mmpgjr4zitcp0/playlist.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("UFC TV", "https://aegis-cloudfront-1.tubi.video/a78ea283-8666-44a1-a0f6-fde5d229ac21/playlist_1920x1080.m3u8", "Olahraga", quality = 720),
         // Religious → Religi
         CategorizedChannel("Rodja TV", "https://wahyu1ptv.pages.dev/RodjaTV-HD.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "Religi", quality = 720),
@@ -410,6 +417,12 @@ object Constants {
         CategorizedChannel("Al Bahjah TV", "https://mq-panel.tv:5443/LiveApp/streams/al-bahjahtv.m3u8", "Religi", quality = 720),
         CategorizedChannel("Dhamma TV", "https://5bf7b725107e5.streamlock.net/dhamma/dhamma/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("MQ TV", "https://wahyu1ptv.pages.dev/MQTV-HD.m3u8", "Religi", quality = 720),
+        CategorizedChannel("Sakti TV", "https://saktitv.siar.us/saktitv/live/playlist.m3u8", "Religi", quality = 720),
+        CategorizedChannel("Arab Saudi", "https://op-group1-swiftservesd-1.dens.tv/s/s27/index.m3u8", "Religi", quality = 720),
+        // Music → Musik
+        CategorizedChannel("Ibiza TV", "https://wahyu1ptv.pages.dev/Ibiza.m3u8", "Musik", quality = 720),
+        CategorizedChannel("Deluxe Music", "https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.m3u8", "Musik", quality = 720),
+        CategorizedChannel("Vevo Music", "https://d1s6jz7jeei17.cloudfront.net/playlist/amg00056-vevotv-vevo2kau-samsungau/playlist.m3u8", "Musik", quality = 720),
         // Regional → Daerah
         CategorizedChannel("Jawa Pos TV", "https://jawapostv.siar.us/jawapostv/live/playlist.m3u8", "Daerah", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", "Daerah", quality = 480),
@@ -436,6 +449,9 @@ object Constants {
         CategorizedChannel("Persiana Cinema", "https://cinehls.persiana.live/hls/stream.m3u8", "International", quality = 720),
         CategorizedChannel("Discover Film", "https://discoverfilm-discoverfilm-1-nl.samsung.wurl.tv/playlist.m3u", "International", quality = 720),
         CategorizedChannel("Moviesphere", "https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8", "International", quality = 720),
-        CategorizedChannel("Moviedome", "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8", "International", quality = 720)
+        CategorizedChannel("Moviedome", "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8", "International", quality = 720),
+        CategorizedChannel("Brat TV", "https://brat-samsung-us.amagi.tv/playlist.m3u8", "International", quality = 720),
+        CategorizedChannel("Wedo TV", "https://op-group1-swiftservehd-1.dens.tv/h/h70/wedotv_movie.m3u8", "International", quality = 720),
+        CategorizedChannel("HG TV", "https://mediapackage-hgtv-source.fullscreen.nz/index.m3u8", "International", quality = 720)
     )
 }

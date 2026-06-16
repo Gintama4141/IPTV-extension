@@ -25,6 +25,7 @@ class IndonesianIPTVProvider : MainAPI() {
         "Religi" to "${Constants.CATEGORY_FLAGS["Religi"]} Religi",
         "Daerah" to "${Constants.CATEGORY_FLAGS["Daerah"]} Daerah",
         "Hiburan" to "${Constants.CATEGORY_FLAGS["Hiburan"]} Hiburan",
+        "Musik" to "${Constants.CATEGORY_FLAGS["Musik"]} Musik",
         "Anak" to "${Constants.CATEGORY_FLAGS["Anak"]} Anak",
         "Olahraga" to "${Constants.CATEGORY_FLAGS["Olahraga"]} Olahraga",
         "International" to "${Constants.CATEGORY_FLAGS["International"]} International",
