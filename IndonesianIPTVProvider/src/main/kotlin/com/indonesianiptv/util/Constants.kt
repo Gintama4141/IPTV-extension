@@ -394,6 +394,9 @@ object Constants {
         CategorizedChannel("FIFA World Cup 4", "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("FIFA World Cup 5", "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("Motorvision+", "https://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("BEIN Sports", "https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8", "Olahraga", quality = 720),
+        CategorizedChannel("Real Madrid TV", "https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/master.m3u8?hdnea=exp=1653452799~acl=*~hmac=6fa983776826e1224ab4c19996ce92f00a1ad234617b07fd8a398160d72c19e0", "Olahraga", quality = 720),
+        CategorizedChannel("Redbull TV", "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", "Olahraga", quality = 720),
         // Religious → Religi
         CategorizedChannel("Rodja TV", "https://tv.rodja.live/aliman/ngrp:HD_all/playlist.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "Religi", quality = 720),
