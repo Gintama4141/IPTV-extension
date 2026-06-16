@@ -397,7 +397,7 @@ object Constants {
         CategorizedChannel("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "Religi", quality = 720),
         CategorizedChannel("TV MUI", "https://mui.siar.us/mui/live/playlist.m3u8", "Religi", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Madani TV", "https://madani.siar.us/madani/live/playlist.m3u8", "Religi", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
-        CategorizedChannel("TV Mu", "https://5bf7b725107e5.streamlock.net/tvmu/tvmu/playlist.m3u8", "Religi", quality = 720),
+        CategorizedChannel("TV Mu", "https://e.siar.us/live/tvmu.m3u8", "Religi", quality = 720),
         CategorizedChannel("DAAI TV", "https://op-group1-swiftservesd-1.dens.tv/s/s182/S4/mnf.m3u8", "Religi", quality = 720),
         CategorizedChannel("Astha TV", "https://hgmtv.com:19360/asthatv/asthatv.m3u8", "Religi", quality = 720),
         CategorizedChannel("MQTV", "https://5bf7b725107e5.streamlock.net/mqtv/mqtv/playlist.m3u8", "Religi", quality = 720),
