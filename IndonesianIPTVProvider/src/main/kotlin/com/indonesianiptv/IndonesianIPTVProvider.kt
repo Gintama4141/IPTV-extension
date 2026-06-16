@@ -124,6 +124,8 @@ class IndonesianIPTVProvider : MainAPI() {
         if (name.contains("my kidz")) return null
         if (name.contains("rock action")) return null
         if (name.contains("rock entertainment")) return null
+        if (name.contains("sea today")) return null
+        if (name.contains("my family")) return null
         if (name.contains("thrill")) return null
         if (name.contains("tvn asia")) return null
         if (name.contains("tvn movies")) return null
