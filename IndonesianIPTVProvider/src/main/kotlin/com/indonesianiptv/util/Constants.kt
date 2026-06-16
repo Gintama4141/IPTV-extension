@@ -399,7 +399,7 @@ object Constants {
         CategorizedChannel("Real Madrid TV", "https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/master.m3u8?hdnea=exp=1653452799~acl=*~hmac=6fa983776826e1224ab4c19996ce92f00a1ad234617b07fd8a398160d72c19e0", "Olahraga", quality = 720),
         CategorizedChannel("Redbull TV", "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", "Olahraga", quality = 720),
         // Religious → Religi
-        CategorizedChannel("Rodja TV", "https://tv.rodja.live/aliman/ngrp:HD_all/playlist.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
+        CategorizedChannel("Rodja TV", "https://wahyu1ptv.pages.dev/RodjaTV-HD.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Al-Iman TV", "https://tv.aliman.id/aliman/live.m3u8", "Religi", quality = 720),
         CategorizedChannel("TV MUI", "https://mui.siar.us/mui/live/playlist.m3u8", "Religi", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Madani TV", "https://madani.siar.us/madani/live/playlist.m3u8", "Religi", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
@@ -410,6 +410,7 @@ object Constants {
         CategorizedChannel("Salam TV", "https://5bf7b725107e5.streamlock.net/salamtv/salamtv/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("Al Bahjah TV", "https://mq-panel.tv:5443/LiveApp/streams/al-bahjahtv.m3u8", "Religi", quality = 720),
         CategorizedChannel("Dhamma TV", "https://5bf7b725107e5.streamlock.net/dhamma/dhamma/playlist.m3u8", "Religi", quality = 720),
+        CategorizedChannel("MQ TV", "https://wahyu1ptv.pages.dev/MQTV-HD.m3u8", "Religi", quality = 720),
         // Regional → Daerah
         CategorizedChannel("Jawa Pos TV", "https://jawapostv.siar.us/jawapostv/live/playlist.m3u8", "Daerah", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", "Daerah", quality = 480),
