@@ -27,6 +27,7 @@ class IndonesianIPTVProvider : MainAPI() {
         "Hiburan" to "${Constants.CATEGORY_FLAGS["Hiburan"]} Hiburan",
         "Anak" to "${Constants.CATEGORY_FLAGS["Anak"]} Anak",
         "Olahraga" to "${Constants.CATEGORY_FLAGS["Olahraga"]} Olahraga",
+        "International" to "${Constants.CATEGORY_FLAGS["International"]} International",
         "JP" to "${countryFlag("JP")} Jepang",
         "KR" to "${countryFlag("KR")} Korea",
         "TH" to "${countryFlag("TH")} Thailand",

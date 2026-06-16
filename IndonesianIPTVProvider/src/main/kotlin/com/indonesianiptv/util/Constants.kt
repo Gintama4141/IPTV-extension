@@ -50,7 +50,7 @@ object Constants {
 
     val CATEGORIES = listOf(
         "Nasional", "Berita", "Edukasi", "Religi", "Daerah",
-        "Hiburan", "Musik", "Anak", "Olahraga", "Pemerintah"
+        "Hiburan", "Musik", "Anak", "Olahraga", "International", "Pemerintah"
     )
 
     val CATEGORY_FLAGS = mapOf(
@@ -63,6 +63,7 @@ object Constants {
         "Musik" to "\uD83C\uDFB5",
         "Anak" to "\uD83E\uDDD2",
         "Olahraga" to "\u26BD",
+        "International" to "\uD83C\uDF0D",
         "Pemerintah" to "\uD83C\uDFDB\uFE0F"
     )
 
@@ -76,6 +77,7 @@ object Constants {
         "Musik" to listOf("musik", "music", "musik indonesia", "video klip", "music video", "lagu"),
         "Anak" to listOf("anak", "kids", "anak-anak", "children", "anak indonesia", "kartun", "cartoon", "kids & family"),
         "Olahraga" to listOf("olahraga", "sports", "olahraga indonesia", "sport", "indonesian sport"),
+        "International" to listOf("international", "international tv", "world", "global"),
         "Pemerintah" to listOf("pemerintah", "government", "pemerintah indonesia", "tv pemerintah", "publik", "public", "parliament")
     )
 
@@ -425,6 +427,7 @@ object Constants {
         CategorizedChannel("Madu TV", "https://re1.siar.us/madutv/hd720/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Jogja TV", "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8", "Daerah", quality = 720),
         CategorizedChannel("TATV", "https://tatv.siar.us/tatv/live.sdp/playlist.m3u8", "Daerah", quality = 720),
-        CategorizedChannel("Stara TV", "https://stream.staratv.id/hls/0/stream.m3u8", "Daerah", quality = 720)
+        CategorizedChannel("Stara TV", "https://stream.staratv.id/hls/0/stream.m3u8", "Daerah", quality = 720),
+        CategorizedChannel("Persiana Jr", "https://junhls.persiana.live/hls/stream.m3u8", "International", quality = 720)
     )
 }
