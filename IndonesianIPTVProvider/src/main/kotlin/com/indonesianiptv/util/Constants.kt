@@ -393,6 +393,7 @@ object Constants {
         CategorizedChannel("Jak TV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8", "Berita", quality = 720),
         CategorizedChannel("BeritaSatu", "https://kmklive-lh.akamaihd.net/i/beritasatu_live@577566/master.m3u8", "Berita", quality = 720),
         CategorizedChannel("TVOne", "https://op-group1-swiftservehd-1.dens.tv/h/h40/01.m3u8", "Berita", quality = 720),
+        CategorizedChannel("Astro Blitar TV", "https://5bf7b725107e5.streamlock.net/abtv/abtv/playlist.m3u8", "Berita", quality = 720),
         // Sports → Olahraga
         CategorizedChannel("FIFA World Cup 1", "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8", "Olahraga", quality = 720),
         CategorizedChannel("FIFA World Cup 2", "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8", "Olahraga", quality = 720),
