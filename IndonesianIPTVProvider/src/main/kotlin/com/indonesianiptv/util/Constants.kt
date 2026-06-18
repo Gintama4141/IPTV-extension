@@ -420,7 +420,7 @@ object Constants {
         CategorizedChannel("MQTV", "https://5bf7b725107e5.streamlock.net/mqtv/mqtv/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("Salam TV", "https://5bf7b725107e5.streamlock.net/salamtv/salamtv/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("Al Bahjah TV", "https://mq-panel.tv:5443/LiveApp/streams/al-bahjahtv.m3u8", "Religi", quality = 720),
-        CategorizedChannel("Dhamma TV", "https://5bf7b725107e5.streamlock.net/dhamma/dhamma/playlist.m3u8", "Religi", quality = 720),
+        CategorizedChannel("Dhamma TV", "https://b.webcache.maxindo.net.id/dhamma/dhamma.m3u8", "Religi", quality = 720),
         CategorizedChannel("MQ TV", "https://wahyu1ptv.pages.dev/MQTV-HD.m3u8", "Religi", quality = 720),
         CategorizedChannel("Sakti TV", "https://saktitv.siar.us/saktitv/live/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("Al Wafa Tarim", "https://ammedia.siar.us/ammedia/live/playlist.m3u8", "Religi", quality = 720),
