@@ -375,6 +375,7 @@ object Constants {
         CategorizedChannel("PBS Kids", "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8", "Anak", quality = 720),
         CategorizedChannel("Duck TV", "https://stream.ads.ottera.tv/playlist.m3u8?network_id=7617", "Anak", quality = 720),
         CategorizedChannel("Allegro", "https://vodcdn.bamboo-cloud.com/livehls/68c525e1063044539b09c253/master.m3u8", "Anak", quality = 720),
+        CategorizedChannel("Ananda", "https://vodcdn.bamboo-cloud.com/livehls/68ef86320630444b1f796875/master.m3u8", "Anak", quality = 720),
         CategorizedChannel("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
         CategorizedChannel("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Indonesiana TV", "https://tvstreamcast.com/indonesiana.m3u8", "Edukasi", quality = 720, headers = mapOf("Referer" to "https://indonesiana.tv/")),
