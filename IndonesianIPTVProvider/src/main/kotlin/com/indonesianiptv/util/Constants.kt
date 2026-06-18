@@ -353,7 +353,6 @@ object Constants {
 
     val INDONESIAN_CHANNELS = listOf(
         // MNC Group → Nasional
-        CategorizedChannel("iNews", "https://d2hfpzcndkyscp.cloudfront.net/live/eds/INEWS_2021/live_fta/INEWS_2021.m3u8", "Berita", tvgId = "iNews.id", quality = 720, headers = mapOf("User-Agent" to MNC_UA, "Referer" to "https://www.rctiplus.com/tv/inews")),
         // Trans Media → Nasional
         CategorizedChannel("Trans TV", "https://livestream.transtv.co.id/stream/live/ttv.m3u8", "Nasional", tvgId = "TransTV.id", quality = 720, headers = mapOf("Referer" to "https://www.detik.com/")),
         CategorizedChannel("Trans7", "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8", "Nasional", tvgId = "Trans7.id", quality = 720, headers = mapOf("Referer" to "https://www.detik.com/")),
@@ -367,6 +366,7 @@ object Constants {
         CategorizedChannel("Magna Channel", "https://edge.medcom.id/live-edge/smil:magna.smil/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
         CategorizedChannel("Nusantara TV", "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Indonesiana TV", "https://tvstreamcast.com/indonesiana.m3u8", "Edukasi", quality = 720, headers = mapOf("Referer" to "https://indonesiana.tv/")),
+        CategorizedChannel("MBG TV", "https://stream.convergen.co/mbg_stream/smil:mbStream.smil/playlist.m3u8", "Edukasi", quality = 720),
         CategorizedChannel("Garuda TV", "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8", "Nasional", quality = 720),
         CategorizedChannel("Dens Food", "https://op-group1-densxvisionhd-1.dens.tv/h/h248/04.m3u8", "Hiburan", quality = 720),
         CategorizedChannel("Moji TV", "https://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8", "Nasional", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
@@ -387,6 +387,9 @@ object Constants {
         CategorizedChannel("Elshinta TV", "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", "Hiburan", quality = 720),
         CategorizedChannel("BMS TV", "https://5bf7b725107e5.streamlock.net/bmstv/bmstv/playlist.m3u8", "Hiburan", quality = 720),
         CategorizedChannel("Ficom Channel", "https://v3.siar.us/ficomchannel/live/playlist.m3u8", "Hiburan", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
+        CategorizedChannel("Stara TV Majalengka", "https://stream.staratv.id/hls/0/stream.m3u8", "Hiburan", quality = 720),
+        CategorizedChannel("Stara TV Yogyakarta", "https://stream.matrixtv.id/hls/0/stream.m3u8", "Hiburan", quality = 720),
+        CategorizedChannel("Lingkar TV", "https://lingkartv.my.id/hls/lingkartv.m3u8", "Hiburan", quality = 720),
         // News channels → Berita
         CategorizedChannel("Metro TV", "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8", "Berita", tvgId = "MetroTV.id", quality = 720, headers = mapOf("Referer" to "https://www.metrotvnews.com/", "User-Agent" to EXO_UA)),
         CategorizedChannel("Kompas TV", "https://op-group1-swiftservehd-1.dens.tv/h/h234/01.m3u8", "Berita", tvgId = "KompasTV.id", quality = 720, headers = mapOf("Referer" to "https://www.kompas.tv/", "User-Agent" to EXO_UA)),
@@ -394,7 +397,6 @@ object Constants {
         CategorizedChannel("CNBC Indonesia", "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8", "Berita", tvgId = "CNBCIndonesia.id", quality = 720, headers = mapOf("Referer" to "https://www.cnbcindonesia.com/")),
         CategorizedChannel("BTV", "https://op-group1-swiftservehd-1.dens.tv/h/h210/index.m3u8", "Berita", quality = 720),
         CategorizedChannel("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "Berita", quality = 720),
-        CategorizedChannel("Jak TV", "https://kmklive-lh.akamaihd.net/i/jaktv_live@94476/master.m3u8", "Berita", quality = 720),
         CategorizedChannel("BeritaSatu", "https://op-group1-swiftservehd-1.dens.tv/h/h209/index.m3u8", "Berita", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
         CategorizedChannel("TVOne", "https://op-group1-swiftservehd-1.dens.tv/h/h40/01.m3u8", "Berita", quality = 720),
         CategorizedChannel("Astro Blitar TV", "https://5bf7b725107e5.streamlock.net/abtv/abtv/playlist.m3u8", "Berita", quality = 720),
@@ -428,13 +430,15 @@ object Constants {
         CategorizedChannel("Arab Saudi", "https://op-group1-swiftservesd-1.dens.tv/s/s27/index.m3u8", "Religi", quality = 720),
         CategorizedChannel("BRTV", "https://5bf7b725107e5.streamlock.net/brtv/brtv/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("DMI TV", "https://tvstreamcast.com/tawaftv.m3u8", "Religi", quality = 720),
+        CategorizedChannel("I Am Channel", "https://61146e7ab7a66.streamlock.net:8089/tes/1/chunklist.m3u8", "Religi", quality = 720),
         // Music → Musik
         CategorizedChannel("Ibiza TV", "https://wahyu1ptv.pages.dev/Ibiza.m3u8", "Musik", quality = 720),
         CategorizedChannel("Deluxe Music", "https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.m3u8", "Musik", quality = 720),
         CategorizedChannel("Vevo Music", "https://d1s6jz7jeei17.cloudfront.net/playlist/amg00056-vevotv-vevo2kau-samsungau/playlist.m3u8", "Musik", quality = 720),
+        CategorizedChannel("Music Information Channel", "https://mic.siar.us/mic/live/mic.m3u8", "Musik", quality = 720),
         // Regional → Daerah
         CategorizedChannel("Jawa Pos TV", "https://jawapostv.siar.us/jawapostv/live/playlist.m3u8", "Daerah", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
-        CategorizedChannel("JTV", "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8", "Daerah", quality = 480),
+        CategorizedChannel("Kilisuci TV", "https://5bf7b725107e5.streamlock.net/kstv/kstv/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Surabaya TV", "https://e.siar.us/live/surabayatv.m3u8", "Daerah", quality = 720),
         CategorizedChannel("TV9 Nusantara", "https://5bf7b725107e5.streamlock.net/tv9/tv9/playlist.m3u8", "Daerah", quality = 480),
         CategorizedChannel("Bali TV", "http://122.248.43.242:1935/BALITV/_definst_/myStream/playlist.m3u8", "Daerah", quality = 480),
@@ -458,7 +462,6 @@ object Constants {
         CategorizedChannel("Madu TV", "https://re1.siar.us/madutv/hd720/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Jogja TV", "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8", "Daerah", quality = 720),
         CategorizedChannel("TATV", "https://tatv.siar.us/tatv/live.sdp/playlist.m3u8", "Daerah", quality = 720),
-        CategorizedChannel("Stara TV", "https://stream.staratv.id/hls/0/stream.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Persiana Jr", "https://junhls.persiana.live/hls/stream.m3u8", "International", quality = 720),
         CategorizedChannel("Persiana Cinema", "https://cinehls.persiana.live/hls/stream.m3u8", "International", quality = 720),
         CategorizedChannel("Discover Film", "https://discoverfilm-discoverfilm-1-nl.samsung.wurl.tv/playlist.m3u", "International", quality = 720),
