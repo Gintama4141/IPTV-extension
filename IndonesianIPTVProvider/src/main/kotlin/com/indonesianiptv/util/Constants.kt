@@ -442,6 +442,7 @@ object Constants {
         CategorizedChannel("Duta TV", "https://dutatv.siar.us/dutatv/live/playlist.m3u8", "Daerah", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Banjar TV", "https://banjartv.siar.us/banjartv/live/playlist.m3u8", "Daerah", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("Banten TV", "https://5bf7b725107e5.streamlock.net/bantentv/bantentv/playlist.m3u8", "Daerah", quality = 720),
+        CategorizedChannel("Bungo TV", "https://5bf7b725107e5.streamlock.net/bungotv/bungotv/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("RBTV Bengkulu", "http://122.248.32.234:1935/ch12/myStream/playlist.m3u8", "Daerah", quality = 480),
         CategorizedChannel("Palembang TV", "http://122.248.43.242:1935/PALEMBANGTV/_definst_/myStream/playlist.m3u8", "Daerah", quality = 480),
         CategorizedChannel("Surau TV", "http://103.28.22.198/surautv/live/playlist.m3u8", "Daerah", quality = 480),
