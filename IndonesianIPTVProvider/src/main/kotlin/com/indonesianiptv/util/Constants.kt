@@ -453,6 +453,7 @@ object Constants {
         CategorizedChannel("Caruban TV", "https://stream.carubantv.id/hls/0/stream.m3u8", "Daerah", quality = 720, headers = mapOf("Referer" to "https://stream.carubantv.id")),
         CategorizedChannel("Davika TV", "https://5bf7b725107e5.streamlock.net/davika/davika/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Dhoho TV", "https://dhohotv.siar.us/dhohotv/live/playlist.m3u8", "Daerah", quality = 720),
+        CategorizedChannel("Efarina TV", "https://live.efarinatv.com/hls/bgtaufikganteng.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Madu TV", "https://re1.siar.us/madutv/hd720/playlist.m3u8", "Daerah", quality = 720),
         CategorizedChannel("Jogja TV", "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8", "Daerah", quality = 720),
         CategorizedChannel("TATV", "https://tatv.siar.us/tatv/live.sdp/playlist.m3u8", "Daerah", quality = 720),
