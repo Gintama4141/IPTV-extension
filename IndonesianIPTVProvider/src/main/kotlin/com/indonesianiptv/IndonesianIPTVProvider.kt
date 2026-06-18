@@ -131,6 +131,8 @@ class IndonesianIPTVProvider : MainAPI() {
         if (name.contains("tvn movies")) return null
         if (name.contains("tvri")) return null
         if (name.contains("antv")) return null
+        if (name.contains("inews")) return null
+        if (name.contains("indosiar")) return null
         if (ch.streamUrl.contains("b1world")) return null
         if (ch.streamUrl.contains("h/h06")) return null
         if (name.contains("net tv")) return null

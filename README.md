@@ -6,13 +6,13 @@ Extension CloudStream yang menyediakan **300+ FTA Live TV** dari Indonesia dan 2
 
 | # | Menu | Channel |
 |---|------|---------|
-| 1 | 🇮🇩 Nasional (40) | RCTI, MNCTV, GTV, Trans TV, Trans7, SCTV, NET TV, Moji TV, Oxygen TV, Magna Channel, Nusantara TV, Garuda TV + channel dari M3U sources |
-| 2 | 📰 Berita (10) | Metro TV, Kompas TV, CNN Indonesia, CNBC Indonesia, BTV, BN Channel, Jak TV, BeritaSatu, TVOne + channel dari M3U sources |
-| 3 | 📚 Edukasi (1) | Indonesiana TV + channel dari M3U sources |
-| 4 | ✝️ Religi (14) | Rodja TV, Al-Iman TV, TV MUI, Madani TV, TV Mu, DAAI TV, Astha TV, MQTV, Salam TV, Al Bahjah TV, Dhamma TV, MQ TV, Sakti TV, Arab Saudi + channel dari M3U sources |
-| 5 | 🏘️ Daerah (50) | Jawa Pos TV, JTV, Surabaya TV, TV9 Nusantara, Bali TV, Bandung TV, Semarang TV, SBO TV, Duta TV, RBTV Bengkulu, Palembang TV, Surau TV, Banyumas TV, Radar Tasikmalaya, TVKU, Caruban TV, Dhoho TV, Madu TV, Jogja TV, TATV, Stara TV + channel dari M3U sources |
-| 6 | 🎭 Hiburan (3) | RTV, Dens Food, Elshinta TV + channel dari M3U sources |
-| 7 | 🎵 Musik (3) | Ibiza TV, Deluxe Music, Vevo Music |
+| 1 | 🇮🇩 Nasional (12) | RCTI, MNCTV, GTV, Trans TV, Trans7, SCTV, NET TV, Moji TV, Oxygen TV, Magna Channel, Nusantara TV, Garuda TV + channel dari M3U sources |
+| 2 | 📰 Berita (9) | Metro TV, Kompas TV, CNN Indonesia, CNBC Indonesia, BTV, BN Channel, BeritaSatu, TVOne, Astro Blitar TV + channel dari M3U sources |
+| 3 | 📚 Edukasi (2) | Indonesiana TV, MBG TV + channel dari M3U sources |
+| 4 | ✝️ Religi (18) | Rodja TV, Al-Iman TV, TV MUI, Madani TV, TV Mu, DAAI TV, Astha TV, MQTV, Salam TV, Al Bahjah TV, Dhamma TV, MQ TV, Sakti TV, Arab Saudi, Al Wafa Tarim, BRTV, DMI TV, I Am Channel + channel dari M3U sources |
+| 5 | 🏘️ Daerah (24) | Jawa Pos TV, Surabaya TV, TV9 Nusantara, Bali TV, Bandung TV, Semarang TV, SBO TV, Duta TV, Banjar TV, Banten TV, Bungo TV, RBTV Bengkulu, Palembang TV, Surau TV, Banyumas TV, Radar Tasikmalaya, TVKU, Caruban TV, Davika TV, Dhoho TV, Efarina TV, Madu TV, Jogja TV, TATV, Kilisuci TV + channel dari M3U sources |
+| 6 | 🎭 Hiburan (10) | RTV, Dens Food, Elshinta TV, BMS TV, Allegro, Ananda, Stara TV Majalengka, Stara TV Yogyakarta, Lingkar TV + channel dari M3U sources |
+| 7 | 🎵 Musik (4) | Ibiza TV, Deluxe Music, Vevo Music, Music Information Channel |
 | 8 | 👶 Anak (3) | Mentari TV, PBS Kids, Duck TV |
 | 9 | ⚽ Olahraga (12) | FIFA World Cup 1-5, Motorvision+, BEIN Sports, Real Madrid TV, Redbull TV, MLB, UFC TV + channel dari M3U sources |
 | 10 | 🌍 International (9) | Persiana Jr, Persiana Cinema, Discover Film, Moviesphere, Moviedome, Brat TV, Wedo TV, HG TV |
