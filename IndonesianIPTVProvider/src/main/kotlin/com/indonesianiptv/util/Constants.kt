@@ -419,6 +419,7 @@ object Constants {
         CategorizedChannel("Dhamma TV", "https://5bf7b725107e5.streamlock.net/dhamma/dhamma/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("MQ TV", "https://wahyu1ptv.pages.dev/MQTV-HD.m3u8", "Religi", quality = 720),
         CategorizedChannel("Sakti TV", "https://saktitv.siar.us/saktitv/live/playlist.m3u8", "Religi", quality = 720),
+        CategorizedChannel("Al Wafa Tarim", "https://ammedia.siar.us/ammedia/live/playlist.m3u8", "Religi", quality = 720),
         CategorizedChannel("Arab Saudi", "https://op-group1-swiftservesd-1.dens.tv/s/s27/index.m3u8", "Religi", quality = 720),
         // Music → Musik
         CategorizedChannel("Ibiza TV", "https://wahyu1ptv.pages.dev/Ibiza.m3u8", "Musik", quality = 720),
