@@ -4,7 +4,10 @@ import com.indonesianiptv.model.M3UChannel
 import com.indonesianiptv.model.M3UParser
 import com.indonesianiptv.util.Constants
 import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.syncproviders.SyncIdName
 import com.lagradost.cloudstream3.utils.*
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 
 class IndonesianIPTVProvider : MainAPI() {
     override var mainUrl = "https://iptv-org.github.io"
@@ -12,11 +15,22 @@ class IndonesianIPTVProvider : MainAPI() {
     override var lang = "id"
     override var hasMainPage = true
     override var supportedTypes = setOf(TvType.Live)
+    override val supportedSyncNames = setOf<SyncIdName>()
+    override var vpnStatus = VPNStatus.None
 
     private var allChannels: List<Constants.CategorizedChannel> = emptyList()
     private var channelCache: Map<String, Constants.CategorizedChannel> = emptyMap()
     private var lastFetch = 0L
     private val cacheTtl = 10 * 60 * 1000L
+
+    private val m3uExclusions = setOf(
+        "metro tv", "kompas tv", "tvone", "btv", "indonesiana",
+        "magna", "rodja", "rri net", "celestial", "hits", "hiys",
+        "kix", "k-plus", "kplus", "my cinema", "my kidz",
+        "rock action", "rock entertainment", "sea today", "my family",
+        "thrill", "tvn asia", "tvn movies", "tvri", "antv", "inews",
+        "indosiar", "net tv"
+    )
 
     override val mainPage = mainPageOf(
         "Nasional" to "${Constants.CATEGORY_FLAGS["Nasional"]} Nasional",
@@ -38,9 +52,8 @@ class IndonesianIPTVProvider : MainAPI() {
         "PH" to "${countryFlag("PH")} Filipina"
     )
 
-    private fun countryFlag(code: String): String {
-        return Constants.COUNTRIES.find { it.code == code }?.flag ?: ""
-    }
+    private fun countryFlag(code: String): String =
+        Constants.COUNTRIES.firstOrNull { it.code == code }?.flag ?: ""
 
     private suspend fun refreshCache() {
         val now = System.currentTimeMillis()
@@ -49,41 +62,53 @@ class IndonesianIPTVProvider : MainAPI() {
 
         val channels = mutableListOf<Constants.CategorizedChannel>()
 
-        // Hardcoded Indonesian channels (TVRI, Nasional, Berita, Religi, Daerah, Hiburan, Anak)
         channels.addAll(Constants.TVRI_CATEGORIZED)
         channels.addAll(Constants.INDONESIAN_CHANNELS)
 
-        // M3U - Indonesian sources
+        // M3U - Indonesian sources (sequential, break on first success)
         for (source in Constants.M3U_SOURCES) {
-            try {
+            val parsed = runCatching {
                 val resp = app.get(source)
-                val parsed = M3UParser.parse(resp.text)
-                channels.addAll(parsed.mapNotNull { categorizeM3uChannel(it) })
-                if (parsed.isNotEmpty()) break
-            } catch (_: Exception) { }
+                M3UParser.parse(resp.text)
+            }.getOrNull() ?: continue
+            channels.addAll(parsed.mapNotNull { categorizeM3uChannel(it) })
+            if (parsed.isNotEmpty()) break
         }
 
-        // International sources (hardcoded + M3U)
-        for (country in Constants.COUNTRIES) {
+        // International sources — parallel M3U fetch per country
+        val countryResults = runCatching {
+            coroutineScope {
+                Constants.COUNTRIES.filter { it.m3uUrl != null }.map { country ->
+                    async {
+                        val m3uUrl = country.m3uUrl!!
+                        runCatching {
+                            val resp = app.get(m3uUrl)
+                            M3UParser.parse(resp.text)
+                        }.getOrNull().orEmpty()
+                    }
+                }.map { it.await() }
+            }
+        }.getOrNull().orEmpty()
+
+        val countryMap = Constants.COUNTRIES.filter { it.m3uUrl != null }.zip(countryResults)
+        for ((country, parsed) in countryMap) {
             val hc = Constants.INTERNATIONAL_CHANNELS.filter { it.category == country.code }
             channels.addAll(hc)
-
-            val m3uUrl = country.m3uUrl ?: continue
-            try {
-                val resp = app.get(m3uUrl)
-                val parsed = M3UParser.parse(resp.text)
-                for (ch in parsed) {
-                    channels.add(Constants.CategorizedChannel(
-                        name = ch.name,
-                        url = ch.streamUrl,
-                        category = country.code,
-                        tvgId = ch.tvgId,
-                        tvgLogo = ch.tvgLogo,
-                        headers = ch.headers,
-                        quality = parseQualityInt(ch.quality)
-                    ))
-                }
-            } catch (_: Exception) { }
+            for (ch in parsed) {
+                channels.add(Constants.CategorizedChannel(
+                    name = ch.name,
+                    url = ch.streamUrl,
+                    category = country.code,
+                    tvgId = ch.tvgId,
+                    tvgLogo = ch.tvgLogo,
+                    headers = ch.headers,
+                    quality = parseQualityInt(ch.quality)
+                ))
+            }
+        }
+        // Countries without M3U url — add only hardcoded channels
+        for (country in Constants.COUNTRIES.filter { it.m3uUrl == null }) {
+            channels.addAll(Constants.INTERNATIONAL_CHANNELS.filter { it.category == country.code })
         }
 
         val seenUrls = mutableSetOf<String>()
@@ -106,42 +131,15 @@ class IndonesianIPTVProvider : MainAPI() {
 
     private fun categorizeM3uChannel(ch: M3UChannel): Constants.CategorizedChannel? {
         val name = ch.name.lowercase()
-        if (name.contains("metro tv")) return null
-        if (name.contains("kompas tv")) return null
-        if (name.contains("tvone")) return null
-        if (name.contains("btv")) return null
-        if (name.contains("indonesiana")) return null
-        if (name.contains("magna")) return null
-        if (name.contains("rodja")) return null
-        if (name.contains("rri net")) return null
-        if (name.contains("celestial")) return null
-        if (name.contains("hits")) return null
-        if (name.contains("hiys")) return null
-        if (name.contains("kix")) return null
-        if (name.contains("k-plus")) return null
-        if (name.contains("kplus")) return null
-        if (name.contains("my cinema")) return null
-        if (name.contains("my kidz")) return null
-        if (name.contains("rock action")) return null
-        if (name.contains("rock entertainment")) return null
-        if (name.contains("sea today")) return null
-        if (name.contains("my family")) return null
-        if (name.contains("thrill")) return null
-        if (name.contains("tvn asia")) return null
-        if (name.contains("tvn movies")) return null
-        if (name.contains("tvri")) return null
-        if (name.contains("antv")) return null
-        if (name.contains("inews")) return null
-        if (name.contains("indosiar")) return null
-        if (ch.streamUrl.contains("b1world")) return null
-        if (ch.streamUrl.contains("h/h06")) return null
-        if (name.contains("net tv")) return null
+        if (m3uExclusions.any { name.contains(it) }) return null
+        if (ch.streamUrl.contains("b1world") || ch.streamUrl.contains("h/h06")) return null
 
         val group = ch.group?.lowercase()?.trim() ?: ""
 
-        val category = when {
-            group.isEmpty() -> categorizeByName(name)
-            else -> Constants.CATEGORY_KEYWORDS.entries.find { entry ->
+        val category = if (group.isEmpty()) {
+            categorizeByName(name)
+        } else {
+            Constants.CATEGORY_KEYWORDS.entries.firstOrNull { entry ->
                 entry.value.any { keyword -> group.contains(keyword) }
             }?.key ?: categorizeByName(name)
         }
@@ -157,11 +155,10 @@ class IndonesianIPTVProvider : MainAPI() {
         )
     }
 
-    private fun categorizeByName(name: String): String {
-        return Constants.CATEGORY_KEYWORDS.entries.find { entry ->
-            entry.value.any { keyword -> name.contains(keyword) }
+    private fun categorizeByName(name: String): String =
+        Constants.CATEGORY_KEYWORDS.entries.firstOrNull { entry ->
+            entry.value.any { name.contains(it) }
         }?.key ?: "Nasional"
-    }
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         refreshCache()
@@ -225,19 +222,18 @@ class IndonesianIPTVProvider : MainAPI() {
         url = url
     ) { this.posterUrl = Constants.resolveLogo(name, tvgId, tvgLogo) }
 
-    private fun parseQualityInt(q: String?): Int {
-        if (q == null) return -1
-        val digits = q.filter { it.isDigit() }
-        val num = digits.toIntOrNull() ?: return -1
-        return when {
-            num >= 4000 -> 2160
-            num >= 1000 -> 1080
-            num >= 720 -> 720
-            num >= 576 -> 576
-            num >= 480 -> 480
-            num >= 360 -> 360
-            num >= 240 -> 240
-            else -> -1
-        }
-    }
+    private fun parseQualityInt(q: String?): Int = q?.filter { it.isDigit() }
+        ?.toIntOrNull()
+        ?.let { num ->
+            when {
+                num >= 4000 -> 2160
+                num >= 1000 -> 1080
+                num >= 720 -> 720
+                num >= 576 -> 576
+                num >= 480 -> 480
+                num >= 360 -> 360
+                num >= 240 -> 240
+                else -> -1
+            }
+        } ?: -1
 }
