@@ -201,7 +201,7 @@ class IndonesianIPTVProvider : MainAPI() {
         return newAnimeLoadResponse(
             name = channel.name,
             url = url,
-            type = TvType.Live
+            type = TvType.TvSeries
         ) {
             this.posterUrl = Constants.resolveLogo(channel.name, channel.tvgId, channel.tvgLogo)
             this.episodes = mutableMapOf(DubStatus.Dubbed to episodes)
