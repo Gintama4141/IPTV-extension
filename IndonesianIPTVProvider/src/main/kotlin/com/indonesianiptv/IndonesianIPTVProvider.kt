@@ -189,11 +189,25 @@ class IndonesianIPTVProvider : MainAPI() {
     override suspend fun load(url: String): LoadResponse? {
         refreshCache()
         val channel = channelCache[url] ?: return null
-        return newLiveStreamLoadResponse(
+        val siblings = allChannels.filter { it.category == channel.category }
+        val episodes = siblings.mapIndexed { idx, ch ->
+            newEpisode(ch.url) {
+                this.name = ch.name
+                this.season = 1
+                this.episode = idx + 1
+                this.posterUrl = Constants.resolveLogo(ch.name, ch.tvgId, ch.tvgLogo)
+            }
+        }
+        return newAnimeLoadResponse(
             name = channel.name,
             url = url,
-            dataUrl = url
-        ) { this.posterUrl = Constants.resolveLogo(channel.name, channel.tvgId, channel.tvgLogo) }
+            type = TvType.Live
+        ) {
+            this.posterUrl = Constants.resolveLogo(channel.name, channel.tvgId, channel.tvgLogo)
+            this.episodes = mutableMapOf(DubStatus.Dubbed to episodes)
+            this.plot = "${siblings.size} channel • ${channel.category}"
+            this.tags = listOf("IPTV", channel.category)
+        }
     }
 
     override suspend fun loadLinks(
