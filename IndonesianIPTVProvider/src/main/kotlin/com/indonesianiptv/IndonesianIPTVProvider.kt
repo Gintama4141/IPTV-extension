@@ -213,11 +213,14 @@ class IndonesianIPTVProvider : MainAPI() {
     ): Boolean {
         refreshCache()
         val channel = channelCache[data] ?: return false
+        val isYouTube = data.contains("youtube.com", ignoreCase = true) ||
+                data.contains("youtu.be", ignoreCase = true)
         callback.invoke(
             newExtractorLink(
                 source = this.name,
                 name = channel.name,
-                url = data
+                url = data,
+                type = if (isYouTube) ExtractorLinkType.VIDEO else ExtractorLinkType.M3U8
             ) {
                 this.quality = channel.quality
                 this.headers = channel.headers
