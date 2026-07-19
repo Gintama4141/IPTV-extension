@@ -359,6 +359,17 @@ object Constants {
         CategorizedChannel("Persiana Cinema", "https://cinehls.persiana.live/hls/stream.m3u8", "International", quality = 720),
         CategorizedChannel("Moviesphere", "https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8", "International", quality = 720),
         CategorizedChannel("Moviedome", "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8", "International", quality = 720),
-        CategorizedChannel("Brat TV", "https://brat-samsung-us.amagi.tv/playlist.m3u8", "International", quality = 720)
+        CategorizedChannel("Brat TV", "https://brat-samsung-us.amagi.tv/playlist.m3u8", "International", quality = 720),
+
+        // YouTube-based channels
+        CategorizedChannel("iNews TV", "https://www.youtube.com/watch?v=WHTPYAvakTg", "Berita", quality = 720),
+        CategorizedChannel("tvOneNews", "https://www.youtube.com/watch?v=45Ql68QSRUI", "Berita", quality = 720),
+        CategorizedChannel("SINDOnews", "https://www.youtube.com/watch?v=z31jg2THbWM", "Berita", quality = 720),
+        CategorizedChannel("Metro TV", "https://www.youtube.com/watch?v=db35a8EOITk", "Berita", quality = 720),
+        CategorizedChannel("IDX Channel", "https://www.youtube.com/watch?v=8dNAAe5dcqQ", "Berita", quality = 720),
+        CategorizedChannel("Kompas TV", "https://www.youtube.com/watch?v=mrn0WpVeE7A", "Berita", quality = 720),
+        CategorizedChannel("Boomerang UK", "https://www.youtube.com/watch?v=rEKifG2XUZg", "International", quality = 720),
+        CategorizedChannel("Classic Mr Bean", "https://www.youtube.com/watch?v=XQLEvieRMj4", "International", quality = 720),
+        CategorizedChannel("Nickelodeon", "https://www.youtube.com/watch?v=pkfcV-OiTk4", "International", quality = 720)
     )
 }
