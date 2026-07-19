@@ -29,7 +29,8 @@ class IndonesianIPTVProvider : MainAPI() {
         "kix", "k-plus", "kplus", "my cinema", "my kidz",
         "rock action", "rock entertainment", "sea today", "my family",
         "thrill", "tvn asia", "tvn movies", "tvri", "antv", "inews",
-        "indosiar", "net tv"
+        "indosiar", "net tv",
+        "gtv", "mnc tv", "rcti", "sctv", "trans7", "moji", "idtv", "mdtv"
     )
 
     override val mainPage = mainPageOf(
@@ -42,14 +43,7 @@ class IndonesianIPTVProvider : MainAPI() {
         "Musik" to "${Constants.CATEGORY_FLAGS["Musik"]} Musik",
         "Anak" to "${Constants.CATEGORY_FLAGS["Anak"]} Anak",
         "Olahraga" to "${Constants.CATEGORY_FLAGS["Olahraga"]} Olahraga",
-        "International" to "${Constants.CATEGORY_FLAGS["International"]} International",
-        "JP" to "${countryFlag("JP")} Jepang",
-        "KR" to "${countryFlag("KR")} Korea",
-        "TH" to "${countryFlag("TH")} Thailand",
-        "MY" to "${countryFlag("MY")} Malaysia",
-        "BN" to "${countryFlag("BN")} Brunei",
-        "SG" to "${countryFlag("SG")} Singapura",
-        "PH" to "${countryFlag("PH")} Filipina"
+        "International" to "${Constants.CATEGORY_FLAGS["International"]} International"
     )
 
     private fun countryFlag(code: String): String =
