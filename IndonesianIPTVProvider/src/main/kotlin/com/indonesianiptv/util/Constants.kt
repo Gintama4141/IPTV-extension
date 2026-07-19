@@ -292,6 +292,7 @@ object Constants {
         // MNC Group → Nasional
         // Trans Media → Nasional
         CategorizedChannel("Trans TV", "https://livestream.transtv.co.id/stream/live/ttv.m3u8", "Nasional", tvgId = "TransTV.id", quality = 720, headers = mapOf("Referer" to "https://www.detik.com/")),
+        CategorizedChannel("Trans 7", "https://video.detik.com/trans7-sec/smil:trans7.smil/playlist.m3u8?wowzatokenstarttime=0&wowzatokenendtime=1784433107745&wowzatokenhash=Q0bYnpohH0xWSxvdpDBk7r0vowu3_rMjl_HX9xKMMKg%3D", "Nasional", tvgId = "Trans7.id", quality = 720, headers = mapOf("Referer" to "https://www.detik.com/")),
 
         // Other Nasional
         CategorizedChannel("Oxygen TV", "https://cdn4-reg2.mm.oxygen.id:8080/hls/oxygentv-web/index.m3u8", "Nasional", quality = 720),
