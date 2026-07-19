@@ -30,7 +30,8 @@ class IndonesianIPTVProvider : MainAPI() {
         "rock action", "rock entertainment", "sea today", "my family",
         "thrill", "tvn asia", "tvn movies", "tvri", "antv", "inews",
         "indosiar", "net tv",
-        "gtv", "mnc tv", "rcti", "sctv", "trans7", "moji", "idtv", "mdtv"
+        "gtv", "mnc tv", "rcti", "sctv", "trans7", "moji", "idtv", "mdtv",
+        "net.", "cinemaworld", "rock entertaiment"
     )
 
     override val mainPage = mainPageOf(
