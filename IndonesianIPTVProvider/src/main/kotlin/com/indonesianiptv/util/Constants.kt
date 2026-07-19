@@ -315,7 +315,6 @@ object Constants {
         // News channels → Berita
         CategorizedChannel("CNN Indonesia", "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8", "Berita", tvgId = "CNNIndonesia.id", quality = 720, headers = mapOf("Referer" to "https://www.cnnindonesia.com/")),
         CategorizedChannel("BN Channel", "https://flv.intechmedia.net/live/ch112.m3u8", "Berita", quality = 720),
-        CategorizedChannel("BeritaSatu", "https://op-group1-swiftservehd-1.dens.tv/h/h209/index.m3u8", "Berita", quality = 720, headers = mapOf("User-Agent" to DENS_UA, "Referer" to "http://dens.tv")),
         CategorizedChannel("Astro Blitar TV", "https://5bf7b725107e5.streamlock.net/abtv/abtv/playlist.m3u8", "Berita", quality = 720),
         // Sports → Olahraga
         CategorizedChannel("FIFA World Cup 1", "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8", "Olahraga", quality = 720),
@@ -329,7 +328,6 @@ object Constants {
         // Religious → Religi
         CategorizedChannel("Rodja TV", "https://wahyu1ptv.pages.dev/RodjaTV-HD.m3u8", "Religi", tvgId = "RodjaTV.id", quality = 720, headers = mapOf("User-Agent" to EXO_UA)),
         CategorizedChannel("TV Mu", "https://e.siar.us/live/tvmu.m3u8", "Religi", quality = 720),
-        CategorizedChannel("DAAI TV", "https://op-group1-swiftservesd-1.dens.tv/s/s182/S4/mnf.m3u8", "Religi", quality = 720),
         CategorizedChannel("Astha TV", "https://hgmtv.com:19360/asthatv/asthatv.m3u8", "Religi", quality = 720),
         CategorizedChannel("Dhamma TV", "https://b.webcache.maxindo.net.id/dhamma/dhamma.m3u8", "Religi", quality = 720),
         CategorizedChannel("MQ TV", "https://wahyu1ptv.pages.dev/MQTV-HD.m3u8", "Religi", quality = 720),
