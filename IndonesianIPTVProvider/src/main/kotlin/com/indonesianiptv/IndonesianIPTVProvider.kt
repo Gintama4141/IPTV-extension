@@ -14,7 +14,7 @@ class IndonesianIPTVProvider : MainAPI() {
     override var name = "Indonesian IPTV"
     override var lang = "id"
     override var hasMainPage = true
-    override var supportedTypes = setOf(TvType.Live)
+    override var supportedTypes = setOf(TvType.Live, TvType.TvSeries)
     override val supportedSyncNames = setOf<SyncIdName>()
     override var vpnStatus = VPNStatus.None
 
